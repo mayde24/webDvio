@@ -1,0 +1,203 @@
+/* Header Style ----------- */
+
+@media screen and (max-height: 1100px) {
+  .header {
+    font-size: 15px;
+  }
+
+  .container-header {
+    width: 95px;
+    text-align: center;
+  }
+}
+
+.header-shadow {
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  transition: 1s;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  z-index: 100;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: fixed;
+  width: 100vw;
+  top: -1px;
+  height: 10vh !important;
+  transition: 1s;
+}
+
+/* Logo of Header Style */
+
+.logo-container {
+  padding-left: 20px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+/* Pages link of Header Style */
+.sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bolder;
+  padding-right: 20px;
+}
+
+/* Link Color (& Hover) Style */
+.work-header {
+  color: #5093AF;
+  font-weight: bolder;
+  transition: 0.5s;
+}
+
+.work-header:hover {
+  color: #3D7288;
+}
+
+.contact-header {
+  color: #D05689;
+  transition: 0.5s;
+}
+
+.contact-header:hover {
+  color: #8E3A5D;
+}
+
+.about-header {
+  color: #DEA331;
+  transition: 0.5s;
+}
+
+.about-header:hover {
+  color: #9E7424;
+}
+
+.container-header {
+  width: 130px;
+  text-align: center;
+}
+
+/* Header Responsive */
+
+@media screen and (max-width: 1300px) {
+  .header {
+    font-size: 18px;
+  }
+
+  .container-header {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .header {
+    font-size: 15px;
+    height: 7vh !important;
+  }
+
+  .container-header {
+    width: 80px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .fa-chevron-left,.fa-chevron-right {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    font-size: 13px;
+  }
+}
+
+/* You can add global styles to this file, and also import other style files */
+/* Random Style -------------- */
+
+html {
+  width: 100vw !important;
+  overflow-x: hidden !important;
+  max-width:100% !important;
+  margin:0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+  width: 100vw !important;
+  overflow-x: hidden !important;
+  max-width:100% !important;
+  margin:0;
+  padding: 0;
+}
+
+.underline {
+  text-decoration-line: underline ;
+}
+
+.line {
+  width: 200px;
+  border: 1px solid #169393;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 1300px) {
+  .line {
+    width: 120px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.opacity {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ScrollBar Style ---------- */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 transparent;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #A6C4C4;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0E7C7C;
+}
