@@ -10,10 +10,10 @@
 </div>
 
 <!-- Arrow Down -->
-<div class="arrow2" id="down2"><i class="fa fa-2x fa-chevron-down" [ngClass]="{'hidden': hauteurEcran > largeur}"></i></div>
+<div class="arrow2" id="down2"><i class="fa fa-2x fa-chevron-down" [ngClass]="{'hidden': variableService.hauteurEcran > variableService.largeur}"></i></div>
 
 <!-- Text About us Part -->
-<div class="about-text-container" id="about-container" [ngStyle]="{'background-image': largeur > 600 ? 'url(\'../../../assets/about-text-fond.png\')' : 'none'}">
+<div class="about-text-container" id="about-container" [ngStyle]="{'background-image': variableService.largeur > 600 ? 'url(\'../../../assets/about-text-fond.png\')' : 'none'}">
   <div class="about-text">
     Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
     Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
@@ -27,10 +27,11 @@
   <div class="line"></div>
 </div>
 
-<div class="deskop-type hidden" id="deskop-type" [ngClass]="{'hidden': largeur < 500 && hauteurEcran > largeur}">
+<div class="deskop-type" id="deskop-type" [ngClass]="{'hidden': variableService.largeur < 500 && variableService.hauteurEcran > variableService.largeur}">
   <!-- Who are we Part -->
   <div class="who-container">
-    <div class="person-container" id="person1" (mouseover)="person1OverCall()" (mouseleave)="person1LeaveCall()">
+    <div class="person-container" id="person1"
+         (mouseover)="hover(1)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 1}">
       <div class="person">
         <img src="../../../assets/person1.jpg" alt="" class="person-profil">
       </div>
@@ -38,21 +39,22 @@
         <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
       </div>
     </div>
-    <div class="person1-text hidden opacity" id="person1-text">
+    <div class="person1-text opacity" id="person1-text" [ngClass]="{'hidden': hovered != 1}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
     </div>
-    <div class="person3-text hidden opacity" id="person3-text">
+    <div class="person3-text opacity" id="person3-text" [ngClass]="{'hidden': hovered != 3}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
     </div>
-    <div class="person2-left-text hidden opacity" id="person2-left-text">
+    <div class="person2-left-text opacity" id="person2-left-text" [ngClass]="{'hidden': hovered != 2}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt.
     </div>
-    <div class="person-container" id="person2" (mouseover)="person2OverCall()" (mouseleave)="person2LeaveCall()">
+    <div class="person-container" id="person2"
+         (mouseover)="hover(2)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 2}">
       <div class="person">
         <img src="../../../assets/person2.jpg" alt="" class="person-profil">
       </div>
@@ -60,11 +62,12 @@
         <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Michel</a>
       </div>
     </div>
-    <div class="person2-right-text hidden opacity" id="person2-right-text">
+    <div class="person2-right-text opacity" id="person2-right-text" [ngClass]="{'hidden': hovered != 2}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt.
     </div>
-    <div class="person-container" id="person3" (mouseover)="person3OverCall()" (mouseleave)="person3LeaveCall()">
+    <div class="person-container" id="person3"
+         (mouseover)="hover(3)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 3}">
       <div class="person">
         <img src="../../../assets/person3.jpg" alt="" class="person-profil">
       </div>
@@ -88,13 +91,15 @@
 </div>
 
 <!-- Phone Screen Type Part -->
-<div class="phone-type" id="phone-type" [ngClass]="{'hidden': largeur > 500 || hauteurEcran < largeur}">
+<div class="phone-type" id="phone-type" [ngClass]="{'hidden': variableService.largeur > 500 || variableService.hauteurEcran < variableService.largeur}">
   <!-- Arrow to the left -->
-  <div class="arrow-left opacity" id="arrow-left3" (click)="arrowLeft3Call()"><i class="fa fa-3x fa-chevron-left"></i></div>
+  <div class="arrow-left" id="arrow-left3" (click)="arrowLeft()" [ngClass]="{'opacity': personIndex == 1}">
+    <i class="fa fa-3x fa-chevron-left"></i>
+  </div>
 
   <div class="element-container">
-    <div class="element1" id="element1">
-      <div class="person-container" id="person1">
+    <div class="element1" id="element1" [ngClass]="{'hidden': personIndex != 1}">
+      <div class="person-container">
         <div class="person">
           <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><img src="../../../assets/person1.jpg" alt="" class="person-profil"></a>
         </div>
@@ -107,8 +112,8 @@
         Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
       </div>
     </div>
-    <div class="element2 hidden" id="element2">
-      <div class="person-container" id="person2">
+    <div class="element2 hidden" id="element2" [ngClass]="{'hidden': personIndex != 2}">
+      <div class="person-container">
         <div class="person">
           <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><img src="../../../assets/person2.jpg" alt="" class="person-profil"></a>
         </div>
@@ -121,8 +126,8 @@
         Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
       </div>
     </div>
-    <div class="element3 hidden" id="element3">
-      <div class="person-container" id="person3">
+    <div class="element3 hidden" id="element3" [ngClass]="{'hidden': personIndex != 3}">
+      <div class="person-container">
         <div class="person">
           <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><img src="../../../assets/person3.jpg" alt="" class="person-profil"></a>
         </div>
@@ -135,8 +140,8 @@
         Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
       </div>
     </div>
-    <div class="element4 hidden" id="element4">
-      <div class="person-container" id="person1">
+    <div class="element4 hidden" id="element4" [ngClass]="{'hidden': personIndex != 4}">
+      <div class="person-container">
         <div class="person">
           <img src="../../../assets/about-team.png" alt="" class="person-profil">
         </div>
@@ -152,7 +157,9 @@
   </div>
 
   <!-- Arrow to the right -->
-  <div class="arrow-right" id="arrow-right3" (click)="arrowRight3Call()"><i class="fa fa-3x fa-chevron-right"></i></div>
+  <div class="arrow-right" id="arrow-right3" (click)="arrowRight()" [ngClass]="{'opacity': personIndex == nbPersons}">
+    <i class="fa fa-3x fa-chevron-right"></i>
+  </div>
 </div>
 
 <!-- Title Our technologies -->

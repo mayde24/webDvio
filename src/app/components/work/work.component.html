@@ -99,7 +99,7 @@
   <!-- Review & arrow swap Part -->
   <div class="review-part">
     <!-- Arrow to the left -->
-    <div class="arrow-left opacity" id="arrow-left" (click)="arrowLeftCall()" [ngClass]="{'opacity': reviewIndex == 1}">
+    <div class="arrow-left" id="arrow-left" (click)="arrowLeftReview()" [ngClass]="{'opacity': reviewIndex == 1}">
       <i class="fa fa-3x fa-chevron-left"></i>
     </div>
 
@@ -111,13 +111,13 @@
         </blockquote>
         <p class="auteur">By Coca Puta @LaGustosa</p>
       </section>
-      <section class="ArticleCopy hidden" id="review2" [ngClass]="{'hidden': reviewIndex != 2}">
+      <section class="ArticleCopy" id="review2" [ngClass]="{'hidden': reviewIndex != 2}">
         <blockquote>
           <p>"As the transition to mobile devices has been rapidly occurring over the past five years, progressive EHR vendors have responded with clear plans and successful products to help expand the user experience. With more than half of physicians currently using a mobile device in their medical practices, these EHR vendors are allowing providers to choose which platform best fits in to their workflow in multiple healthcare delivery settings including highly usable mobile products."</p>
         </blockquote>
         <p class="auteur">By Sponge Bob @FrenchCo</p>
       </section>
-      <section class="ArticleCopy hidden" id="review3" [ngClass]="{'hidden': reviewIndex != 3}">
+      <section class="ArticleCopy" id="review3" [ngClass]="{'hidden': reviewIndex != 3}">
         <blockquote>
           <p>"Both can be used to handle events. However, addEventListener should be the preferred choice since it can do everything onclick does and more."</p>
         </blockquote>
@@ -126,16 +126,16 @@
     </div>
 
     <!-- Arrow to the right -->
-    <div class="arrow-right" id="arrow-right" (click)="arrowRightCall()" [ngClass]="{'opacity': reviewIndex == nbReviews}">
+    <div class="arrow-right" id="arrow-right" (click)="arrowRightReview()" [ngClass]="{'opacity': reviewIndex == nbReviews}">
       <i class="fa fa-3x fa-chevron-right"></i>
     </div>
   </div>
 </div>
 
 <!-- Work For Phone & Small Screen -->
-<div class="phone-screen hidden" id="phone-screen" [ngClass]="{'hidden': variableService.largeur>500}">
+<div class="phone-screen" id="phone-screen" [ngClass]="{'hidden': variableService.largeur>500}">
   <!-- Arrow to the left -->
-  <div class="arrow-left opacity" id="arrow-left2" (click)="arrowLeft2Call()" [ngClass]="{'opacity': workIndex == 1}">
+  <div class="arrow-left" id="arrow-left2" (click)="arrowLeft2Work()" [ngClass]="{'opacity': workIndex == 1}">
     <i class="fa fa-3x fa-chevron-left"></i>
   </div>
 
@@ -185,7 +185,7 @@
         </section>
       </div>
     </div>
-    <div class="work2 hidden work" id="work2" [ngStyle]="{'marginTop.px': variableService.hauteur}">
+    <div class="work2 work" id="work2" [ngStyle]="{'marginTop.px': variableService.hauteur}">
       <div class="client-right client" id="client2">
         <div class="client-img-container">
           <img src="../../../assets/client2.png" alt="" class="client-img">
@@ -230,7 +230,7 @@
         </section>
       </div>
     </div>
-    <div class="work3 hidden work" id="work3" [ngStyle]="{'marginTop.px': variableService.hauteur}">
+    <div class="work3 work" id="work3" [ngStyle]="{'marginTop.px': variableService.hauteur}">
       <div class="client-left client" id="client3">
         <div class="client-img-container">
           <img src="../../../assets/client3.png" alt="" class="client-img">
@@ -278,7 +278,7 @@
   </div>
 
   <!-- Arrow to the right -->
-  <div class="arrow-right" id="arrow-right2" (click)="arrowRight2Call()" [ngClass]="{'opacity': workIndex == nbWorks}">
+  <div class="arrow-right" id="arrow-right2" (click)="arrowRight2Work()" [ngClass]="{'opacity': workIndex == nbWorks}">
     <i class="fa fa-3x fa-chevron-right"></i>
   </div>
 </div>
