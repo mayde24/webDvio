@@ -1,7 +1,7 @@
 <div class="deskop-screen" id="deskop-screen" [ngClass]="{'hidden': variableService.largeur<=500}">
   <!-- Clients Part FOR DESKOP -->
   <div class="client-container">
-    <div class="client-left client" [ngStyle]="{'marginTop': variableService.hauteur}">
+    <div class="client-left client" [ngStyle]="{'margin-top': variableService.hauteur}">
       <div class="client-img-container">
         <img src="../../../assets/client1.png" alt="" class="client-img">
       </div>
@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div class="client-right client" [ngStyle]="{'margin-top.px': variableService.hauteur}">
+    <div class="client-right client" [ngStyle]="{'margin-top': variableService.hauteur}">
       <div class="client-info-right">
         <div class="client-name">La French Co</div>
         <div class="client-description">
@@ -59,7 +59,7 @@
         <img src="../../../assets/client2.png" alt="" class="client-img">
       </div>
     </div>
-    <div class="client-left client" [ngStyle]="{'marginTop': variableService.hauteur}">
+    <div class="client-left client" [ngStyle]="{'margin-top': variableService.hauteur}">
       <div class="client-img-container">
         <img src="../../../assets/client3.png" alt="" class="client-img">
       </div>
@@ -140,11 +140,11 @@
   </div>
 
   <div class="work-all">
-    <div class="work1 work" id="work1" [ngStyle]="{'marginTop': variableService.hauteur}">
+    <div class="work1 work" id="work1" [ngStyle]="{'margin-top': variableService.hauteur}">
       <div class="client-left client" id="client1">
         <div class="client-img-container">
           <img src="../../../assets/client1.png" alt="" class="client-img">
-        </div>
+        </div>[ngStyle]="{'margin-top': variableService.hauteur}"
         <div class="client-info-left" routerLinkActive="active">
           <div class="client-name"><a routerLink="pizza" class="client-name">La Gustosa</a></div>
           <div class="client-description">
@@ -185,7 +185,7 @@
         </section>
       </div>
     </div>
-    <div class="work2 hidden work" id="work2" [ngStyle]="{'marginTop': variableService.hauteur}">
+    <div class="work2 hidden work" id="work2" [ngStyle]="{'margin-top': variableService.hauteur}">
       <div class="client-right client" id="client2">
         <div class="client-img-container">
           <img src="../../../assets/client2.png" alt="" class="client-img">
@@ -230,7 +230,7 @@
         </section>
       </div>
     </div>
-    <div class="work3 hidden work" id="work3" [ngStyle]="{'marginTop': variableService.hauteur}">
+    <div class="work3 hidden work" id="work3" [ngStyle]="{'margin-top': variableService.hauteur}">
       <div class="client-left client" id="client3">
         <div class="client-img-container">
           <img src="../../../assets/client3.png" alt="" class="client-img">
