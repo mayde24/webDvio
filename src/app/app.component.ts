@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import * as AOS from 'aos';
+import {VariableService} from './services/variable.service';
 
 @Component({
   selector: 'app-root',
