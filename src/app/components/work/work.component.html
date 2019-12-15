@@ -1,7 +1,7 @@
-<div class="deskop-screen" id="deskop-screen">
+<div class="deskop-screen" id="deskop-screen" [ngClass]="{'hidden': num2<=500}" (scroll)="onScroll()">
   <!-- Clients Part FOR DESKOP -->
   <div class="client-container">
-    <div class="client-left client">
+    <div class="client-left client" [ngStyle]="{'margin-top.px': height}">
       <div class="client-img-container">
         <img src="../../../assets/client1.png" alt="" class="client-img">
       </div>
@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div class="client-right client">
+    <div class="client-right client" [ngStyle]="{'margin-top.px': height}">
       <div class="client-info-right">
         <div class="client-name">La French Co</div>
         <div class="client-description">
@@ -59,7 +59,7 @@
         <img src="../../../assets/client2.png" alt="" class="client-img">
       </div>
     </div>
-    <div class="client-left client">
+    <div class="client-left client" [ngStyle]="{'margin-top.px': height}">
       <div class="client-img-container">
         <img src="../../../assets/client3.png" alt="" class="client-img">
       </div>
@@ -129,12 +129,12 @@
 </div>
 
 <!-- Work For Phone & Small Screen -->
-<div class="phone-screen hidden" id="phone-screen">
+<div class="phone-screen hidden" id="phone-screen" [ngClass]="{'hidden': num2>500}">
   <!-- Arrow to the left -->
   <div class="arrow-left opacity" id="arrow-left2" (click)="arrowLeft2Call()"><i class="fa fa-3x fa-chevron-left"></i></div>
 
   <div class="work-all">
-    <div class="work1 work" id="work1">
+    <div class="work1 work" id="work1" [ngStyle]="{'margin-top.px': height}">
       <div class="client-left client" id="client1">
         <div class="client-img-container">
           <img src="../../../assets/client1.png" alt="" class="client-img">
@@ -179,7 +179,7 @@
         </section>
       </div>
     </div>
-    <div class="work2 hidden work" id="work2">
+    <div class="work2 hidden work" id="work2" [ngStyle]="{'margin-top.px': height}">
       <div class="client-right client" id="client2">
         <div class="client-img-container">
           <img src="../../../assets/client2.png" alt="" class="client-img">
@@ -224,7 +224,7 @@
         </section>
       </div>
     </div>
-    <div class="work3 hidden work" id="work3">
+    <div class="work3 hidden work" id="work3" [ngStyle]="{'margin-top.px': height}">
       <div class="client-left client" id="client3">
         <div class="client-img-container">
           <img src="../../../assets/client3.png" alt="" class="client-img">
