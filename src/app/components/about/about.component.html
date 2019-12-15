@@ -1,5 +1,5 @@
 <!-- Banner Style -->
-<div class="home-banner2" [ngStyle]="{'margin-top': variableService.hauteur}">
+<div class="home-banner2" [ngClass]="{'myMarginDix': variableService.hauteurEcran > 1080, 'myMarginSept': variableService.hauteurEcran < 1080}">
   <div class="home-text-container2">
     <div class="title-home-banner2">Dvio?</div>
     <div class="random-text-banner2">350kg of human, sprinkled with efficiency and professionalism, on his bed of kindness and positive energy.</div>
@@ -10,11 +10,11 @@
 </div>
 
 <!-- Arrow Down -->
-<div class="arrow2" id="down2"><i class="fa fa-2x fa-chevron-down" [ngClass]="{'hidden': variableService.hauteurEcran > variableService.largeur}"></i></div>
+<div class="arrow2" id="down2"><i class="fa fa-2x fa-chevron-down"></i></div>
 
 <!-- Text About us Part -->
 <div class="about-text-container" id="about-container" [ngStyle]="{'background-image': variableService.largeur > 600 ? 'url(\'../../../assets/about-text-fond.png\')' : 'none'}">
-  <div class="about-text">
+  <div class="about-text" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
     Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
     Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
     Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
@@ -30,7 +30,7 @@
 <div class="deskop-type" id="deskop-type" [ngClass]="{'hidden': variableService.largeur < 500 && variableService.hauteurEcran > variableService.largeur}">
   <!-- Who are we Part -->
   <div class="who-container">
-    <div class="person-container" id="person1"
+    <div class="person-container" id="person1" [ngsReveal]="{reset:true}"
          (mouseover)="hover(1)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 1 && hovered != 0}">
       <div class="person">
         <img src="../../../assets/person1.jpg" alt="" class="person-profil">
@@ -39,21 +39,21 @@
         <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
       </div>
     </div>
-    <div class="person1-text" id="person1-text" [ngClass]="{'hidden': hovered != 1}">
+    <div class="person1-text" id="person1-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 1}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
     </div>
-    <div class="person3-text" id="person3-text" [ngClass]="{'hidden': hovered != 3}">
+    <div class="person3-text" id="person3-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 3}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
     </div>
-    <div class="person2-left-text" id="person2-left-text" [ngClass]="{'hidden': hovered != 2}">
+    <div class="person2-left-text" id="person2-left-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 2}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt.
     </div>
-    <div class="person-container" id="person2"
+    <div class="person-container" id="person2" [ngsReveal]="{reset:true}"
          (mouseover)="hover(2)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 2 && hovered != 0}">
       <div class="person">
         <img src="../../../assets/person2.jpg" alt="" class="person-profil">
@@ -62,11 +62,11 @@
         <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Michel</a>
       </div>
     </div>
-    <div class="person2-right-text" id="person2-right-text" [ngClass]="{'hidden': hovered != 2}">
+    <div class="person2-right-text" id="person2-right-text"  [ngsReveal]="{reset:true}"[ngClass]="{'hidden': hovered != 2}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt.
     </div>
-    <div class="person-container" id="person3"
+    <div class="person-container" id="person3" [ngsReveal]="{reset:true}"
          (mouseover)="hover(3)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 3 && hovered != 0}">
       <div class="person">
         <img src="../../../assets/person3.jpg" alt="" class="person-profil">
@@ -79,10 +79,10 @@
 
   <!-- Our Team Part -->
   <div class="team-container">
-    <div class="team-img-container">
+    <div class="team-img-container" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
       <img src="../../../assets/about-team.png" alt="" class="team-img">
     </div>
-    <div class="team-text">
+    <div class="team-text" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
@@ -93,12 +93,12 @@
 <!-- Phone Screen Type Part -->
 <div class="phone-type" id="phone-type" [ngClass]="{'hidden': variableService.largeur > 500 || variableService.hauteurEcran < variableService.largeur}">
   <!-- Arrow to the left -->
-  <div class="arrow-left" id="arrow-left3" (click)="arrowLeft()" [ngClass]="{'opacity': personIndex == 1}">
+  <div class="arrow-left" id="arrow-left3" [ngsReveal]="{reset:true}" (click)="arrowLeft()" [ngClass]="{'opacity': personIndex == 1}">
     <i class="fa fa-3x fa-chevron-left"></i>
   </div>
 
   <div class="element-container">
-    <div class="element1" id="element1" [ngClass]="{'hidden': personIndex != 1}">
+    <div class="element1" id="element1" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': personIndex != 1}">
       <div class="person-container">
         <div class="person">
           <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><img src="../../../assets/person1.jpg" alt="" class="person-profil"></a>
@@ -112,7 +112,7 @@
         Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
       </div>
     </div>
-    <div class="element2 hidden" id="element2" [ngClass]="{'hidden': personIndex != 2}">
+    <div class="element2 hidden" id="element2" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': personIndex != 2}">
       <div class="person-container">
         <div class="person">
           <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><img src="../../../assets/person2.jpg" alt="" class="person-profil"></a>
@@ -126,7 +126,7 @@
         Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
       </div>
     </div>
-    <div class="element3 hidden" id="element3" [ngClass]="{'hidden': personIndex != 3}">
+    <div class="element3 hidden" id="element3" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': personIndex != 3}">
       <div class="person-container">
         <div class="person">
           <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><img src="../../../assets/person3.jpg" alt="" class="person-profil"></a>
@@ -140,7 +140,7 @@
         Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
       </div>
     </div>
-    <div class="element4 hidden" id="element4" [ngClass]="{'hidden': personIndex != 4}">
+    <div class="element4 hidden" id="element4" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': personIndex != 4}">
       <div class="person-container">
         <div class="person">
           <img src="../../../assets/about-team.png" alt="" class="person-profil">
@@ -157,7 +157,7 @@
   </div>
 
   <!-- Arrow to the right -->
-  <div class="arrow-right" id="arrow-right3" (click)="arrowRight()" [ngClass]="{'opacity': personIndex == nbPersons}">
+  <div class="arrow-right" id="arrow-right3" [ngsReveal]="{reset:true}" (click)="arrowRight()" [ngClass]="{'opacity': personIndex == nbPersons}">
     <i class="fa fa-3x fa-chevron-right"></i>
   </div>
 </div>
@@ -169,7 +169,7 @@
 </div>
 
 <!-- Technologies part -->
-<div class="technologies-container">
+<div class="technologies-container" [ngsRevealSet]="{ reset:true}" [ngsInterval]="150" [ngsSelector]="'.technologie'">
   <div class="technologie icon-left">
     <div class="tech-img"><i class="fab fa-4x fa-html5 one-icon image-icon"></i></div>
     <div class="tech-title one-title">HTML</div>
