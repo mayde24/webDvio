@@ -1,6 +1,6 @@
 <div class="deskop-screen" id="deskop-screen" [ngClass]="{'hidden': variableService.largeur<=500}">
   <!-- Clients Part FOR DESKOP -->
-  <div class="client-container">
+  <div class="client-container" [ngsRevealSet]="{ reset:true}" [ngsInterval]="500" [ngsSelector]="'.client'">
     <div class="client-left client" [ngStyle]="{'margin-top': variableService.hauteur}">
       <div class="client-img-container">
         <img src="../../../assets/client1.png" alt="" class="client-img">
@@ -139,7 +139,7 @@
     <i class="fa fa-3x fa-chevron-left"></i>
   </div>
 
-  <div class="work-all">
+  <div class="work-all" [ngsRevealSet]="{ reset:true}" [ngsInterval]="500" [ngsSelector]="'.work'">
     <div class="work1 work" id="work1" [ngStyle]="{'margin-top': variableService.hauteur}">
       <div class="client-left client" id="client1">
         <div class="client-img-container">
@@ -150,7 +150,7 @@
           <div class="client-description">
             Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.
           </div>
-          <div class="client-detail-container">
+          <div class="client-detail-container" [ngsRevealSet]="{ reset:true}" [ngsInterval]="150" [ngsSelector]="'.client-detail'">
             <div class="client-detail">
               <div class="detail-logo"><img src="../../../assets/symfony.png" alt="" class="client-icon"></div>
               <div class="detail-name two-title">Symfony</div>
