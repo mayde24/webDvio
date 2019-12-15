@@ -1,5 +1,5 @@
 <!-- Banner Style -->
-<div class="home-banner2">
+<div class="home-banner2" [ngStyle]="{'marginTop.px': hauteur}">
   <div class="home-text-container2">
     <div class="title-home-banner2">Dvio?</div>
     <div class="random-text-banner2">350kg of human, sprinkled with efficiency and professionalism, on his bed of kindness and positive energy.</div>
@@ -13,7 +13,7 @@
 <div class="arrow2" id="down2"><i class="fa fa-2x fa-chevron-down"></i></div>
 
 <!-- Text About us Part -->
-<div class="about-text-container" id="about-container">
+<div class="about-text-container" id="about-container" [ngStyle]="{'background-image': num2 > 600 ? 'url(\'../../../assets/about-text-fond.png\')' : 'none'}">
   <div class="about-text">
     Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
     Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
@@ -27,7 +27,7 @@
   <div class="line"></div>
 </div>
 
-<div class="deskop-type hidden" id="deskop-type">
+<div class="deskop-type hidden" id="deskop-type" [ngClass]="{'hidden': num2 < 500 && num > num2}">
   <!-- Who are we Part -->
   <div class="who-container">
     <div class="person-container" id="person1" (mouseover)="person1OverCall()" (mouseleave)="person1LeaveCall()">
@@ -88,7 +88,7 @@
 </div>
 
 <!-- Phone Screen Type Part -->
-<div class="phone-type" id="phone-type">
+<div class="phone-type" id="phone-type" [ngClass]="{'hidden': num2 > 500 || num < num2}">
   <!-- Arrow to the left -->
   <div class="arrow-left opacity" id="arrow-left3" (click)="arrowLeft3Call()"><i class="fa fa-3x fa-chevron-left"></i></div>
 

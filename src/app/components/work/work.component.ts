@@ -30,6 +30,7 @@ export class WorkComponent implements OnInit {
       document.getElementById('phone-screen').classList.remove('hidden');
       document.getElementById('deskop-screen').classList.add('hidden');
     }
+
     if (document.querySelector('.work') != null) {
       document.querySelector('body').style.maxHeight  = '100vh';
       const myHeader = document.getElementsByClassName('header')[0] as HTMLElement;
