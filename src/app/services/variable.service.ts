@@ -12,8 +12,4 @@ export class VariableService {
 
   constructor() {
   }
-
-
-
-
 }
