@@ -8,6 +8,14 @@ import * as AOS from 'aos';
 })
 export class AppComponent implements OnInit {
   title = 'webSite';
+  constructor(private variableService: VariableService) {
+    window.onscroll = function () {
+      variableService.scrollY = document.documentElement.scrollTop;
+    };
+    variableService.largeur = window.innerWidth;
+    variableService.hauteur = window.innerWidth > 1080 ? '10vh' : '7vh';
+    variableService.hauteurEcran = window.innerHeight;
+  }
   ngOnInit() {
     AOS.init({
       offset: 200,
