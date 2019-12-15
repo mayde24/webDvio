@@ -13,9 +13,5 @@ export class HeaderComponent implements OnInit {
               public scrollService: VariableService) { }
 
   ngOnInit() {
-    if (document.querySelector('.contact-container2') === null) {
-      document.querySelector('body').style.backgroundColor = 'white' ;
-      document.querySelector('body').style.maxHeight  = 'auto';
-    }
   }
 }

@@ -16,10 +16,6 @@ export class WorkComponent implements OnInit {
   constructor(public variableService: VariableService) { }
 
   ngOnInit() {
-    if (document.querySelector('.contact-container2') === null) {
-      document.querySelector('body').style.backgroundColor = 'white' ;
-      document.querySelector('body').style.maxHeight  = 'auto';
-    }
   }
 
   arrowRightReview() {

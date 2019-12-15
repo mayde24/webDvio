@@ -1,20 +1,22 @@
 <!-- Contact part -->
-<div class="contact-container2 putain" [ngStyle]="{'margin-top': variableService.hauteur - 2}">
-  <form action="" class="contact2" data-aos="fade-down" data-aos-duration="1000">
-    <div class="contact-div">
-      <label for="email"></label>
-      <input type="text" id="email" name="email" class="input-contact" placeholder="Email...">
-    </div>
-    <div class="contact-div">
-      <label for="subject"></label>
-      <input type="email" id="subject" name="subject" class="input-contact" placeholder="Subject...">
-    </div>
-    <div class="contact-div">
-      <label for="msg"></label>
-      <textarea id="msg" name="msg" class="textarea-contact" placeholder="Message..."></textarea>
-    </div>
-    <div class="contact-div">
-      <button type="submit" class="button-contact">Send</button>
-    </div>
-  </form>
+<div class="backblue" [ngStyle]="{'margin-top': variableService.hauteur, 'height.vh': variableService.largeur > 1080 ? 90 : 93 }">
+  <div class="contact-container2 putain">
+    <form action="" class="contact2" data-aos="fade-down" data-aos-duration="1000">
+      <div class="contact-div">
+        <label for="email"></label>
+        <input type="text" id="email" name="email" class="input-contact" placeholder="Email...">
+      </div>
+      <div class="contact-div">
+        <label for="subject"></label>
+        <input type="email" id="subject" name="subject" class="input-contact" placeholder="Subject...">
+      </div>
+      <div class="contact-div">
+        <label for="msg"></label>
+        <textarea id="msg" name="msg" class="textarea-contact" placeholder="Message..."></textarea>
+      </div>
+      <div class="contact-div">
+        <button type="submit" class="button-contact">Send</button>
+      </div>
+    </form>
+  </div>
 </div>
