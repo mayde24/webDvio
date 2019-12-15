@@ -16,6 +16,8 @@ export class AppComponent implements OnInit {
       variableService.scrollY = document.documentElement.scrollTop;
     };
     variableService.hauteur = (document.getElementsByClassName('header')[0] as HTMLElement).offsetHeight;
+    variableService.largeur = window.innerWidth;
+    variableService.hauteurEcran = window.innerHeight;
   }
 
   ngOnInit() {

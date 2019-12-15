@@ -1,4 +1,4 @@
-<div class="deskop-screen" id="deskop-screen" [ngClass]="{'hidden': largeur<=500}">
+<div class="deskop-screen" id="deskop-screen" [ngClass]="{'hidden': variableService.largeur<=500}">
   <!-- Clients Part FOR DESKOP -->
   <div class="client-container">
     <div class="client-left client" [ngStyle]="{'marginTop.px': variableService.hauteur}">
@@ -133,7 +133,7 @@
 </div>
 
 <!-- Work For Phone & Small Screen -->
-<div class="phone-screen hidden" id="phone-screen" [ngClass]="{'hidden': largeur>500}">
+<div class="phone-screen hidden" id="phone-screen" [ngClass]="{'hidden': variableService.largeur>500}">
   <!-- Arrow to the left -->
   <div class="arrow-left opacity" id="arrow-left2" (click)="arrowLeft2Call()" [ngClass]="{'opacity': workIndex == 1}">
     <i class="fa fa-3x fa-chevron-left"></i>

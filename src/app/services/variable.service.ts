@@ -7,6 +7,8 @@ export class VariableService {
 
   scrollY: number;
   hauteur: number;
+  largeur: number;
+  hauteurEcran: number;
 
   constructor() {
   }
