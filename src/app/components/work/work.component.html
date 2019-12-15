@@ -99,23 +99,25 @@
   <!-- Review & arrow swap Part -->
   <div class="review-part">
     <!-- Arrow to the left -->
-    <div class="arrow-left opacity" id="arrow-left" (click)="arrowLeftCall()"><i class="fa fa-3x fa-chevron-left"></i></div>
+    <div class="arrow-left opacity" id="arrow-left" (click)="arrowLeftCall()" [ngClass]="{'opacity': reviewIndex == 1}">
+      <i class="fa fa-3x fa-chevron-left"></i>
+    </div>
 
     <!-- Reviews Part -->
     <div class="review-container">
-      <section class="ArticleCopy" id="review1">
+      <section class="ArticleCopy" id="review1" [ngClass]="{'hidden': reviewIndex != 1}">
         <blockquote>
           <p>"Most experienced developers shun this method, but it does get the job done; it is simple and direct. You may not use closures or anonymous functions here (though the handler itself is an anonymous function of sorts), and your control of scope is limited."</p>
         </blockquote>
         <p class="auteur">By Coca Puta @LaGustosa</p>
       </section>
-      <section class="ArticleCopy hidden" id="review2">
+      <section class="ArticleCopy hidden" id="review2" [ngClass]="{'hidden': reviewIndex != 2}">
         <blockquote>
           <p>"As the transition to mobile devices has been rapidly occurring over the past five years, progressive EHR vendors have responded with clear plans and successful products to help expand the user experience. With more than half of physicians currently using a mobile device in their medical practices, these EHR vendors are allowing providers to choose which platform best fits in to their workflow in multiple healthcare delivery settings including highly usable mobile products."</p>
         </blockquote>
         <p class="auteur">By Sponge Bob @FrenchCo</p>
       </section>
-      <section class="ArticleCopy hidden" id="review3">
+      <section class="ArticleCopy hidden" id="review3" [ngClass]="{'hidden': reviewIndex != 3}">
         <blockquote>
           <p>"Both can be used to handle events. However, addEventListener should be the preferred choice since it can do everything onclick does and more."</p>
         </blockquote>
@@ -124,14 +126,18 @@
     </div>
 
     <!-- Arrow to the right -->
-    <div class="arrow-right" id="arrow-right" (click)="arrowRightCall()"><i class="fa fa-3x fa-chevron-right"></i></div>
+    <div class="arrow-right" id="arrow-right" (click)="arrowRightCall()" [ngClass]="{'opacity': reviewIndex == nbReviews}">
+      <i class="fa fa-3x fa-chevron-right"></i>
+    </div>
   </div>
 </div>
 
 <!-- Work For Phone & Small Screen -->
 <div class="phone-screen hidden" id="phone-screen" [ngClass]="{'hidden': largeur>500}">
   <!-- Arrow to the left -->
-  <div class="arrow-left opacity" id="arrow-left2" (click)="arrowLeft2Call()"><i class="fa fa-3x fa-chevron-left"></i></div>
+  <div class="arrow-left opacity" id="arrow-left2" (click)="arrowLeft2Call()" [ngClass]="{'opacity': workIndex == 1}">
+    <i class="fa fa-3x fa-chevron-left"></i>
+  </div>
 
   <div class="work-all">
     <div class="work1 work" id="work1" [ngStyle]="{'marginTop.px': variableService.hauteur}">
@@ -171,7 +177,7 @@
       </div>
       <!-- Reviews Part -->
       <div class="review-container">
-        <section class="ArticleCopy" id="review1">
+        <section class="ArticleCopy">
           <blockquote>
             <p>"Most experienced developers shun this method, but it does get the job done; it is simple and direct. You may not use closures or anonymous functions here (though the handler itself is an anonymous function of sorts), and your control of scope is limited."</p>
           </blockquote>
@@ -216,7 +222,7 @@
       </div>
       <!-- Reviews Part -->
       <div class="review-container">
-        <section class="ArticleCopy" id="review2">
+        <section class="ArticleCopy">
           <blockquote>
             <p>"As the transition to mobile devices has been rapidly occurring over the past five years, progressive EHR vendors have responded with clear plans and successful products to help expand the user experience."</p>
           </blockquote>
@@ -261,7 +267,7 @@
       </div>
       <!-- Reviews Part -->
       <div class="review-container">
-        <section class="ArticleCopy" id="review3">
+        <section class="ArticleCopy">
           <blockquote>
             <p>"Both can be used to handle events. However, addEventListener should be the preferred choice since it can do everything onclick does and more."</p>
           </blockquote>
@@ -272,5 +278,7 @@
   </div>
 
   <!-- Arrow to the right -->
-  <div class="arrow-right" id="arrow-right2" (click)="arrowRight2Call()"><i class="fa fa-3x fa-chevron-right"></i></div>
+  <div class="arrow-right" id="arrow-right2" (click)="arrowRight2Call()" [ngClass]="{'opacity': workIndex == nbWorks}">
+    <i class="fa fa-3x fa-chevron-right"></i>
+  </div>
 </div>
