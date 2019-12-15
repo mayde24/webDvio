@@ -22,19 +22,19 @@ export class WorkComponent implements OnInit {
     }
   }
 
-  arrowRightCall() {
+  arrowRightReview() {
     this.reviewIndex++;
   }
 
-  arrowLeftCall() {
+  arrowLeftReview() {
     this.reviewIndex--;
   }
 
-  arrowRight2Call() {
+  arrowRight2Work() {
     this.workIndex++;
   }
 
-  arrowLeft2Call() {
+  arrowLeft2Work() {
     this.workIndex--;
   }
 }
