@@ -9,6 +9,10 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit {
   title = 'webSite';
   ngOnInit() {
-    AOS.init();
+    AOS.init({
+      offset: 200,
+      delay: 100,
+      duration: 1000,
+    });
   }
 }

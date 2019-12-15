@@ -89,8 +89,7 @@
 
 /* Vague Fond */
 .client1-fond {
-  background-image: url("../../../assets/client1-fond.png");
-  opacity: 0.4;
+  background-image: url("../../../assets/client1-fond-opac.png");
   width: 100vw;
   height: 250vh;
   background-size: cover;
@@ -1871,14 +1870,6 @@ a:hover {
 }
 
 /* Vague Fond */
-.client1-fond {
-  background-image: url("../../../assets/client1-fond.png");
-  opacity: 0.4;
-  width: 100vw;
-  height: 250vh;
-  background-size: cover;
-  position: relative;
-}
 
 .title-fond {
   font-size: 200px;
