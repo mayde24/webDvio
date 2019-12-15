@@ -10,13 +10,13 @@ export class WorkComponent implements OnInit {
 
   reviewIndex = 1 ;
   workIndex = 1 ;
-  num2: number;
+  largeur: number;
   nbReviews: number = 3;
 
   constructor(public variableService: VariableService) { }
 
   ngOnInit() {
-    this.num2 = window.innerWidth;
+    this.largeur = window.innerWidth;
     if (document.querySelector('.contact-container2') === null) {
       document.querySelector('body').style.backgroundColor = 'white' ;
       document.querySelector('body').style.maxHeight  = 'auto';

@@ -10,10 +10,10 @@
 </div>
 
 <!-- Arrow Down -->
-<div class="arrow2" id="down2"><i class="fa fa-2x fa-chevron-down" [ngClass]="{'hidden': num > num2}"></i></div>
+<div class="arrow2" id="down2"><i class="fa fa-2x fa-chevron-down" [ngClass]="{'hidden': hauteurEcran > largeur}"></i></div>
 
 <!-- Text About us Part -->
-<div class="about-text-container" id="about-container" [ngStyle]="{'background-image': num2 > 600 ? 'url(\'../../../assets/about-text-fond.png\')' : 'none'}">
+<div class="about-text-container" id="about-container" [ngStyle]="{'background-image': largeur > 600 ? 'url(\'../../../assets/about-text-fond.png\')' : 'none'}">
   <div class="about-text">
     Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
     Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
@@ -27,7 +27,7 @@
   <div class="line"></div>
 </div>
 
-<div class="deskop-type hidden" id="deskop-type" [ngClass]="{'hidden': num2 < 500 && num > num2}">
+<div class="deskop-type hidden" id="deskop-type" [ngClass]="{'hidden': largeur < 500 && hauteurEcran > largeur}">
   <!-- Who are we Part -->
   <div class="who-container">
     <div class="person-container" id="person1" (mouseover)="person1OverCall()" (mouseleave)="person1LeaveCall()">
@@ -88,7 +88,7 @@
 </div>
 
 <!-- Phone Screen Type Part -->
-<div class="phone-type" id="phone-type" [ngClass]="{'hidden': num2 > 500 || num < num2}">
+<div class="phone-type" id="phone-type" [ngClass]="{'hidden': largeur > 500 || hauteurEcran < largeur}">
   <!-- Arrow to the left -->
   <div class="arrow-left opacity" id="arrow-left3" (click)="arrowLeft3Call()"><i class="fa fa-3x fa-chevron-left"></i></div>
 

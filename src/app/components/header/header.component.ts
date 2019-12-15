@@ -18,5 +18,4 @@ export class HeaderComponent implements OnInit {
       document.querySelector('body').style.maxHeight  = 'auto';
     }
   }
-
 }

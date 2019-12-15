@@ -8,14 +8,14 @@ import {VariableService} from '../../services/variable.service';
 })
 export class HomeComponent implements OnInit {
 
-  num = 0;
-  num2 = 0;
+  hauteurEcran: number;
+  largeur: number;
 
   constructor(public variableService: VariableService) { }
 
   ngOnInit() {
-    this.num = window.innerHeight;
-    this.num2 = window.innerWidth;
+    this.hauteurEcran = window.innerHeight;
+    this.largeur = window.innerWidth;
 
     if (document.querySelector('.contact-container2') === null) {
       document.querySelector('body').style.backgroundColor = 'white' ;
