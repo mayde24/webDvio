@@ -18,11 +18,12 @@ export class WorkComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    const num2 = window.innerWidth;
     if (document.querySelector('.contact-container2') === null) {
       document.querySelector('body').style.backgroundColor = 'white' ;
       document.querySelector('body').style.maxHeight  = 'auto';
     }
-    if (window.innerWidth > 500) {
+    if (num2 > 500) {
       document.getElementById('deskop-screen').classList.remove('hidden');
       document.getElementById('phone-screen').classList.add('hidden');
     } else {

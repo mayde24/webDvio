@@ -151,6 +151,19 @@
   justify-content: center;
   align-items: center;
   padding-bottom: 5vh;
+  margin-top: 35px;
+  animation: arrow 1s infinite;
+}
+
+@keyframes  arrow {
+  40% {
+    transform: translate(0px, -10px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
 
 /* Text About us Part ----------- */
@@ -242,8 +255,8 @@
 }
 
 .person-container:hover .person-profil {
-  width: 400px;
-  height: 400px;
+  width: 330px;
+  height: 330px;
   filter: brightness(65%);
 }
 
@@ -256,8 +269,8 @@
   }
 
   .person-container:hover .person-profil  {
-    width: 270px;
-    height: 270px;
+    width: 230px;
+    height: 230px;
   }
 
   .who-container {
@@ -274,8 +287,8 @@
   }
 
   .person-container:hover .person-profil  {
-    width: 230px;
-    height: 230px;
+    width: 200px;
+    height: 200px;
   }
 
   .who-container {
@@ -298,8 +311,8 @@
   }
 
   .person-container:hover .person-profil  {
-    width: 190px;
-    height: 190px;
+    width: 150px;
+    height: 150px;
   }
 
   .who-container {
@@ -410,7 +423,6 @@
 }
 
 .fa-chevron-down {
-  margin-top: 25px;
   color: #275E85;
   transition: 1s;
 }
@@ -477,19 +489,15 @@
 .team-container {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   margin: 0 auto;
   width: 75%;
   padding-bottom: 5vh;
+  padding-top: 50px;
 }
 
 /* Team Responsive */
-
-@media screen and (max-width: 1300px) {
-  .team-container {
-    padding-top: 30px;
-  }
-}
 
 @media screen and (max-width: 880px) {
   .team-container {
@@ -499,15 +507,15 @@
 
 /* Image Style */
 .team-img {
-  width: 37vw;
+  width: 65vw;
   object-fit: cover;
 }
 
 /* Team Image Responsive */
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1080px) {
   .team-img {
-    width: 30vw;
+    width: 45vw;
   }
 }
 
@@ -515,8 +523,8 @@
 .team-text {
   font-size: 22px;
   color: #275E85;
-  text-align: left;
-  padding-left: 50px;
+  text-align: center;
+  width: 80%;
 }
 
 /* Team Text Responsive */
@@ -524,14 +532,12 @@
 @media screen and (max-width: 1550px) {
   .team-text {
     font-size: 20px;
-    padding-left: 30px;
   }
 }
 
 @media screen and (max-width: 1080px) {
   .team-text {
     font-size: 15px;
-    padding-left: 30px;
   }
 }
 

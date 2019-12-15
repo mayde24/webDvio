@@ -9,6 +9,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { AboutComponent } from './components/about/about.component';
 import { Client1Component } from './components/client1/client1.component';
 import { HeaderComponent } from './components/header/header.component';
+import { TypingAnimationModule } from 'angular-typing-animation';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HeaderComponent } from './components/header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TypingAnimationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

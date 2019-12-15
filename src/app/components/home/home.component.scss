@@ -8,6 +8,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0;
+  padding-top: 25px;
 }
 
 /* Text Style */
@@ -46,6 +47,10 @@
     margin-bottom: 10vh;
     font-size: 45px;
   }
+
+  .home-banner {
+    padding-top: 0;
+  }
 }
 
 svg:not(:root).svg-inline--fa {
@@ -69,6 +74,10 @@ svg:not(:root).svg-inline--fa {
 
   .home-banner {
     margin-top: 5vh;
+  }
+
+  .home-banner {
+    padding-top: 25px;
   }
 }
 
@@ -202,6 +211,20 @@ svg:not(:root).svg-inline--fa {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  animation: arrow 1s infinite;
+}
+
+@keyframes  arrow {
+  40% {
+    transform: translate(0px, -10px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
 
 .fa-chevron-down {
@@ -284,6 +307,44 @@ svg:not(:root).svg-inline--fa {
   width: 75%;
   padding-top: 3vh;
   padding-bottom: 5vh;
+}
+
+.element {
+  display: inline-block;
+  background-color: #aaaaaa;
+  height: 100px;
+  width: 100px;
+  transform: skew(20deg);
+  font-size: 1px;
+  padding: 1px;
+  color: white;
+  margin-right: 5px;
+  margin-left: 5px;
+  animation: shake 2s infinite;
+  animation-direction: alternate;
+}
+
+.reason-img-container:hover {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes  shake {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.rotate {
+  transition: all 0.5s ease-in-out;
+}
+.rotate:hover {
+  transition: all 1s ease-in-out;
 }
 
 .reason {
@@ -454,6 +515,19 @@ svg:not(:root).svg-inline--fa {
   padding-bottom: 10vh;
 }
 
+//.expertise-img-container {
+//  animation: fondu 2s;
+//}
+//
+//@keyframes  fondu {
+//  0% {
+//    opacity: 0;
+//  }
+//  1000% {
+//    opacity: 1;
+//  }
+//}
+
 .expertise-fond {
   background-image: url("../../../assets/expertise-fond.png");
   background-size: cover;
@@ -494,6 +568,10 @@ svg:not(:root).svg-inline--fa {
   .expertise-text {
     font-size: 15px;
     padding-left: 30px;
+  }
+
+  .expertise-container {
+    width: 85%;
   }
 }
 

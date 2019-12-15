@@ -58,14 +58,10 @@ export class AboutComponent implements OnInit {
     document.getElementById('person2').classList.add('hidden');
     document.getElementById('person3').classList.add('hidden');
     document.getElementById('person1-text').classList.remove('hidden');
-    setTimeout(() => {
-      document.getElementById('person1-text').classList.remove('opacity');
-    }, 100);
+    document.getElementById('person1-text').classList.remove('opacity');
   }
   person1LeaveCall() {
-    setTimeout(() => {
-      document.getElementById('person1-text').classList.add('opacity');
-    }, 100);
+    document.getElementById('person1-text').classList.add('opacity');
     document.getElementById('person1-text').classList.add('hidden');
     document.getElementById('person2').classList.remove('hidden');
     document.getElementById('person3').classList.remove('hidden');
@@ -75,18 +71,14 @@ export class AboutComponent implements OnInit {
     document.getElementById('person3').classList.add('hidden');
     document.getElementById('person2-left-text').classList.remove('hidden');
     document.getElementById('person2-right-text').classList.remove('hidden');
-    setTimeout(() => {
-      document.getElementById('person2-left-text').classList.remove('opacity');
-      document.getElementById('person2-right-text').classList.remove('opacity');
-    }, 100);
+    document.getElementById('person2-left-text').classList.remove('opacity');
+    document.getElementById('person2-right-text').classList.remove('opacity');
   }
   person2LeaveCall() {
     document.getElementById('person1').classList.remove('hidden');
     document.getElementById('person3').classList.remove('hidden');
-    setTimeout(() => {
-      document.getElementById('person2-right-text').classList.add('opacity');
-      document.getElementById('person2-left-text').classList.add('opacity');
-    }, 100);
+    document.getElementById('person2-right-text').classList.add('opacity');
+    document.getElementById('person2-left-text').classList.add('opacity');
     document.getElementById('person2-left-text').classList.add('hidden');
     document.getElementById('person2-right-text').classList.add('hidden');
   }
@@ -94,16 +86,12 @@ export class AboutComponent implements OnInit {
       document.getElementById('person1').classList.add('hidden');
       document.getElementById('person2').classList.add('hidden');
       document.getElementById('person3-text').classList.remove('hidden');
-      setTimeout(() => {
-        document.getElementById('person3-text').classList.remove('opacity');
-      }, 100);
+      document.getElementById('person3-text').classList.remove('opacity');
   }
   person3LeaveCall() {
       document.getElementById('person1').classList.remove('hidden');
       document.getElementById('person2').classList.remove('hidden');
-      setTimeout(() => {
-        document.getElementById('person3-text').classList.add('opacity');
-      }, 100);
+      document.getElementById('person3-text').classList.add('opacity');
       document.getElementById('person3-text').classList.add('hidden');
   }
   arrowRight3Call() {
