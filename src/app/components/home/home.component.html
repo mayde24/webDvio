@@ -1,5 +1,5 @@
 <!-- Banner Style -->
-<div class="home-banner" [ngStyle]="{'marginTop.px': hauteurEcran < 100 ? variableService.hauteur * 2 : variableService.hauteur}">
+<div class="home-banner" [ngStyle]="{'marginTop.px': variableService.hauteurEcran < 100 ? variableService.hauteur * 2 : variableService.hauteur}">
   <div class="home-text-container">
     <div class="title-home-banner">
       <div class=""><span typingAnimation [typeSpeed]="25" hideCursorOnComplete="true" [startDelay]="250">Be smart</span></div>
@@ -14,7 +14,7 @@
 </div>
 
 <!-- Arrow Down -->
-<div class="arrow" id="down"><i class="fa fa-2x fa-chevron-down" [ngClass]="{'hidden': hauteurEcran > largeur}"></i></div>
+<div class="arrow" id="down"><i class="fa fa-2x fa-chevron-down" [ngClass]="{'hidden': variableService.hauteurEcran > variableService.largeur}"></i></div>
 
 <!-- Title Why Working With Us ? -->
 <div class="title1-container">
