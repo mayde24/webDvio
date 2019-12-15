@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {VariableService} from '../../services/variable.service';
 
 @Component({
   selector: 'app-about',
@@ -10,7 +11,7 @@ export class AboutComponent implements OnInit {
   num = 0;
   num2 = 0;
 
-  constructor() { }
+  constructor(public variableService: VariableService) { }
 
   ngOnInit() {
     this.num = window.innerHeight;
@@ -20,14 +21,6 @@ export class AboutComponent implements OnInit {
       document.querySelector('body').style.backgroundColor = 'white' ;
       document.querySelector('body').style.maxHeight  = 'auto';
     }
-
-    window.addEventListener('scroll', (event) => {
-      if (window.scrollY > 400) {
-        document.getElementById('header').classList.add('header-shadow');
-      } else {
-        document.getElementById('header').classList.remove('header-shadow');
-      }
-    });
   }
 
   // sleep time expects milliseconds

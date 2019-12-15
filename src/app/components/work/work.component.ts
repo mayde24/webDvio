@@ -11,10 +11,9 @@ export class WorkComponent implements OnInit {
   reviewIndex = 1 ;
   workIndex = 1 ;
   num2: number;
-  height: number;
   nbReviews: number = 3;
 
-  constructor(public scrollService: VariableService) { }
+  constructor(public variableService: VariableService) { }
 
   ngOnInit() {
     this.num2 = window.innerWidth;

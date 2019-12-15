@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {VariableService} from '../../services/variable.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(public variableService: VariableService) { }
 
   ngOnInit() {
     if (document.querySelector('.contact-container2') != null) {
@@ -21,13 +22,6 @@ export class ContactComponent implements OnInit {
       document.querySelector('body').style.backgroundColor = 'white' ;
       document.querySelector('body').style.maxHeight  = 'auto';
     }
-    window.addEventListener('scroll', (event) => {
-      if (window.scrollY > 400) {
-        document.getElementById('header').classList.add('header-shadow');
-      } else {
-        document.getElementById('header').classList.remove('header-shadow');
-      }
-    });
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {VariableService} from '../../services/variable.service';
 
 @Component({
   selector: 'app-client1',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Client1Component implements OnInit {
 
-  constructor() { }
+  constructor(public variableService: VariableService) { }
 
   ngOnInit() {
     if (document.querySelector('.contact-container2') === null) {
@@ -19,13 +20,6 @@ export class Client1Component implements OnInit {
       const myDiv = document.getElementsByClassName('client-banner')[0] as HTMLElement;
       myDiv.style.marginTop  = myHeader.offsetHeight + 'px';
     }
-    window.addEventListener('scroll', (event) => {
-      if (window.scrollY > 400) {
-        document.getElementById('header').classList.add('header-shadow');
-      } else {
-        document.getElementById('header').classList.remove('header-shadow');
-      }
-    });
   }
 
 }

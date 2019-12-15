@@ -13,13 +13,6 @@ export class HeaderComponent implements OnInit {
               public scrollService: VariableService) { }
 
   ngOnInit() {
-    window.addEventListener('scroll', (event) => {
-      if (window.scrollY > 400) {
-        document.getElementById('header').classList.add('header-shadow');
-      } else {
-        document.getElementById('header').classList.remove('header-shadow');
-      }
-    });
     if (document.querySelector('.contact-container2') === null) {
       document.querySelector('body').style.backgroundColor = 'white' ;
       document.querySelector('body').style.maxHeight  = 'auto';

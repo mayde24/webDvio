@@ -1,5 +1,5 @@
 <!-- Banner Style -->
-<div class="home-banner2" [ngStyle]="{'marginTop.px': hauteur}">
+<div class="home-banner2" [ngStyle]="{'marginTop.px': variableService.hauteur}">
   <div class="home-text-container2">
     <div class="title-home-banner2">Dvio?</div>
     <div class="random-text-banner2">350kg of human, sprinkled with efficiency and professionalism, on his bed of kindness and positive energy.</div>
@@ -10,7 +10,7 @@
 </div>
 
 <!-- Arrow Down -->
-<div class="arrow2" id="down2"><i class="fa fa-2x fa-chevron-down"></i></div>
+<div class="arrow2" id="down2"><i class="fa fa-2x fa-chevron-down" [ngClass]="{'hidden': num > num2}"></i></div>
 
 <!-- Text About us Part -->
 <div class="about-text-container" id="about-container" [ngStyle]="{'background-image': num2 > 600 ? 'url(\'../../../assets/about-text-fond.png\')' : 'none'}">
