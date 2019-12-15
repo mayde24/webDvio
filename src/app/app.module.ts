@@ -10,6 +10,7 @@ import { AboutComponent } from './components/about/about.component';
 import { Client1Component } from './components/client1/client1.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TypingAnimationModule } from 'angular-typing-animation';
+import {NgsRevealModule} from 'ngx-scrollreveal';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { TypingAnimationModule } from 'angular-typing-animation';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TypingAnimationModule
+    TypingAnimationModule,
+    NgsRevealModule
   ],
   providers: [],
   bootstrap: [AppComponent]

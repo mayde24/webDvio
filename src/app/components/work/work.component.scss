@@ -466,8 +466,7 @@
 
 /* Vague Fond */
 .client1-fond {
-  background-image: url("../../../assets/client1-fond.png");
-  opacity: 0.4;
+  background-image: url("../../../assets/client1-fond-opac.png");
   width: 100vw;
   height: 250vh;
   background-size: cover;
@@ -928,7 +927,7 @@
 
 .about-text-container {
   width: 70vw;
-  background-image: url("../../../assets/about-font-opaque.png");
+  background-image: url("../../../assets/about-text-fond.png");
   background-size: cover;
   margin: 0 auto;
   text-align: center;

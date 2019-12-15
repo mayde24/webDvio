@@ -23,8 +23,8 @@
 </div>
 
 <!-- Reasons why Part -->
-<div class="reason-container">
-  <div class="reason" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+<div class="reason-container" [ngsRevealSet]="{ reset:true}" [ngsInterval]="300" [ngsSelector]="'.reason'">
+  <div class="reason">
     <div class="reason-title blue-title">
       Security
     </div>
@@ -35,7 +35,7 @@
       <img src="../../../assets/reason1.png" alt="" class="reason-img">
     </div>
   </div>
-  <div class="reason" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+  <div class="reason">
     <div class="reason-title pink-title">
       Design
     </div>
@@ -46,9 +46,9 @@
       <img src="../../../assets/reason2.png" alt="" class="reason-img">
     </div>
   </div>
-  <div class="reason" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="500">
+  <div class="reason">
     <div class="reason-title orange-title">
-      Efficacity
+      Efficiency
     </div>
     <div class="reason-text orange-text">
       Alii nullo quaerente vultus severitate adsimulata.
@@ -67,7 +67,7 @@
 
 <!-- Expertise Part -->
 <div class="expertise-container" id="expertise-container">
-  <div class="expertise-img-container" data-aos="fade-in" data-aos-duration="1000">
+  <div class="expertise-img-container" [ngsReveal]="{reset:true}">
     <img src="../../../assets/expertise2.png" alt="" class="expertise-img">
   </div>
   <div class="expertise-text">
