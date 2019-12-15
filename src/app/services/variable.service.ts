@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class VariableService {
 
   scrollY: number;
-  hauteur: number;
+  hauteur: string;
   largeur: number;
   hauteurEcran: number;
 

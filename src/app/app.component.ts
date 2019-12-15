@@ -15,8 +15,8 @@ export class AppComponent implements OnInit {
     window.onscroll = function () {
       variableService.scrollY = document.documentElement.scrollTop;
     };
-    variableService.hauteur = (document.getElementsByClassName('header')[0] as HTMLElement).offsetHeight;
     variableService.largeur = window.innerWidth;
+    variableService.hauteur = window.innerWidth > 1080 ? '10vh' : '7vh';
     variableService.hauteurEcran = window.innerHeight;
   }
 
