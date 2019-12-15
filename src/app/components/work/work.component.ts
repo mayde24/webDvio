@@ -14,7 +14,7 @@ export class WorkComponent implements OnInit {
   height: number;
   nbReviews: number = 3;
 
-  constructor(public scrollService: VariableService) { }
+  constructor(public variableService: VariableService) { }
 
   ngOnInit() {
     this.num2 = window.innerWidth;
@@ -22,7 +22,6 @@ export class WorkComponent implements OnInit {
       document.querySelector('body').style.backgroundColor = 'white' ;
       document.querySelector('body').style.maxHeight  = 'auto';
     }
-
   }
 
   arrowRightCall() {
