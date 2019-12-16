@@ -23,12 +23,16 @@ body {
   margin-top: 10vh !important;
 }
 
+.myMarginDixPlus {
+  margin-top: 12vh !important;
+}
+
 .myMarginSept {
   margin-top: 7vh !important;
 }
 
 .myMarginDouble {
-  margin-top: 14vh !important;
+  margin-top: 12vh !important;
 }
 
 .underline {
@@ -62,6 +66,10 @@ body {
 
 .carousel-indicators li {
   background-color: #4CAAAA !important;
+}
+
+.noIndicator .carousel-indicators {
+  display: none !important;
 }
 
 @keyframes  arrowLeft {

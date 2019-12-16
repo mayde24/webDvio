@@ -1,5 +1,5 @@
 <!-- Banner Style -->
-<div class="home-banner2" [ngClass]="{'myMarginDix': variableService.hauteurEcran > 1080, 'myMarginSept': variableService.hauteurEcran < 1080}">
+<div class="home-banner2" [ngClass]="{'myMarginDix': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
   <div class="home-text-container2">
     <div class="title-home-banner2">Dvio?</div>
     <div class="random-text-banner2">350kg of human, sprinkled with efficiency and professionalism, on his bed of kindness and positive energy.</div>
@@ -39,17 +39,17 @@
         <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
       </div>
     </div>
-    <div class="person1-text" id="person1-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 1}">
+    <div class="person1-text visibl" id="person1-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 1}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
     </div>
-    <div class="person3-text" id="person3-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 3}">
+    <div class="person3-text visibl" id="person3-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 3}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
     </div>
-    <div class="person2-left-text" id="person2-left-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 2}">
+    <div class="person2-left-text visibl" id="person2-left-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 2}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt.
     </div>
@@ -62,7 +62,7 @@
         <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Michel</a>
       </div>
     </div>
-    <div class="person2-right-text" id="person2-right-text"  [ngsReveal]="{reset:true}"[ngClass]="{'hidden': hovered != 2}">
+    <div class="person2-right-text visibl" id="person2-right-text"  [ngsReveal]="{reset:true}"[ngClass]="{'hidden': hovered != 2}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt.
     </div>
@@ -79,10 +79,10 @@
 
   <!-- Our Team Part -->
   <div class="team-container">
-    <div class="team-img-container" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
+    <div class="team-img-container" [ngsReveal]="{reset:false}">
       <img src="../../../assets/about-team.png" alt="" class="team-img">
     </div>
-    <div class="team-text" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
+    <div class="team-text" [ngsReveal]="{reset:false}">
       Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
       Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
@@ -92,7 +92,7 @@
 
 <!-- Phone Screen Type Part -->
 <div class="phone-type" id="phone-type" [ngClass]="{'hidden': variableService.largeur > 500 || variableService.hauteurEcran < variableService.largeur}">
-  <ngb-carousel class="element-container">
+  <ngb-carousel class="element-container noIndicator">
     <ng-template ngbSlide [ngsReveal]="{reset:true}" >
       <div class="element1" id="element1">
         <div class="person-container">

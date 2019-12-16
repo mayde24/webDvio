@@ -473,7 +473,12 @@ svg:not(:root).svg-inline--fa {
 /* Image Style */
 
 .reason-img {
-  height: 300px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.ombre-img {
+  height: 30px;
   object-fit: cover;
 }
 
@@ -481,25 +486,25 @@ svg:not(:root).svg-inline--fa {
 
 @media screen and (max-width: 1300px) {
   .reason-img {
-    height: 250px;
+    height: 200px;
   }
 }
 
 @media screen and (max-width: 1080px) {
   .reason-img {
-    height: 180px;
+    height: 140px;
   }
 }
 
 @media screen and (max-width: 880px) {
   .reason-img {
-    height: 150px;
+    height: 130px;
   }
 }
 
 @media screen and (max-width: 500px) {
   .reason-img {
-    height: 180px;
+    height: 150px;
   }
 }
 
