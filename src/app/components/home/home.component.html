@@ -1,5 +1,5 @@
 <!-- Banner Style -->
-<div class="home-banner" [ngClass]="{'myMarginDix': variableService.largeur > 1080, 'myMarginDouble': variableService.largeur < 1080}">
+<div class="home-banner" [ngClass]="{'myMarginDix': variableService.largeur > 1080, 'myMarginDouble': variableService.largeur < 1080 && variableService.largeur > 500, 'myMarginSept': variableService.largeur < 500}">
   <div class="home-text-container">
     <div class="title-home-banner">
       <div class=""><span typingAnimation [typeSpeed]="25" hideCursorOnComplete="true" [startDelay]="250">Be smart</span></div>
