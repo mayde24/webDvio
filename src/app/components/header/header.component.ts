@@ -10,7 +10,8 @@ import {VariableService} from '../../services/variable.service';
 export class HeaderComponent implements OnInit {
 
   constructor(public router: Router,
-              public scrollService: VariableService) { }
+              public scrollService: VariableService,
+              public variableService: VariableService) { }
 
   ngOnInit() {
   }

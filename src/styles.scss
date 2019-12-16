@@ -72,6 +72,10 @@ body {
   display: none !important;
 }
 
+ngb-carousel {
+  outline:none !important;
+}
+
 @keyframes  arrowLeft {
   40% {
     transform: translate(-10px, 0px);
