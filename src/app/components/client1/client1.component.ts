@@ -11,6 +11,7 @@ export class Client1Component implements OnInit {
   constructor(public variableService: VariableService) { }
 
   ngOnInit() {
+    document.documentElement.scrollTop = 0;
   }
 
 }

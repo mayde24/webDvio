@@ -7,10 +7,10 @@ import { VariableService} from './services/variable.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent implements OnInit {
   title = 'webSite';
-
-
+  
   constructor(private variableService: VariableService) {
     window.onscroll = function () {
       variableService.scrollY = document.documentElement.scrollTop;
@@ -28,6 +28,5 @@ export class AppComponent implements OnInit {
     });
 
   }
-
 
 }

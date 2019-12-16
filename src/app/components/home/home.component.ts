@@ -11,5 +11,6 @@ export class HomeComponent implements OnInit {
   constructor(public variableService: VariableService) { }
 
   ngOnInit() {
+    document.documentElement.scrollTop = 0;
   }
 }

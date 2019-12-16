@@ -91,8 +91,8 @@
 </div>
 
 <!-- Phone Screen Type Part -->
-<div class="phone-type" id="phone-type" [ngClass]="{'hidden': variableService.largeur > 500 || variableService.hauteurEcran < variableService.largeur}">
-  <ngb-carousel class="element-container noIndicator">
+<div class="phone-type" id="phone-type" [ngClass]="{'hidden': variableService.largeur > 500 || variableService.hauteurEcran < variableService.largeur}" (swipeleft)="next()" (swiperight)="prev()">
+  <ngb-carousel class="element-container noIndicator" [interval]="time" [showNavigationArrows]="show" #mycarousel2>
     <ng-template ngbSlide [ngsReveal]="{reset:true}" >
       <div class="element1" id="element1">
         <div class="person-container">

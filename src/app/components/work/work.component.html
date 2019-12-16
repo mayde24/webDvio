@@ -100,7 +100,7 @@
   <div class="review-part">
 
     <!-- Reviews Part -->
-    <ngb-carousel class="review-container">
+    <ngb-carousel class="review-container" [interval]="3000">
       <ng-template ngbSlide [ngsReveal]="{reset:true}" >
         <section class="ArticleCopy">
           <blockquote>
@@ -130,10 +130,10 @@
 </div>
 
 <!-- Work For Phone & Small Screen -->
-<div class="phone-screen" id="phone-screen" [ngClass]="{'hidden': variableService.largeur>500}">
+<div class="phone-screen" id="phone-screen" [ngClass]="{'hidden': variableService.largeur>500}" (swipeleft)="next()" (swiperight)="prev()">
   <div class="work-all" [ngsRevealSet]="{ reset:true}" [ngsInterval]="500" [ngsSelector]="'.work'">
-    <ngb-carousel>
-      <ng-template ngbSlide [ngsReveal]="{reset:true}" >
+    <ngb-carousel #mycarousel [interval]="10000000" [showNavigationArrows]="show">
+      <ng-template ngbSlide [ngsReveal]="{reset:true}">
         <div class="work1 work" id="work1" [ngClass]="{'myMarginDix': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
           <div class="client-left client" id="client1">
             <div class="client-img-container">
@@ -276,5 +276,4 @@
       </ng-template>
     </ngb-carousel>
   </div>
-
 </div>
