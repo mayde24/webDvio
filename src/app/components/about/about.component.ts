@@ -25,13 +25,5 @@ export class AboutComponent implements OnInit {
   leave() {
     this.hovered = 0;
   }
-
-  arrowRight() {
-    this.personIndex++;
-  }
-
-  arrowLeft() {
-    this.personIndex--;
-  }
 }
 

@@ -92,74 +92,73 @@
 
 <!-- Phone Screen Type Part -->
 <div class="phone-type" id="phone-type" [ngClass]="{'hidden': variableService.largeur > 500 || variableService.hauteurEcran < variableService.largeur}">
-  <!-- Arrow to the left -->
-  <div class="arrow-left" id="arrow-left3" [ngsReveal]="{reset:true}" (click)="arrowLeft()" [ngClass]="{'opacity': personIndex == 1}">
-    <i class="fa fa-3x fa-chevron-left"></i>
-  </div>
+  <ngb-carousel class="element-container">
+    <ng-template ngbSlide [ngsReveal]="{reset:true}" >
+      <div class="element1" id="element1">
+        <div class="person-container">
+          <div class="person">
+            <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><img src="../../../assets/person1.jpg" alt="" class="person-profil"></a>
+          </div>
+          <div class="person1-name">
+            <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
+          </div>
+        </div>
+        <div class="person-text-general">
+          Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
+          Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide [ngsReveal]="{reset:true}" >
+      <div class="element2" id="element2">
+        <div class="person-container">
+          <div class="person">
+            <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><img src="../../../assets/person2.jpg" alt="" class="person-profil"></a>
+          </div>
+          <div class="person2-name">
+            <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Michel</a>
+          </div>
+        </div>
+        <div class="person-text-general">
+          Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
+          Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide [ngsReveal]="{reset:true}" >
+      <div class="element3" id="element3">
+        <div class="person-container">
+          <div class="person">
+            <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><img src="../../../assets/person3.jpg" alt="" class="person-profil"></a>
+          </div>
+          <div class="person3-name">
+            <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name">Armand Bègue</a>
+          </div>
+        </div>
+        <div class="person-text-general">
+          Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
+          Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide [ngsReveal]="{reset:true}" >
+      <div class="element4" id="element4">
+        <div class="person-container">
+          <div class="person">
+            <img src="../../../assets/about-team.png" alt="" class="person-profil">
+          </div>
+          <div class="person1-name">
+            <p class="person4-name">The crew</p>
+          </div>
+        </div>
+        <div class="person-text-general">
+          Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
+          Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
 
-  <div class="element-container">
-    <div class="element1" id="element1" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': personIndex != 1}">
-      <div class="person-container">
-        <div class="person">
-          <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><img src="../../../assets/person1.jpg" alt="" class="person-profil"></a>
-        </div>
-        <div class="person1-name">
-          <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
-        </div>
-      </div>
-      <div class="person-text-general">
-        Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-        Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
-      </div>
-    </div>
-    <div class="element2 hidden" id="element2" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': personIndex != 2}">
-      <div class="person-container">
-        <div class="person">
-          <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><img src="../../../assets/person2.jpg" alt="" class="person-profil"></a>
-        </div>
-        <div class="person2-name">
-          <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Michel</a>
-        </div>
-      </div>
-      <div class="person-text-general">
-        Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-        Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
-      </div>
-    </div>
-    <div class="element3 hidden" id="element3" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': personIndex != 3}">
-      <div class="person-container">
-        <div class="person">
-          <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><img src="../../../assets/person3.jpg" alt="" class="person-profil"></a>
-        </div>
-        <div class="person3-name">
-          <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name">Armand Bègue</a>
-        </div>
-      </div>
-      <div class="person-text-general">
-        Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-        Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
-      </div>
-    </div>
-    <div class="element4 hidden" id="element4" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': personIndex != 4}">
-      <div class="person-container">
-        <div class="person">
-          <img src="../../../assets/about-team.png" alt="" class="person-profil">
-        </div>
-        <div class="person1-name">
-          <p class="person4-name">The crew</p>
-        </div>
-      </div>
-      <div class="person-text-general">
-        Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-        Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
-      </div>
-    </div>
-  </div>
-
-  <!-- Arrow to the right -->
-  <div class="arrow-right" id="arrow-right3" [ngsReveal]="{reset:true}" (click)="arrowRight()" [ngClass]="{'opacity': personIndex == nbPersons}">
-    <i class="fa fa-3x fa-chevron-right"></i>
-  </div>
 </div>
 
 <!-- Title Our technologies -->

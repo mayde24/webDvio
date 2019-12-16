@@ -47,6 +47,41 @@ body {
   }
 }
 
+.carousel-control-prev-icon{
+  background-image: url('assets/arrow-left.png') !important;
+  animation: arrowLeft 1s infinite;
+  height: 40px;
+  width: 40px;
+}
+.carousel-control-next-icon{
+  background-image: url('assets/arrow-right.png') !important;
+  animation: arrowRight 1s infinite;
+  height: 40px;
+  width: 40px;
+}
+
+.carousel-indicators li {
+  background-color: #4CAAAA !important;
+}
+
+@keyframes  arrowLeft {
+  40% {
+    transform: translate(-10px, 0px);
+  }
+  80% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes  arrowRight {
+  40% {
+    transform: translate(10px, 0px);
+  }
+  80% {
+    transform: translate(0px, 0px);
+  }
+}
+
 a {
   text-decoration: none;
 }

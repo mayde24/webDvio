@@ -311,6 +311,32 @@
   color: #2C7676;
 }
 
+.arrow-left {
+  animation: arrowLeft 1s infinite;
+}
+
+.arrow-right {
+  animation: arrowRight 1s infinite;
+}
+
+@keyframes  arrowLeft {
+  40% {
+    transform: translate(-10px, 0px);
+  }
+  80% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes  arrowRight {
+  40% {
+    transform: translate(10px, 0px);
+  }
+  80% {
+    transform: translate(0px, 0px);
+  }
+}
+
 /* Review Responsive */
 
 @media screen and (max-width: 1300px) {
@@ -354,11 +380,20 @@
 
   .ArticleCopy {
     width: 95%;
-    padding: 10px;
+    padding: 30px;
   }
 
   .ArticleCopy p {
     margin: 0;
+  }
+
+  .ArticleCopy blockquote:before,
+  .ArticleCopy blockquote:after{
+    font-size: 20px;
+  }
+
+  .auteur {
+    display:none;
   }
 }
 

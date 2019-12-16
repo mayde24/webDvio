@@ -923,3 +923,29 @@ a:hover {
 .arrow-left:hover,.arrow-right:hover {
   color: #2C7676;
 }
+
+.arrow-left {
+  animation: arrowLeft 1s infinite;
+}
+
+.arrow-right {
+  animation: arrowRight 1s infinite;
+}
+
+@keyframes  arrowLeft {
+  40% {
+    transform: translate(-10px, 0px);
+  }
+  80% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes  arrowRight {
+  40% {
+    transform: translate(10px, 0px);
+  }
+  80% {
+    transform: translate(0px, 0px);
+  }
+}

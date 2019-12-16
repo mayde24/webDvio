@@ -10,7 +10,10 @@ import { AboutComponent } from './components/about/about.component';
 import { Client1Component } from './components/client1/client1.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TypingAnimationModule } from 'angular-typing-animation';
-import {NgsRevealModule} from 'ngx-scrollreveal';
+import { NgsRevealModule } from 'ngx-scrollreveal';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,11 @@ import {NgsRevealModule} from 'ngx-scrollreveal';
     BrowserModule,
     AppRoutingModule,
     TypingAnimationModule,
-    NgsRevealModule
+    NgsRevealModule,
+    BrowserAnimationsModule,
+    NgbModule,
+    NgbPaginationModule,
+    NgbAlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]
