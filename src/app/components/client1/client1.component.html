@@ -1,8 +1,9 @@
 <!-- Banner Client 1 Style -->
-<div class="client-banner" [ngClass]="{'myMarginDouble': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
-  <div class="client-name-banner">La Gustosa</div>
-</div>
-
+<a href="https://damecoeur-4cffc.firebaseapp.com/home">
+  <div class="client-banner" [ngClass]="{'myMarginDouble': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
+    <div class="client-name-banner">Dame de Coeur</div>
+  </div>
+</a>
 <!-- Title Project -->
 <div class="title4-container">
   <div class="title1-text">Project</div>
@@ -11,9 +12,9 @@
 
 <!-- Text Project Style -->
 <div class="text-project" ngsReveal>
-  Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-  Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
-  Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
+  Afin de faire honneur à <strong>la cuisine française</strong> et aux valeurs transcrites par la famille Duchatel, nous avons réalisé un site moderne et épuré tout en soulignant le traditionnel cher à <strong>Dame de Cœur.</strong> <br> <br>
+  De ce fait, le site donne place au menu du restaurant et son détail, tout en racontant l'histoire des restaurateurs ainsi que les différents moyens de contact utile à l'utilisateur. Quelques animations en <strong>Javascript </strong>pour un effet élégant et fluide et le tour est joué !<br> <br>
+  <strong> Si vous souhaitez visiter le site </strong><em>(ou manger un bon petit plat)</em>, <strong>n'hésitez pas à cliquer sur le logo de Dame de Coeur, plus haut.</strong>
 </div>
 <div class="client-detail-tech">
   <div class="client-detail-container" [ngsRevealSet]="{ reset:false}" [ngsInterval]="250" [ngsSelector]="'.log2'">
@@ -40,28 +41,26 @@
 <div class="client1-fond">
   <div class="title-fond">V I E W</div>
   <div class="image-fond-container">
-    <div class="image-fond1">
-      <div>
-        <img src="../../../assets/client1-img2.png" alt="" class="img-left" [ngsReveal]="{ reset:false}">
-      </div>
-      <div>
-        <img src="../../../assets/client1-img3.png" alt="" class="img-right" [ngsReveal]="{ reset:false}">
-      </div>
-    </div>
     <div class="image-fond2">
       <img src="../../../assets/client1-img1.png" alt="" class="img-middle" [ngsReveal]="{ reset:false}">
+    </div>
+    <div class="image-fond1">
+      <div [ngsRevealSet]="{ reset:false}">
+        <img src="../../../assets/client1-img3.png" alt="" class="img-right">
+      </div>
+      <div [ngsRevealSet]="{ reset:false}">
+        <img src="../../../assets/client1-img2.png" alt="" class="img-left">
+      </div>
     </div>
   </div>
 </div>
 
 <!-- Other Project Bar -->
-<div class="other-project">
-  <!-- Arrow to the left -->
-  <div class="arrow-left"><i class="fa fa-3x fa-chevron-left"></i></div>
-
-  <!-- Text -->
-  <div><h2 class="other-text">Other project</h2></div>
-
-  <!-- Arrow to the right -->
-  <div class="arrow-right"><i class="fa fa-3x fa-chevron-right"></i></div>
+<div routerLinkActive="active">
+  <a routerLink="/work/esmel-lian">
+    <div class="other-project">
+      <!-- Text -->
+      <div><h2 class="other-text">Other project</h2></div>
+    </div>
+  </a>
 </div>

@@ -5,6 +5,7 @@ import {WorkComponent} from './components/work/work.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {AboutComponent} from './components/about/about.component';
 import {Client1Component} from './components/client1/client1.component';
+import {Client2Component} from './components/client2/client2.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'work', component: WorkComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'work/pizza', component: Client1Component },
+  { path: 'work/dame-de-coeur', component: Client1Component },
+  { path: 'work/esmel-lian', component: Client2Component },
   { path: '**', redirectTo: 'home' }
 ];
 

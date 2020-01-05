@@ -6,9 +6,9 @@
         <img src="../../../assets/client1.png" alt="" class="client-img">
       </div>
       <div class="client-info-left" routerLinkActive="active">
-        <div class="client-name"><a routerLink="pizza" class="client-name">La Gustosa</a></div>
+        <div class="client-name"><a routerLink="dame-de-coeur" class="client-name">Dame de Coeur</a></div>
         <div class="client-description">
-          Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.
+          La famille Duchatel, restaurateur français au cœur de Paris, nous ont confié la réalisation du <strong> site vitrine </strong> de leur héritage.
         </div>
         <div class="client-detail-container">
           <div class="client-detail">
@@ -32,18 +32,14 @@
     </div>
     <div class="client-right client" [ngClass]="{'myMarginDix': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
       <div class="client-info-right">
-        <div class="client-name">La French Co</div>
+        <div class="client-name"><a routerLink="esmel-lian" class="client-name">Esmel Lian</a></div>
         <div class="client-description">
-          Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.
+          Photographe de renom, Mme. Lian nous a fait confiance dans la réalisation d'un <strong> portfolio </strong> en accord avec son <strong>univers artistique.</strong>
         </div>
         <div class="client-detail-container">
           <div class="client-detail">
-            <div class="detail-logo"><img src="../../../assets/symfony.png" alt="" class="client-icon"></div>
-            <div class="detail-name two-title">Symfony</div>
-          </div>
-          <div class="client-detail">
-            <div class="detail-logo"><i class="fab fa-4x fa-js four-icon client-icon"></i></div>
-            <div class="detail-name four-title">Javascript</div>
+            <div class="detail-logo"><i class="fab fa-4x fa-angular four-icon image-icon"></i></div>
+            <div class="detail-name four-title">Angular</div>
           </div>
           <div class="client-detail">
             <div class="detail-logo"><i class="fab fa-4x fa-html5 one-icon client-icon"></i></div>
@@ -52,40 +48,15 @@
           <div class="client-detail">
             <div class="detail-logo"><i class="fab fa-4x fa-css3 two-icon client-icon"></i></div>
             <div class="detail-name two-title">CSS</div>
+          </div>
+          <div class="client-detail">
+            <div class="detail-logo"><i class="fab fa-4x fa-js four-icon client-icon"></i></div>
+            <div class="detail-name four-title">Javascript</div>
           </div>
         </div>
       </div>
       <div class="client-img-container">
         <img src="../../../assets/client2.png" alt="" class="client-img">
-      </div>
-    </div>
-    <div class="client-left client" [ngClass]="{'myMarginDix': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
-      <div class="client-img-container">
-        <img src="../../../assets/client3.png" alt="" class="client-img">
-      </div>
-      <div class="client-info-left">
-        <div class="client-name">Tayuya Design</div>
-        <div class="client-description">
-          Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.
-        </div>
-        <div class="client-detail-container">
-          <div class="client-detail">
-            <div class="detail-logo"><img src="../../../assets/symfony.png" alt="" class="client-icon"></div>
-            <div class="detail-name two-title">Symfony</div>
-          </div>
-          <div class="client-detail">
-            <div class="detail-logo"><i class="fab fa-4x fa-js four-icon client-icon"></i></div>
-            <div class="detail-name four-title">Javascript</div>
-          </div>
-          <div class="client-detail">
-            <div class="detail-logo"><i class="fab fa-4x fa-html5 one-icon client-icon"></i></div>
-            <div class="detail-name one-title">HTML</div>
-          </div>
-          <div class="client-detail">
-            <div class="detail-logo"><i class="fab fa-4x fa-css3 two-icon client-icon"></i></div>
-            <div class="detail-name two-title">CSS</div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -100,29 +71,21 @@
   <div class="review-part">
 
     <!-- Reviews Part -->
-    <ngb-carousel class="review-container" [interval]="3000">
+    <ngb-carousel class="review-container" [interval]="6000">
       <ng-template ngbSlide [ngsReveal]="{reset:true}" >
         <section class="ArticleCopy">
           <blockquote>
-            <p>"Most experienced developers shun this method, but it does get the job done; it is simple and direct. You may not use closures or anonymous functions here (though the handler itself is an anonymous function of sorts), and your control of scope is limited."</p>
+            <p>"Notre famille chérit cet héritage depuis 3 générations maintenant. Et, par le professionnalisme et l'écoute dont à fait preuve Dvio, nous sommes ravis de nous être tournés vers eux."</p>
           </blockquote>
-          <p class="auteur">By Coca Puta @LaGustosa</p>
+          <p class="auteur">By Jerome Duchatel @DameDeCoeur</p>
         </section>
       </ng-template>
       <ng-template ngbSlide [ngsReveal]="{reset:true}" >
         <section class="ArticleCopy">
           <blockquote>
-            <p>"As the transition to mobile devices has been rapidly occurring over the past five years, progressive EHR vendors have responded with clear plans and successful products to help expand the user experience. With more than half of physicians currently using a mobile device in their medical practices, these EHR vendors are allowing providers to choose which platform best fits in to their workflow in multiple healthcare delivery settings including highly usable mobile products."</p>
+            <p>"Je voulais un portfolio unique, un site retranscrivant mon  univers tout en restant léger et agréable à naviguer. Le résultat est exactement ce que je voulais ! "</p>
           </blockquote>
-          <p class="auteur">By Sponge Bob @FrenchCo</p>
-        </section>
-      </ng-template>
-      <ng-template ngbSlide [ngsReveal]="{reset:true}" >
-        <section class="ArticleCopy">
-          <blockquote>
-            <p>"Both can be used to handle events. However, addEventListener should be the preferred choice since it can do everything onclick does and more."</p>
-          </blockquote>
-          <p class="auteur">By Boris Concou @TayuyaDesign</p>
+          <p class="auteur">By Miss Lian @EsmelLian</p>
         </section>
       </ng-template>
     </ngb-carousel>
@@ -140,9 +103,9 @@
               <img src="../../../assets/client1.png" alt="" class="client-img">
             </div>
             <div class="client-info-left" routerLinkActive="active">
-              <div class="client-name"><a routerLink="pizza" class="client-name">La Gustosa</a></div>
+              <div class="client-name"><a routerLink="dame-de-coeur" class="client-name">Dame de coeur</a></div>
               <div class="client-description">
-                Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.
+                La famille Duchatel, restaurateur français au cœur de Paris, nous ont confié la réalisation du <strong> site vitrine </strong> de leur héritage.
               </div>
               <div class="client-detail-container" [ngsRevealSet]="{ reset:true}" [ngsInterval]="150" [ngsSelector]="'.client-detail'">
                 <div class="client-detail">
@@ -173,9 +136,9 @@
           <div class="review-container">
             <section class="ArticleCopy">
               <blockquote>
-                <p>"Most experienced developers shun this method, but it does get the job done; it is simple and direct. You may not use closures or anonymous functions here (though the handler itself is an anonymous function of sorts), and your control of scope is limited."</p>
+                <p>"Notre famille chérit cet héritage depuis 3 générations maintenant. Et, par le professionnalisme et l'écoute dont à fait preuve Dvio, nous sommes ravis de nous être tournés vers eux."</p>
               </blockquote>
-              <p class="auteur">By Coca Puta @LaGustosa</p>
+              <p class="auteur">By Jerome Duchatel @DameDeCoeur</p>
             </section>
           </div>
         </div>
@@ -187,18 +150,14 @@
               <img src="../../../assets/client2.png" alt="" class="client-img">
             </div>
             <div class="client-info-right">
-              <div class="client-name">La French Co</div>
+              <div class="client-name"><a routerLink="esmel-lian" class="client-name">Esmel Lian</a></div>
               <div class="client-description">
-                Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.
+                Photographe de renom, Mme. Lian nous a fait confiance dans la réalisation d'un <strong> portfolio </strong> en accord avec son <strong>univers artistique.</strong>
               </div>
               <div class="client-detail-container">
                 <div class="client-detail">
-                  <div class="detail-logo"><img src="../../../assets/symfony.png" alt="" class="client-icon"></div>
-                  <div class="detail-name two-title">Symfony</div>
-                </div>
-                <div class="client-detail">
-                  <div class="detail-logo"><i class="fab fa-4x fa-js four-icon client-icon"></i></div>
-                  <div class="detail-name four-title">Javascript</div>
+                  <div class="detail-logo"><i class="fab fa-4x fa-angular four-icon image-icon"></i></div>
+                  <div class="detail-name four-title">Angular</div>
                 </div>
                 <div class="client-detail">
                   <div class="detail-logo"><i class="fab fa-4x fa-html5 one-icon client-icon"></i></div>
@@ -207,6 +166,10 @@
                 <div class="client-detail">
                   <div class="detail-logo"><i class="fab fa-4x fa-css3 two-icon client-icon"></i></div>
                   <div class="detail-name two-title">CSS</div>
+                </div>
+                <div class="client-detail">
+                  <div class="detail-logo"><i class="fab fa-4x fa-js four-icon client-icon"></i></div>
+                  <div class="detail-name four-title">Javascript</div>
                 </div>
               </div>
             </div>
@@ -220,56 +183,9 @@
           <div class="review-container">
             <section class="ArticleCopy">
               <blockquote>
-                <p>"As the transition to mobile devices has been rapidly occurring over the past five years, progressive EHR vendors have responded with clear plans and successful products to help expand the user experience."</p>
+                <p>"Je voulais un portfolio unique, un site retranscrivant mon  univers tout en restant léger et agréable à naviguer. Le résultat est exactement ce que je voulais ! "</p>
               </blockquote>
-              <p class="auteur">By Sponge Bob @FrenchCo</p>
-            </section>
-          </div>
-        </div>
-      </ng-template>
-      <ng-template ngbSlide [ngsReveal]="{reset:true}" >
-        <div class="work3 work" id="work3" [ngClass]="{'myMarginDix': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
-          <div class="client-left client" id="client3">
-            <div class="client-img-container">
-              <img src="../../../assets/client3.png" alt="" class="client-img">
-            </div>
-            <div class="client-info-left">
-              <div class="client-name">Tayuya Design</div>
-              <div class="client-description">
-                Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.
-              </div>
-              <div class="client-detail-container">
-                <div class="client-detail">
-                  <div class="detail-logo"><img src="../../../assets/symfony.png" alt="" class="client-icon"></div>
-                  <div class="detail-name two-title">Symfony</div>
-                </div>
-                <div class="client-detail">
-                  <div class="detail-logo"><i class="fab fa-4x fa-js four-icon client-icon"></i></div>
-                  <div class="detail-name four-title">Javascript</div>
-                </div>
-                <div class="client-detail">
-                  <div class="detail-logo"><i class="fab fa-4x fa-html5 one-icon client-icon"></i></div>
-                  <div class="detail-name one-title">HTML</div>
-                </div>
-                <div class="client-detail">
-                  <div class="detail-logo"><i class="fab fa-4x fa-css3 two-icon client-icon"></i></div>
-                  <div class="detail-name two-title">CSS</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Title Reviews -->
-          <div class="title4-container">
-            <div class="title1-text">Reviews</div>
-            <div class="line"></div>
-          </div>
-          <!-- Reviews Part -->
-          <div class="review-container">
-            <section class="ArticleCopy">
-              <blockquote>
-                <p>"Both can be used to handle events. However, addEventListener should be the preferred choice since it can do everything onclick does and more."</p>
-              </blockquote>
-              <p class="auteur">By Boris Concou @TayuyaDesign</p>
+              <p class="auteur">By Miss Lian @EsmelLian</p>
             </section>
           </div>
         </div>

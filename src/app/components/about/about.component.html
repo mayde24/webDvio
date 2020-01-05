@@ -2,7 +2,7 @@
 <div class="home-banner2" [ngClass]="{'myMarginDix': variableService.largeur > 750, 'myMarginSept': variableService.largeur < 1080}">
   <div class="home-text-container2">
     <div class="title-home-banner2">Dvio?</div>
-    <div class="random-text-banner2">350kg of human, sprinkled with efficiency and professionalism, on his bed of kindness and positive energy.</div>
+    <div class="random-text-banner2">350 kg d'humain, saupoudré d'efficacité et de professionnalisme, sur son lit de gentillesse et d'énergie positive.</div>
   </div>
   <div class="home-img">
     <img src="../../../assets/about-banner2.png" alt="" class="home-banner-img2">
@@ -15,15 +15,15 @@
 <!-- Text About us Part -->
 <div class="about-text-container" id="about-container" [ngStyle]="{'background-image': variableService.largeur > 600 ? 'url(\'../../../assets/about-text-fond.png\')' : 'none'}">
   <div class="about-text" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
-    Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-    Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
-    Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
+    Notre aventure a commencé avec 3 personnalités distinctes, <strong> enthousiastes de prouver ses compétences </strong> dans de grands projets. <br> <br>
+    Ce fut un jour une idée et depuis, une réalité de chaque instant. Celui d'une <strong>équipe grandissante </strong> et travaillant avec plaisir afin de concevoir le meilleur d'eux-même. <br> <br>
+    Chaque mission est une nouvelle opportunité de s'améliorer et de créer quelque chose dont nous serons fier.
   </div>
 </div>
 
 <!-- Title Who are we ? -->
 <div class="title1-container">
-  <div class="title1-text">Who are we?</div>
+  <div class="title1-text">Qui sommes-nous ?</div>
   <div class="line"></div>
 </div>
 
@@ -33,43 +33,40 @@
     <div class="person-container" id="person1" [ngsReveal]="{reset:true}"
          (mouseover)="hover(1)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 1 && hovered != 0}">
       <div class="person">
-        <img src="../../../assets/person1.jpg" alt="" class="person-profil">
+        <img src="../../../assets/person1.jpeg" alt="" class="person-profil">
       </div>
       <div class="person1-name">
         <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
       </div>
     </div>
     <div class="person1-text visibl" id="person1-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 1}">
-      Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-      Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
-      Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
+      Née à Alger. Etudiant en France l'ingénierie informatique, elle multiplia les bootcamps d'informatique intensifs (Notamment Le Wagon et l'école 42) afin de parfaire son code et en apprendre d'avantage sur la programmation et ses ficelles. <br><br>
+      Elle accompagne aujourd'hui l'équipe en tant que Designer et Frontend Developper par sa maîtrise du visuel et du moderne.
     </div>
     <div class="person3-text visibl" id="person3-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 3}">
-      Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-      Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
-      Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
+      Né à Paris. Etudiant la programmation et le management en France, il suivit stages et alternance en tant que FullStack developper et Chef de projet, au sein d'entreprises telles que Sopra Steria et Amplifon.<br><br>
+      Aujourd'hui, au sein de la famille Dvio, il endosse le rôle de Backend Developper, jonglant entre code et serveur par ses superbes talents.
     </div>
-    <div class="person2-left-text visibl" id="person2-left-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 2}">
-      Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-      Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt.
+    <div class="person2-left-text visibl person2Text" id="person2-left-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 2}">
+      Née à Alger et suivant des études auprès de grandes écoles françaises telles que Paris School of Economics ou l'Ecole de guerre économique (EGE), elle est aujourd’hui consultante spécialisée en Cyber sécurité chez Devoteam. <br>
     </div>
     <div class="person-container" id="person2" [ngsReveal]="{reset:true}"
          (mouseover)="hover(2)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 2 && hovered != 0}">
       <div class="person">
-        <img src="../../../assets/person2.jpg" alt="" class="person-profil">
+        <img src="../../../assets/person2.jpeg" alt="" class="person-profil">
       </div>
       <div class="person2-name">
-        <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Michel</a>
+        <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Douadi</a>
       </div>
     </div>
-    <div class="person2-right-text visibl" id="person2-right-text"  [ngsReveal]="{reset:true}"[ngClass]="{'hidden': hovered != 2}">
-      Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-      Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt.
+    <div class="person2-right-text visibl person2Text" id="person2-right-text"  [ngsReveal]="{reset:true}"[ngClass]="{'hidden': hovered != 2}">
+      Egalement présidente du club Risque de l'EGE, elle anime celui-ci et organise divers congrès et événements à grande échelle. <br>
+      Elle gère auprès de l'équipe l'aspect conseils marketing et sécurité du produit.
     </div>
     <div class="person-container" id="person3" [ngsReveal]="{reset:true}"
          (mouseover)="hover(3)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 3 && hovered != 0}">
       <div class="person">
-        <img src="../../../assets/person3.jpg" alt="" class="person-profil">
+        <img src="../../../assets/person3.jpeg" alt="" class="person-profil">
       </div>
       <div class="person3-name">
         <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name">Armand Bègue</a>
@@ -83,9 +80,8 @@
       <img src="../../../assets/about-team.png" alt="" class="team-img">
     </div>
     <div class="team-text" [ngsReveal]="{reset:false}">
-      Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-      Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong> adsimulata patrimonia sua in inmensum extollunt, cultorum ut puta feracium multiplicantes.<br><br>
-      Alii nullo quaerente vultus severitate adsimulata patrimonia sua.
+      Le reste de l'équipe, aujourd'hui formée de 4 autres personnes, se compose d'un incroyable codeur, d'une superbe marketeuse, d'un talentueux UX designer et d'un manager féroce. Tous beaucoup trop perfectionniste pour leur propre bien. <br> <br>
+      De quoi constituer une équipe de choc lorsqu'il s'agit de créer un accord avec vos besoins et envie. En soi, le meilleur pour vous.
     </div>
   </div>
 </div>
@@ -97,15 +93,15 @@
       <div class="element1" id="element1">
         <div class="person-container">
           <div class="person">
-            <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><img src="../../../assets/person1.jpg" alt="" class="person-profil"></a>
+            <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><img src="../../../assets/person1.jpeg" alt="" class="person-profil"></a>
           </div>
           <div class="person1-name">
             <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
           </div>
         </div>
         <div class="person-text-general">
-          Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-          Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
+          Née à Alger. Etudiant en France l'ingénierie informatique, elle multiplia les bootcamps d'informatique intensifs (Notamment Le Wagon et l'école 42) afin de parfaire son code et en apprendre d'avantage sur la programmation et ses ficelles. <br><br>
+          Elle accompagne aujourd'hui l'équipe en tant que Designer et Frontend Developper par sa maîtrise du visuel et du moderne.
         </div>
       </div>
     </ng-template>
@@ -113,15 +109,16 @@
       <div class="element2" id="element2">
         <div class="person-container">
           <div class="person">
-            <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><img src="../../../assets/person2.jpg" alt="" class="person-profil"></a>
+            <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><img src="../../../assets/person2.jpeg" alt="" class="person-profil"></a>
           </div>
           <div class="person2-name">
             <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Douadi</a>
           </div>
         </div>
         <div class="person-text-general">
-          Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-          Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
+          Née à Alger et suivant des études auprès de grandes écoles françaises telles que Paris School of Economics ou l'Ecole de guerre économique (EGE), elle est aujourd’hui consultante spécialisée en Cyber sécurité chez Devoteam.<br><br>
+          Egalement présidente du club Risque de l'EGE, elle anime celui-ci et organise divers congrès et événements à grande échelle.<br>
+          Elle gère auprès de l'équipe l'aspect conseils marketing et sécurité du produit.
         </div>
       </div>
     </ng-template>
@@ -129,15 +126,15 @@
       <div class="element3" id="element3">
         <div class="person-container">
           <div class="person">
-            <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><img src="../../../assets/person3.jpg" alt="" class="person-profil"></a>
+            <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><img src="../../../assets/person3.jpeg" alt="" class="person-profil"></a>
           </div>
           <div class="person3-name">
             <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name">Armand Bègue</a>
           </div>
         </div>
         <div class="person-text-general">
-          Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-          Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
+          Né à Paris. Etudiant la programmation et le management en France, il suivit stages et alternance en tant que FullStack developper et Chef de projet, au sein d'entreprises telles que Sopra Steria et Amplifon.<br><br>
+          Aujourd'hui, au sein de la famille Dvio, il endosse le rôle de Backend Developper, jonglant entre code et serveur par ses superbes talents.
         </div>
       </div>
     </ng-template>
@@ -152,8 +149,8 @@
           </div>
         </div>
         <div class="person-text-general">
-          Alii nullo quaerente <strong>vultus severitate adsimulata patrimonia </strong> sua in inmensum extollunt, cultorum ut puta feracium multiplicantes. <br> <br>
-          Alii nullo quaerente vultus severitate adsimulata patrimonia sua in inmensum extollunt, <strong> cultorum ut puta feracium multiplicantes. Alii nullo quaerente vultus severitate </strong>
+          Le reste de l'équipe, aujourd'hui formée de 4 autres personnes, se compose d'un incroyable codeur, d'une superbe marketeuse, d'un talentueux UX designer et d'un manager féroce. Tous beaucoup trop perfectionniste pour leur propre bien. <br> <br>
+          De quoi constituer une équipe de choc lorsqu'il s'agit de créer un accord avec vos besoins et envie. En soi, le meilleur pour vous.
         </div>
       </div>
     </ng-template>
@@ -163,7 +160,7 @@
 
 <!-- Title Our technologies -->
 <div class="title1-container">
-  <div class="title1-text">Our technologies</div>
+  <div class="title1-text">Nos technologies</div>
   <div class="line"></div>
 </div>
 

@@ -16,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatCardModule } from '@angular/material';
 import { MyHammerConfig } from './my-hammer.config';
+import { Client2Component } from './components/client2/client2.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MyHammerConfig } from './my-hammer.config';
     ContactComponent,
     AboutComponent,
     Client1Component,
-    HeaderComponent
+    HeaderComponent,
+    Client2Component
   ],
   imports: [
     BrowserModule,

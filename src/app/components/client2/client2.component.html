@@ -1,0 +1,66 @@
+<!-- Banner Client 1 Style -->
+<a href="https://esmellian.firebaseapp.com/home">
+  <div class="client-banner" [ngClass]="{'myMarginDouble': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
+  </div>
+</a>
+
+<!-- Title Project -->
+<div class="title4-container">
+  <div class="title1-text">Project</div>
+  <div class="line"></div>
+</div>
+
+<!-- Text Project Style -->
+<div class="text-project" ngsReveal>
+  Afin de retranscrire l'univers de notre photographe, nous avons décidé de montrer les principaux thèmes que celle-ci aimait traiter au lieu d'alourdir le site avec des centaines de photographies prises de ses mains.<br><br>
+  Nous avons construit <strong>une maquette</strong> puis, après validation par la cliente, avons créer celle-ci sur <strong>Angular</strong>. Pour dynamiser le tout, des animations ont été rajoutées - principalement faites via <strong>TypeScript</strong> et <strong>CSS</strong>.<br><br>
+  Pour visiter le projet, il vous suffit de <strong> cliquer sur le logo de Esmel Lian, </strong> studio de photographie.
+</div>
+<div class="client-detail-tech">
+  <div class="client-detail-container" [ngsRevealSet]="{ reset:false}" [ngsInterval]="250" [ngsSelector]="'.log2'">
+    <div class="client-detail log2">
+      <div class="detail-logo"><i class="fab fa-4x fa-angular four-icon client-icon2"></i></div>
+      <div class="detail-name four-title">Angular</div>
+    </div>
+    <div class="client-detail log2">
+      <div class="detail-logo"><i class="fab fa-4x fa-html5 one-icon client-icon2"></i></div>
+      <div class="detail-name one-title">HTML</div>
+    </div>
+    <div class="client-detail log2">
+      <div class="detail-logo"><i class="fab fa-4x fa-css3 two-icon client-icon2"></i></div>
+      <div class="detail-name two-title">CSS</div>
+    </div>
+    <div class="client-detail log2">
+      <div class="detail-logo"><i class="fab fa-4x fa-js four-icon client-icon2"></i></div>
+      <div class="detail-name four-title">Javascript</div>
+    </div>
+  </div>
+</div>
+
+<!-- Vague Fond Part -->
+<div class="client1-fond">
+  <div class="title-fond">V I E W</div>
+  <div class="image-fond-container">
+    <div class="image-fond2">
+      <img src="../../../assets/client2-img1.png" alt="" class="img-middle" [ngsReveal]="{ reset:false}">
+    </div>
+  </div>
+</div>
+<div class="image-fond1">
+  <div [ngsReveal]="{ reset:false}">
+    <video src="../../../assets/client2-img2.mp4" class="img-left" autoplay muted preload="true" loop></video>
+  </div>
+  <div [ngsReveal]="{ reset:false}">
+    <video src="../../../assets/client2-img3.mp4" class="img-right" autoplay muted preload="true" loop></video>
+  </div>
+</div>
+
+<!-- Other Project Bar -->
+<div routerLinkActive="active">
+  <a routerLink="/work/dame-de-coeur">
+    <div class="other-project">
+      <!-- Text -->
+      <div><h2 class="other-text">Other project</h2></div>
+    </div>
+  </a>
+</div>
