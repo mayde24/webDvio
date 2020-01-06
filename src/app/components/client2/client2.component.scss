@@ -149,7 +149,7 @@
     padding-top: 30vh;
   }
   .client1-fond {
-    height: 50vh;
+    height: 120vh;
   }
 }
 
@@ -188,10 +188,14 @@
     font-size: 60px;
     padding-top: 8vh;
   }
+
+  .client1-fond {
+    height: 55vh;
+  }
 }
 
 
-@media screen and (min-height: 1000px) {
+@media screen and (min-height: 900px) {
   .text-project {
     font-size: 22px;
     width: 70%;
@@ -203,7 +207,7 @@
   }
 
   .client1-fond {
-    height: 160vw;
+    height: 100vw;
   }
 }
 

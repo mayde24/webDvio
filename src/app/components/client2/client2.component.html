@@ -48,10 +48,10 @@
 </div>
 <div class="image-fond1">
   <div [ngsReveal]="{ reset:false}">
-    <video src="../../../assets/client2-img2.mp4" class="img-left" autoplay muted preload="true" loop></video>
+    <video src="../../../assets/client2-img2.mp4" class="img-left" autoplay muted preload="true" loop oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
   </div>
   <div [ngsReveal]="{ reset:false}">
-    <video src="../../../assets/client2-img3.mp4" class="img-right" autoplay muted preload="true" loop></video>
+    <video src="../../../assets/client2-img3.mp4" class="img-right" autoplay muted preload="true" loop oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
   </div>
 </div>
 

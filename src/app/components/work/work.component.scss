@@ -161,7 +161,7 @@
 
 @media screen and (max-width: 1200px) {
   .client-name {
-    font-size: 65px;
+    font-size: 58px;
   }
 
   .client-info-right {
@@ -296,7 +296,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 500px;
+  height: 400px;
   padding-right: 20px;
   padding-left: 20px;
 }
@@ -349,10 +349,6 @@
   .ArticleCopy p {
     font-size: 18px;
   }
-
-  .review-part {
-    height: 500px;
-  }
 }
 
 @media screen and (max-width: 880px) {
@@ -366,10 +362,6 @@
 
   .auteur {
     font-size: 12px;
-  }
-
-  .review-part {
-    height: 430px;
   }
 }
 
