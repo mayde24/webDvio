@@ -231,7 +231,7 @@
   width: 85%;
   margin: 0 auto;
   padding-bottom: 10vh;
-  padding-top: 20vh;
+  padding-top: 10vh;
   position: relative;
 }
 
@@ -259,6 +259,9 @@
 @media screen and (max-width: 1300px) {
   .image-fond-container {
     padding-top: 80vh;
+  }
+  .image-fond1 {
+    padding-top: 20vh;
   }
 }
 
