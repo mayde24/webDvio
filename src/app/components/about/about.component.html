@@ -1,11 +1,11 @@
 <!-- Banner Style -->
-<div class="home-banner2" [ngClass]="{'myMarginDix': variableService.largeur > 750, 'myMarginSept': variableService.largeur < 1080}">
+<div class="home-banner2" [ngClass]="{'myMarginDix': variableService.largeur > 750, 'myMarginSept': variableService.largeur < 1080}" lazy-load-images>
   <div class="home-text-container2">
     <div class="title-home-banner2">Dvio?</div>
     <div class="random-text-banner2">350 kg d'humain, saupoudré d'efficacité et de professionnalisme, sur son lit de gentillesse et d'énergie positive.</div>
   </div>
   <div class="home-img">
-    <img src="../../../assets/about-banner2.png" alt="" class="home-banner-img2">
+    <img [attr.data-src]="'../../../assets/about-banner2.png'" alt="" class="home-banner-img2">
   </div>
 </div>
 
@@ -27,13 +27,13 @@
   <div class="line"></div>
 </div>
 
-<div class="deskop-type" id="deskop-type" [ngClass]="{'hidden': variableService.largeur < 500 && variableService.hauteurEcran > variableService.largeur}">
+<div class="deskop-type" id="deskop-type" [ngClass]="{'hidden': variableService.largeur < 500 && variableService.hauteurEcran > variableService.largeur}" lazy-load-images>
   <!-- Who are we Part -->
   <div class="who-container">
     <div class="person-container" id="person1" [ngsReveal]="{reset:true}"
          (mouseover)="hover(1)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 1 && hovered != 0}">
       <div class="person">
-        <img src="../../../assets/person1.jpeg" alt="" class="person-profil">
+        <img [attr.data-src]="'../../../assets/person1.jpeg'" alt="" class="person-profil">
       </div>
       <div class="person1-name">
         <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
@@ -53,7 +53,7 @@
     <div class="person-container" id="person2" [ngsReveal]="{reset:true}"
          (mouseover)="hover(2)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 2 && hovered != 0}">
       <div class="person">
-        <img src="../../../assets/person2.jpeg" alt="" class="person-profil">
+        <img [attr.data-src]="'../../../assets/person2.jpeg'" alt="" class="person-profil">
       </div>
       <div class="person2-name">
         <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Douadi</a>
@@ -66,7 +66,7 @@
     <div class="person-container" id="person3" [ngsReveal]="{reset:true}"
          (mouseover)="hover(3)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 3 && hovered != 0}">
       <div class="person">
-        <img src="../../../assets/person3.jpeg" alt="" class="person-profil">
+        <img [attr.data-src]="'../../../assets/person3.jpeg'" alt="" class="person-profil">
       </div>
       <div class="person3-name">
         <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name">Armand Bègue</a>
@@ -77,23 +77,23 @@
   <!-- Our Team Part -->
   <div class="team-container">
     <div class="team-img-container" [ngsReveal]="{reset:false}">
-      <img src="../../../assets/about-team.png" alt="" class="team-img">
+      <img [attr.data-src]="'../../../assets/about-team.png'" alt="" class="team-img">
     </div>
     <div class="team-text" [ngsReveal]="{reset:false}">
-      Le reste de l'équipe, aujourd'hui formée de 4 autres personnes, se compose d'un incroyable codeur, d'une superbe marketeuse, d'un talentueux UX designer et d'un manager féroce. Tous beaucoup trop perfectionniste pour leur propre bien. <br> <br>
+      Le reste de l'équipe, aujourd'hui formée de 3 autres personnes, se compose d'un incroyable codeur, d'une superbe marketeuse et d'un talentueux UX designer. Tous beaucoup trop perfectionniste pour leur propre bien. <br> <br>
       De quoi constituer une équipe de choc lorsqu'il s'agit de créer un accord avec vos besoins et envie. En soi, le meilleur pour vous.
     </div>
   </div>
 </div>
 
 <!-- Phone Screen Type Part -->
-<div class="phone-type" id="phone-type" [ngClass]="{'hidden': variableService.largeur > 500 || variableService.hauteurEcran < variableService.largeur}" (swipeleft)="next()" (swiperight)="prev()">
+<div class="phone-type" id="phone-type" [ngClass]="{'hidden': variableService.largeur > 500 || variableService.hauteurEcran < variableService.largeur}" (swipeleft)="next()" (swiperight)="prev()" lazy-load-images>
   <ngb-carousel class="element-container noIndicator" [interval]="time" [showNavigationArrows]="show" #mycarousel2>
     <ng-template ngbSlide [ngsReveal]="{reset:true}" >
       <div class="element1" id="element1">
         <div class="person-container">
           <div class="person">
-            <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><img src="../../../assets/person1.jpeg" alt="" class="person-profil"></a>
+            <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><img [attr.data-src]="'../../../assets/person1.jpeg'" alt="" class="person-profil"></a>
           </div>
           <div class="person1-name">
             <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
@@ -109,7 +109,7 @@
       <div class="element2" id="element2">
         <div class="person-container">
           <div class="person">
-            <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><img src="../../../assets/person2.jpeg" alt="" class="person-profil"></a>
+            <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><img [attr.data-src]="'../../../assets/person2.jpeg'" alt="" class="person-profil"></a>
           </div>
           <div class="person2-name">
             <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Douadi</a>
@@ -126,7 +126,7 @@
       <div class="element3" id="element3">
         <div class="person-container">
           <div class="person">
-            <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><img src="../../../assets/person3.jpeg" alt="" class="person-profil"></a>
+            <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><img [attr.data-src]="'../../../assets/person3.jpeg'" alt="" class="person-profil"></a>
           </div>
           <div class="person3-name">
             <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name">Armand Bègue</a>
@@ -142,7 +142,7 @@
       <div class="element4" id="element4">
         <div class="person-container">
           <div class="person">
-            <img src="../../../assets/about-team.png" alt="" class="person-profil">
+            <img [attr.data-src]="'../../../assets/about-team.png'" alt="" class="person-profil">
           </div>
           <div class="person1-name">
             <p class="person4-name">The crew</p>

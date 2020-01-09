@@ -1,5 +1,5 @@
 <!-- Banner Style -->
-<div class="home-banner" [ngClass]="{'myMarginDix': variableService.largeur > 1080, 'myMarginDouble': variableService.largeur < 1080 && variableService.largeur > 500, 'myMarginSept': variableService.largeur < 500}">
+<div class="home-banner" [ngClass]="{'myMarginDix': variableService.largeur > 1080, 'myMarginDouble': variableService.largeur < 1080 && variableService.largeur > 500, 'myMarginSept': variableService.largeur < 500}" lazy-load-images>
   <div class="home-text-container">
     <div class="title-home-banner">
       <div class=""><span typingAnimation [typeSpeed]="25" hideCursorOnComplete="true" [startDelay]="250">Be smart</span></div>
@@ -9,7 +9,7 @@
     <div class="random-text-banner">Il n'a jamais été aussi simple de donner vie à son projet et ce, en toute sérénité et simplicité. <br>Accordez-vous cette chance.</div>
   </div>
   <div class="home-img">
-    <img src="../../../assets/home-banner.png" alt="" class="home-banner-img">
+    <img [attr.data-src]="'../../../assets/home-banner.png'"  alt="" class="home-banner-img">
   </div>
 </div>
 
@@ -23,7 +23,7 @@
 </div>
 
 <!-- Reasons why Part -->
-<div class="reason-container" [ngsRevealSet]="{ reset:true}" [ngsInterval]="300" [ngsSelector]="'.reason'">
+<div class="reason-container" [ngsRevealSet]="{ reset:true}" [ngsInterval]="300" [ngsSelector]="'.reason'" lazy-load-images>
   <div class="reason">
     <div class="reason-title blue-title">
       Sécurité
@@ -32,10 +32,10 @@
       Un produit sécurisé et dans le respect des lois RGPD, nous concevrons
     </div>
     <div class="reason-img-container rotate">
-      <img src="../../../assets/reason1.png" alt="" class="reason-img">
+      <img [attr.data-src]="'../../../assets/reason1.png'" alt="" class="reason-img">
     </div>
     <div class="img-ombre">
-      <img src="../../../assets/ombre.png" class="ombre-img">
+      <img [attr.data-src]="'../../../assets/ombre.png'" class="ombre-img">
     </div>
   </div>
   <div class="reason">
@@ -46,10 +46,10 @@
       Entre vos goûts et tendances actuelles, nous créerons le meilleur visuel.
     </div>
     <div class="reason-img-container">
-      <img src="../../../assets/reason2.png" alt="" class="reason-img">
+      <img [attr.data-src]="'../../../assets/reason2.png'" alt="" class="reason-img">
     </div>
     <div class="img-ombre">
-      <img src="../../../assets/ombre.png" class="ombre-img">
+      <img [attr.data-src]="'../../../assets/ombre.png'" class="ombre-img">
     </div>
   </div>
   <div class="reason">
@@ -60,10 +60,10 @@
       Un service de qualité et un professionnalisme, nous vous promettons.
     </div>
     <div class="reason-img-container">
-      <img src="../../../assets/reason3.png" alt="" class="reason-img">
+      <img [attr.data-src]="'../../../assets/reason3.png'" alt="" class="reason-img">
     </div>
     <div class="img-ombre">
-      <img src="../../../assets/ombre.png" class="ombre-img">
+      <img [attr.data-src]="'../../../assets/ombre.png'" class="ombre-img">
     </div>
   </div>
 </div>
@@ -75,9 +75,9 @@
 </div>
 
 <!-- Expertise Part -->
-<div class="expertise-container" id="expertise-container">
+<div class="expertise-container" id="expertise-container" lazy-load-images>
   <div class="expertise-img-container" [ngsReveal]="{reset:true}">
-    <img src="../../../assets/expertise2.png" alt="" class="expertise-img">
+    <img [attr.data-src]="'../../../assets/expertise2.png'"  alt="" class="expertise-img">
   </div>
   <div class="expertise-text">
     Notre politique est simple : <strong>Vous simplifier la vie. </strong><br> <br>

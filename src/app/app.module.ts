@@ -17,6 +17,7 @@ import { NgbPaginationModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap'
 import { MatCardModule } from '@angular/material';
 import { MyHammerConfig } from './my-hammer.config';
 import { Client2Component } from './components/client2/client2.component';
+import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { Client2Component } from './components/client2/client2.component';
     NgbModule,
     NgbPaginationModule,
     NgbAlertModule,
-    MatCardModule
+    MatCardModule,
+    LazyLoadImagesModule
   ],
   providers: [
     {

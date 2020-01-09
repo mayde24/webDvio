@@ -1,6 +1,6 @@
 <!-- Banner Client 1 Style -->
-<a href="https://damecoeur-4cffc.firebaseapp.com/home">
-  <div class="client-banner" [ngClass]="{'myMarginDouble': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
+<a href="https://damecoeur-4cffc.firebaseapp.com/home" lazy-load-images>
+  <div class="client-banner" [attr.data-background-src]="'../../../assets/client1.png'" [ngClass]="{'myMarginDouble': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
     <div class="client-name-banner">Dame de Coeur</div>
   </div>
 </a>
@@ -19,10 +19,6 @@
 <div class="client-detail-tech">
   <div class="client-detail-container" [ngsRevealSet]="{ reset:false}" [ngsInterval]="250" [ngsSelector]="'.log2'">
     <div class="client-detail log2">
-      <div class="detail-logo"><img src="../../../assets/symfony.png" alt="" class="client-icon2"></div>
-      <div class="detail-name two-title">Symfony</div>
-    </div>
-    <div class="client-detail log2">
       <div class="detail-logo"><i class="fab fa-4x fa-js four-icon client-icon2"></i></div>
       <div class="detail-name four-title">Javascript</div>
     </div>
@@ -38,18 +34,18 @@
 </div>
 
 <!-- Vague Fond Part -->
-<div class="client1-fond">
+<div class="client1-fond" [ngsRevealSet]="{ reset:false}" [ngsInterval]="250" [ngsSelector]="'.produit'" lazy-load-images>
   <div class="title-fond">V I E W</div>
   <div class="image-fond-container">
-    <div class="image-fond2">
-      <img src="../../../assets/client1-img1.png" alt="" class="img-middle" [ngsReveal]="{ reset:false}">
+    <div class="image-fond2 produit">
+      <img [attr.data-src]="'../../../assets/client1-img1.png'"  alt="" class="img-middle">
     </div>
     <div class="image-fond1">
-      <div [ngsRevealSet]="{ reset:false}">
-        <img src="../../../assets/client1-img3.png" alt="" class="img-right">
+      <div class="produit">
+        <img [attr.data-src]="'../../../assets/client1-img3.png'"  alt="" class="img-right">
       </div>
-      <div [ngsRevealSet]="{ reset:false}">
-        <img src="../../../assets/client1-img2.png" alt="" class="img-left">
+      <div class="produit">
+        <img [attr.data-src]="'../../../assets/client1-img2.png'"  alt="" class="img-left">
       </div>
     </div>
   </div>

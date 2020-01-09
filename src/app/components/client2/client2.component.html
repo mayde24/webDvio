@@ -1,6 +1,6 @@
 <!-- Banner Client 1 Style -->
-<a href="https://esmellian.firebaseapp.com/home">
-  <div class="client-banner" [ngClass]="{'myMarginDouble': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
+<a href="https://esmellian.firebaseapp.com/home" lazy-load-images>
+  <div class="client-banner" [attr.data-background-src]="'../../../assets/client2.png'" [ngClass]="{'myMarginDouble': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
   </div>
 </a>
 
@@ -38,19 +38,19 @@
 </div>
 
 <!-- Vague Fond Part -->
-<div class="client1-fond">
+<div class="client1-fond" lazy-load-images>
   <div class="title-fond">V I E W</div>
   <div class="image-fond-container">
     <div class="image-fond2">
-      <img src="../../../assets/client2-img1.png" alt="" class="img-middle" [ngsReveal]="{ reset:false}">
+      <img [attr.data-src]="'../../../assets/client2-img1.png'" alt="" class="img-middle" [ngsReveal]="{ reset:false}">
     </div>
   </div>
 </div>
 <div class="image-fond1">
-  <div [ngsReveal]="{ reset:false}">
+  <div>
     <video src="../../../assets/client2-img2.mp4" class="img-left" autoplay muted preload="true" loop oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
   </div>
-  <div [ngsReveal]="{ reset:false}">
+  <div>
     <video src="../../../assets/client2-img3.mp4" class="img-right" autoplay muted preload="true" loop oncanplay="this.play()" onloadedmetadata="this.muted = true"></video>
   </div>
 </div>
