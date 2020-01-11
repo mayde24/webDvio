@@ -87,28 +87,18 @@
 </div>
 
 <!-- Title Interested in our services? -->
-<div class="title1-container yolo">
-  <div class="title1-text">Interressez par nos services ?</div>
+<div class="title1-container yolo contact-container-new" routerLinkActive="active">
+  <div class="title1-text">Intérressés par nos services ?</div>
   <div class="line"></div>
+  <a routerLink="/contact">
+    <div class="contact-new">
+      <div class="round-contact blue-back">
+        <i class="far fa-envelope"></i>
+      </div>
+    </div>
+  </a>
 </div>
 
 <!-- Contact part -->
-<div class="contact-container1" >
-  <form action="" class="contact1" [ngsRevealSet]="{ reset:true}" [ngsInterval]="200" [ngsSelector]="'.contact-div'">
-    <div class="contact-div">
-      <label for="email"></label>
-      <input type="text" id="email" name="email" class="input-contact" placeholder="Email...">
-    </div>
-    <div class="contact-div">
-      <label for="subject"></label>
-      <input type="text" id="subject" name="subject" class="input-contact" placeholder="Subject...">
-    </div>
-    <div class="contact-div">
-      <label for="msg"></label>
-      <textarea id="msg" name="msg" class="textarea-contact" placeholder="Message..."></textarea>
-    </div>
-    <div class="contact-div">
-      <button type="submit" class="button-contact">Send</button>
-    </div>
-  </form>
+<div class="contact-container-new contact-container1">
 </div>

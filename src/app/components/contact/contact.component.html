@@ -1,22 +1,63 @@
 <!-- Contact part -->
-<div class="backblue" [ngStyle]="{'margin-top': variableService.hauteur, 'height.vh': variableService.largeur > 1080 ? 90 : 93 }">
-  <div class="contact-container2 putain">
-    <form action="" class="contact2" [ngsRevealSet]="{ reset:false}" [ngsInterval]="200" [ngsSelector]="'.contact-div'">
-      <div class="contact-div">
-        <label for="email"></label>
-        <input type="text" id="email" name="email" class="input-contact" placeholder="Email...">
+<!--<div class="backblue" [ngStyle]="{'margin-top': variableService.hauteur, 'height.vh': variableService.largeur > 1080 ? 90 : 93 }">-->
+<!--  <div class="contact-container2 putain">-->
+<!--    <form action="" class="contact2" [ngsRevealSet]="{ reset:false}" [ngsInterval]="200" [ngsSelector]="'.contact-div'">-->
+<!--      <div class="contact-div">-->
+<!--        <label for="email"></label>-->
+<!--        <input type="text" id="email" name="email" class="input-contact" placeholder="Email...">-->
+<!--      </div>-->
+<!--      <div class="contact-div">-->
+<!--        <label for="subject"></label>-->
+<!--        <input type="text" id="subject" name="subject" class="input-contact" placeholder="Subject...">-->
+<!--      </div>-->
+<!--      <div class="contact-div">-->
+<!--        <label for="msg"></label>-->
+<!--        <textarea id="msg" name="msg" class="textarea-contact" placeholder="Message..."></textarea>-->
+<!--      </div>-->
+<!--      <div class="contact-div">-->
+<!--        <button type="submit" class="button-contact">Send</button>-->
+<!--      </div>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="contact-container-new">
+  <div class="title-new">Contact Dvio</div>
+  <div class="sub-text-new">Envie de travailler avec nous ?<br>De suivre notre aventure de près ?</div>
+  <div class="all-contacts">
+    <a href="mailto:contact@dvio.fr?cc=maya.douadi@outlook.fr&subject=[Projet%20Contact]" target="_blank">
+    <div class="contact-new">
+      <div class="round-contact blue-back">
+        <i class="far fa-envelope"></i>
       </div>
-      <div class="contact-div">
-        <label for="subject"></label>
-        <input type="text" id="subject" name="subject" class="input-contact" placeholder="Subject...">
+      <div class="contact-title">EMAIL</div>
+      <div class="contact-content blue-line">contact@dvio.fr</div>
+    </div>
+    </a>
+    <div class="contact-new">
+      <div class="round-contact pink-back">
+        <i class="fas fa-phone"></i>
       </div>
-      <div class="contact-div">
-        <label for="msg"></label>
-        <textarea id="msg" name="msg" class="textarea-contact" placeholder="Message..."></textarea>
+      <div class="contact-title">PHONE</div>
+      <div class="contact-content pink-line">(+33/0)661691605</div>
+    </div>
+    <a href="https://www.linkedin.com/company/dviocompany/" target="_blank">
+      <div class="contact-new">
+        <div class="round-contact orange-back">
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+        <div class="contact-title">LINKEDIN</div>
+        <div class="contact-content orange-line">Rejoignez notre réseau</div>
       </div>
-      <div class="contact-div">
-        <button type="submit" class="button-contact">Send</button>
+    </a>
+    <a href="https://twitter.com/DvioTeam" target="_blank">
+      <div class="contact-new">
+        <div class="round-contact green-back">
+          <i class="fab fa-twitter"></i>
+        </div>
+        <div class="contact-title">TWITTER</div>
+        <div class="contact-content green-line">Suivez-nous</div>
       </div>
-    </form>
+    </a>
   </div>
 </div>
