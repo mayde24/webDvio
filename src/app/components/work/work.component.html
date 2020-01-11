@@ -1,11 +1,11 @@
 <div class="deskop-screen" id="deskop-screen" [ngClass]="{'hidden': variableService.largeur<=500}" lazy-load-images>
   <!-- Clients Part FOR DESKOP -->
-  <div class="client-container" [ngsRevealSet]="{ reset:true}" [ngsInterval]="500" [ngsSelector]="'.client'">
+  <div class="client-container" [ngsRevealSet]="{ reset:true}" [ngsInterval]="500" [ngsSelector]="'.client'" routerLinkActive="active">
     <div class="client-left client" [ngClass]="{'myMarginDix': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
-      <div class="client-img-container">
+      <a routerLink="dame-de-coeur" class="client-name"><div class="client-img-container">
         <img [attr.data-src]="'../../../assets/client1.png'" alt="" class="client-img">
-      </div>
-      <div class="client-info-left" routerLinkActive="active">
+      </div></a>
+      <div class="client-info-left">
         <div class="client-name"><a routerLink="dame-de-coeur" class="client-name">Dame de Coeur</a></div>
         <div class="client-description">
           La famille Duchatel, restaurateur français au cœur de Paris, nous ont confié la réalisation du <strong> site vitrine </strong> de leur héritage.
@@ -51,9 +51,9 @@
           </div>
         </div>
       </div>
-      <div class="client-img-container">
+      <a routerLink="esmel-lian" class="client-name"><div class="client-img-container">
         <img [attr.data-src]="'../../../assets/client2.png'"  alt="" class="client-img">
-      </div>
+      </div></a>
     </div>
   </div>
 
@@ -90,15 +90,15 @@
 
 <!-- Work For Phone & Small Screen -->
 <div class="phone-screen" id="phone-screen" [ngClass]="{'hidden': variableService.largeur>500}" (swipeleft)="next()" (swiperight)="prev()" lazy-load-images>
-  <div class="work-all" [ngsRevealSet]="{ reset:true}" [ngsInterval]="500" [ngsSelector]="'.work'">
+  <div class="work-all" [ngsRevealSet]="{ reset:true}" [ngsInterval]="500" [ngsSelector]="'.work'" routerLinkActive="active">
     <ngb-carousel #mycarousel [interval]="10000000" [showNavigationArrows]="show">
       <ng-template ngbSlide [ngsReveal]="{reset:true}">
         <div class="work1 work" id="work1" [ngClass]="{'myMarginDix': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
           <div class="client-left client" id="client1">
-            <div class="client-img-container">
+            <a routerLink="dame-de-coeur" class="client-name"><div class="client-img-container">
               <img [attr.data-src]="'../../../assets/client1.png'"  alt="" class="client-img">
-            </div>
-            <div class="client-info-left" routerLinkActive="active">
+            </div></a>
+            <div class="client-info-left">
               <div class="client-name"><a routerLink="dame-de-coeur" class="client-name">Dame de coeur</a></div>
               <div class="client-description">
                 La famille Duchatel, restaurateur français au cœur de Paris, nous ont confié la réalisation du <strong> site vitrine </strong> de leur héritage.
@@ -138,9 +138,9 @@
       <ng-template ngbSlide [ngsReveal]="{reset:true}" >
         <div class="work2 work" id="work2" [ngClass]="{'myMarginDix': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
           <div class="client-right client" id="client2">
-            <div class="client-img-container">
+            <a routerLink="esmel-lian" class="client-name"><div class="client-img-container">
               <img [attr.data-src]="'../../../assets/client2.png'"  alt="" class="client-img">
-            </div>
+            </div></a>
             <div class="client-info-right">
               <div class="client-name"><a routerLink="esmel-lian" class="client-name">Esmel Lian</a></div>
               <div class="client-description">

@@ -1,0 +1,55 @@
+[debug] [2020-01-11T15:33:40.965Z] ----------------------------------------------------------------------
+[debug] [2020-01-11T15:33:40.966Z] Command:       /home/linuxbrew/.linuxbrew/Cellar/node/12.8.0/bin/node /home/linuxbrew/.linuxbrew/bin/firebase deploy
+[debug] [2020-01-11T15:33:40.966Z] CLI Version:   7.11.0
+[debug] [2020-01-11T15:33:40.966Z] Platform:      linux
+[debug] [2020-01-11T15:33:40.966Z] Node Version:  v12.8.0
+[debug] [2020-01-11T15:33:41.017Z] Time:          Sat Jan 11 2020 16:33:40 GMT+0100 (Central European Standard Time)
+[debug] [2020-01-11T15:33:41.017Z] ----------------------------------------------------------------------
+[debug] [2020-01-11T15:33:41.018Z] 
+[debug] [2020-01-11T15:33:41.070Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-11T15:33:41.070Z] > authorizing via signed-in user
+[debug] [2020-01-11T15:33:41.070Z] [iam] checking project dvio-test for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2020-01-11T15:33:41.071Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/dvio-test:testIamPermissions  
+
+[debug] [2020-01-11T15:33:41.814Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-11T15:33:41.816Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/dvio-test  
+ 
+[debug] [2020-01-11T15:33:42.149Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'dvio-test'...
+[info] 
+[info] i  deploying database, storage, hosting
+[info] i  database: checking rules syntax...
+[debug] [2020-01-11T15:33:42.164Z] >>> HTTP REQUEST PUT https://dvio-test.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+[debug] [2020-01-11T15:33:42.864Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax for database dvio-test is valid
+[debug] [2020-01-11T15:33:42.866Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/dvio-test  
+ 
+[debug] [2020-01-11T15:33:43.770Z] <<< HTTP RESPONSE 200
+[info] i  firebase.storage: checking storage.rules for compilation errors...
+[debug] [2020-01-11T15:33:43.831Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/dvio-test:test  
+
+[debug] [2020-01-11T15:33:44.552Z] <<< HTTP RESPONSE 200
+[info] ✔  firebase.storage: rules file storage.rules compiled successfully
+[debug] [2020-01-11T15:33:44.555Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/dvio-test/versions  
+
+[debug] [2020-01-11T15:33:46.100Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-11T15:33:46.104Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/dvio-test/releases?pageSize=10&pageToken=  
+ 
+[debug] [2020-01-11T15:33:47.065Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-11T15:33:47.067Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/dvio-test/rulesets/8880e391-b180-429f-ba0a-942ca6d52c28  
+ 
+[debug] [2020-01-11T15:33:47.887Z] <<< HTTP RESPONSE 200
+[info] i  storage: latest version of storage.rules already up to date, skipping upload...
+[info] i  hosting[dvio-test]: beginning deploy...
+[info] i  hosting[dvio-test]: found 167 files in dist
+[debug] [2020-01-11T15:33:49.904Z] [hosting] hash cache [ZGlzdA] stored for 167 files
+[debug] [2020-01-11T15:33:49.905Z] [hosting][hash queue][FINAL]
+[debug] [2020-01-11T15:33:49.906Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/dvio-test/versions/2347e9f62a775439:populateFiles  
+ <request body omitted>
