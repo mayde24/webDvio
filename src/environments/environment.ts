@@ -8,7 +8,7 @@ export const environment = {
 
 const firebaseConfig = {
   apiKey: "AIzaSyBScHiHWsJuzRMkhVSxWMZQFxxaYixZ6so",
-  authDomain: "dvio-test.firebaseapp.com",
+  authDomain: "www.dvio.fr",
   databaseURL: "https://dvio-test.firebaseio.com",
   projectId: "dvio-test",
   storageBucket: "dvio-test.appspot.com",
