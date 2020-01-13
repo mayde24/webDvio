@@ -1,0 +1,37 @@
+[debug] [2020-01-13T09:33:51.812Z] ----------------------------------------------------------------------
+[debug] [2020-01-13T09:33:51.816Z] Command:       /home/linuxbrew/.linuxbrew/Cellar/node/12.8.0/bin/node /home/mayde42/Bureau/angular_project/Dvio/webSite/node_modules/.bin/firebase deploy
+[debug] [2020-01-13T09:33:51.817Z] CLI Version:   7.11.0
+[debug] [2020-01-13T09:33:51.817Z] Platform:      linux
+[debug] [2020-01-13T09:33:51.817Z] Node Version:  v12.8.0
+[debug] [2020-01-13T09:33:51.817Z] Time:          Mon Jan 13 2020 10:33:51 GMT+0100 (Central European Standard Time)
+[debug] [2020-01-13T09:33:51.818Z] ----------------------------------------------------------------------
+[debug] [2020-01-13T09:33:51.818Z] 
+[debug] [2020-01-13T09:33:51.882Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-13T09:33:51.883Z] > authorizing via signed-in user
+[debug] [2020-01-13T09:33:51.883Z] [iam] checking project dvio-test for permissions ["firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2020-01-13T09:33:51.886Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-01-13T09:33:51.887Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-01-13T09:33:51.990Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-13T09:33:52.158Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/dvio-test:testIamPermissions  
+
+[debug] [2020-01-13T09:33:52.916Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-13T09:33:52.919Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/dvio-test  
+ 
+[debug] [2020-01-13T09:33:53.112Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'dvio-test'...
+[info] 
+[info] i  deploying database, storage, hosting
+[info] i  database: checking rules syntax...
+[debug] [2020-01-13T09:33:53.129Z] >>> HTTP REQUEST PUT https://dvio-test.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+[debug] [2020-01-13T09:33:53.836Z] <<< HTTP RESPONSE 200
+[info] ✔  database: rules syntax for database dvio-test is valid
+[debug] [2020-01-13T09:33:53.839Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/dvio-test  
+ 

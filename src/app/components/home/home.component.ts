@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {VariableService} from '../../services/variable.service';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-home',
