@@ -1,6 +1,6 @@
 <!-- Banner Client 1 Style -->
 <a href="https://esmellian.firebaseapp.com/home" lazy-load-images>
-  <div class="client-banner" [attr.data-background-src]="'../../../assets/client2.png'" [ngClass]="{'myMarginDouble': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}">
+  <div class="client-banner" [attr.data-background-src]="'../../../assets/client2.png'" [ngClass]="{'myMarginDouble': variableService.largeur > 1080, 'myMarginSept': variableService.largeur < 1080}" (click)="goTo()">
   </div>
 </a>
 

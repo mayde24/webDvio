@@ -35,7 +35,7 @@
       <div class="person">
         <img [attr.data-src]="'../../../assets/person1.jpeg'" alt="" class="person-profil">
       </div>
-      <div class="person1-name">
+      <div class="person1-name" (click)="goToMaya()">
         <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
       </div>
     </div>
@@ -55,7 +55,7 @@
       <div class="person">
         <img [attr.data-src]="'../../../assets/person2.jpeg'" alt="" class="person-profil">
       </div>
-      <div class="person2-name">
+      <div class="person2-name" (click)="goToYasmine()">
         <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Douadi</a>
       </div>
     </div>
@@ -68,7 +68,7 @@
       <div class="person">
         <img [attr.data-src]="'../../../assets/person3.jpeg'" alt="" class="person-profil">
       </div>
-      <div class="person3-name">
+      <div class="person3-name" (click)="goToArmand()">
         <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name">Armand Bègue</a>
       </div>
     </div>
@@ -92,10 +92,10 @@
     <ng-template ngbSlide [ngsReveal]="{reset:true}" >
       <div class="element1" id="element1">
         <div class="person-container">
-          <div class="person">
+          <div class="person" (click)="goToMaya()">
             <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><img [attr.data-src]="'../../../assets/person1.jpeg'" alt="" class="person-profil"></a>
           </div>
-          <div class="person1-name">
+          <div class="person1-name" (click)="goToMaya()">
             <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
           </div>
         </div>
@@ -108,10 +108,10 @@
     <ng-template ngbSlide [ngsReveal]="{reset:true}" >
       <div class="element2" id="element2">
         <div class="person-container">
-          <div class="person">
+          <div class="person" (click)="goToYasmine()">
             <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><img [attr.data-src]="'../../../assets/person2.jpeg'" alt="" class="person-profil"></a>
           </div>
-          <div class="person2-name">
+          <div class="person2-name" (click)="goToYasmine()">
             <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Douadi</a>
           </div>
         </div>
@@ -125,10 +125,10 @@
     <ng-template ngbSlide [ngsReveal]="{reset:true}" >
       <div class="element3" id="element3">
         <div class="person-container">
-          <div class="person">
+          <div class="person" (click)="goToArmand()">
             <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><img [attr.data-src]="'../../../assets/person3.jpeg'" alt="" class="person-profil"></a>
           </div>
-          <div class="person3-name">
+          <div class="person3-name" (click)="goToArmand()">
             <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name">Armand Bègue</a>
           </div>
         </div>

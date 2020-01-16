@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { VariableService } from '../../services/variable.service';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
+import * as firebase from 'firebase';
 
 
 @Component({
@@ -20,6 +21,8 @@ export class WorkComponent implements OnInit {
 
   ngOnInit() {
     document.documentElement.scrollTop = 0;
+    const visit_name = 'Work-' + this.variableService.visit_id;
+    firebase.analytics().logEvent('visit', {name: visit_name});
   }
 
   next() {

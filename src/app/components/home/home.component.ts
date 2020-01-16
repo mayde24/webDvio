@@ -13,5 +13,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     document.documentElement.scrollTop = 0;
+    const visit_name = 'Home-' + this.variableService.visit_id;
+    firebase.analytics().logEvent('visit', {name: visit_name});
   }
 }

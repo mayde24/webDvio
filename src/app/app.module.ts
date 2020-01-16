@@ -18,6 +18,7 @@ import { MatCardModule } from '@angular/material';
 import { MyHammerConfig } from './my-hammer.config';
 import { Client2Component } from './components/client2/client2.component';
 import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
+import { CookieService } from 'ngx-cookie-service';
 
 import * as firebase from 'firebase';
 
@@ -58,6 +59,7 @@ firebase.initializeApp(firebaseConfig);
     LazyLoadImagesModule
   ],
   providers: [
+    CookieService,
     {
       provide: HAMMER_GESTURE_CONFIG,
       useClass: MyHammerConfig
