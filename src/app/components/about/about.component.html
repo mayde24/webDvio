@@ -1,11 +1,11 @@
 <!-- Banner Style -->
 <div class="home-banner2" [ngClass]="{'myMarginDix': variableService.largeur > 750, 'myMarginSept': variableService.largeur < 1080}" lazy-load-images>
   <div class="home-text-container2">
-    <div class="title-home-banner2">Dvio?</div>
-    <div class="random-text-banner2">350 kg d'humain, saupoudré d'efficacité et de professionnalisme, sur son lit de gentillesse et d'énergie positive.</div>
+    <div class="title-home-banner2"><h1>Dvio ?</h1></div>
+    <div class="random-text-banner2"><h1>350 kg d'humain, saupoudré d'efficacité et de professionnalisme, sur son lit de gentillesse et d'énergie positive.</h1></div>
   </div>
   <div class="home-img">
-    <img [attr.data-src]="'../../../assets/about-banner2.png'" alt="" class="home-banner-img2">
+    <img [attr.data-src]="'../../../assets/about-banner2.png'" alt="Agence de developpeur Dvio, créateur et concepteur de site web design." class="home-banner-img2">
   </div>
 </div>
 
@@ -15,15 +15,17 @@
 <!-- Text About us Part -->
 <div class="about-text-container" id="about-container" [ngStyle]="{'background-image': variableService.largeur > 600 ? 'url(\'../../../assets/about-text-fond.png\')' : 'none'}">
   <div class="about-text" data-aos="fade-down" data-aos-duration="500" data-aos-delay="100">
-    Notre aventure a commencé avec 3 personnalités distinctes, <strong> enthousiastes de prouver leurs compétences </strong> dans de grands projets. <br> <br>
-    Ce fut un jour une idée et depuis, une réalité de chaque instant. Celle d'une <strong>équipe grandissante </strong> et travaillant avec plaisir afin de concevoir le meilleur d'elle-même. <br> <br>
-    Chaque mission est une nouvelle opportunité de s'améliorer et de créer quelque chose dont nous serons fiers.
+    <h2>
+      Notre aventure a commencé avec 3 personnalités distinctes, <strong> enthousiastes de prouver leurs compétences </strong> dans de grands projets. <br> <br>
+      Ce fut un jour une idée et depuis, une réalité de chaque instant. Celle d'une <strong>équipe grandissante </strong> et travaillant avec plaisir afin de concevoir le meilleur d'elle-même. <br> <br>
+      Chaque mission est une nouvelle opportunité de s'améliorer et de créer quelque chose dont nous serons fiers.
+    </h2>
   </div>
 </div>
 
 <!-- Title Who are we ? -->
 <div class="title1-container">
-  <div class="title1-text">Qui sommes-nous ?</div>
+  <div class="title1-text"><h2>Qui sommes-nous ?</h2></div>
   <div class="line"></div>
 </div>
 
@@ -33,43 +35,49 @@
     <div class="person-container" id="person1" [ngsReveal]="{reset:true}"
          (mouseover)="hover(1)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 1 && hovered != 0}">
       <div class="person">
-        <img [attr.data-src]="'../../../assets/person1.jpeg'" alt="" class="person-profil">
+        <img [attr.data-src]="'../../../assets/person1.jpeg'" alt="Agence de developpeur Dvio, créateur et concepteur de site web design." class="person-profil">
       </div>
       <div class="person1-name" (click)="goToMaya()">
-        <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
+        <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><h3>Maya Douadi</h3></a>
       </div>
     </div>
     <div class="person1-text visibl" id="person1-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 1}">
-      Etudiant l'ingénierie informatique, elle multiplia les bootcamps d'informatique intensifs (notamment Le Wagon et l'école 42) afin de parfaire son code et d'en apprendre davantage sur la programmation et ses ficelles. <br><br>
-      Elle accompagne aujourd'hui l'équipe en tant que Designer et Frontend Developper pour sa maîtrise du visuel et du moderne.
+      <h3>
+        Etudiant l'ingénierie informatique, elle multiplia les bootcamps d'informatique intensifs (notamment Le Wagon et l'école 42) afin de parfaire son code et d'en apprendre davantage sur la programmation et ses ficelles. <br><br>
+        Elle accompagne aujourd'hui l'équipe en tant que Designer et Frontend Developper pour sa maîtrise du visuel et du moderne.
+      </h3>
     </div>
     <div class="person3-text visibl" id="person3-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 3}">
-      Etudiant la programmation et le management, il suivit stages et alternance en tant que FullStack developper et Chef de projet pour de grandes entreprises.<br><br>
-      Aujourd'hui, au sein de la famille Dvio, il endosse le rôle de Backend Developper, jonglant entre code et serveur par ses superbes talents.
+      <h3>
+        Etudiant la programmation et le management, il suivit stages et alternance en tant que FullStack developper et Chef de projet pour de grandes entreprises.<br><br>
+        Aujourd'hui, au sein de la famille Dvio, il endosse le rôle de Backend Developper, jonglant entre code et serveur par ses superbes talents.
+      </h3>
     </div>
     <div class="person2-left-text visibl person2Text" id="person2-left-text" [ngsReveal]="{reset:true}" [ngClass]="{'hidden': hovered != 2}">
-      Suivant des études auprès de grandes écoles françaises telles que Paris School of Economics ou l'Ecole de guerre économique (EGE), elle est aujourd’hui consultante spécialisée en Cyber sécurité. <br>
+      <h3>Suivant des études auprès de grandes écoles françaises telles que Paris School of Economics ou l'Ecole de guerre économique (EGE), elle est aujourd’hui consultante spécialisée en Cyber sécurité. <br></h3>
     </div>
     <div class="person-container" id="person2" [ngsReveal]="{reset:true}"
          (mouseover)="hover(2)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 2 && hovered != 0}">
       <div class="person">
-        <img [attr.data-src]="'../../../assets/person2.jpeg'" alt="" class="person-profil">
+        <img [attr.data-src]="'../../../assets/person2.jpeg'" alt="Agence de developpeur Dvio, créateur et concepteur de site web design." class="person-profil">
       </div>
       <div class="person2-name" (click)="goToYasmine()">
-        <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Douadi</a>
+        <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><h3>Yasmine Douadi</h3></a>
       </div>
     </div>
     <div class="person2-right-text visibl person2Text" id="person2-right-text"  [ngsReveal]="{reset:true}"[ngClass]="{'hidden': hovered != 2}">
-      Egalement présidente du club Risque de l'EGE, elle anime celui-ci et organise divers congrès et événements à grande échelle. <br>
-      Elle gère auprès de l'équipe Dvio l'aspect conseils marketing et sécurité du produit.
+      <h3>
+        Egalement présidente du club Risque de l'EGE, elle anime celui-ci et organise divers congrès et événements à grande échelle. <br>
+        Elle gère auprès de l'équipe Dvio l'aspect conseils marketing et sécurité du produit.
+      </h3>
     </div>
     <div class="person-container" id="person3" [ngsReveal]="{reset:true}"
          (mouseover)="hover(3)" (mouseleave)="leave()" [ngClass]="{'hidden': hovered != 3 && hovered != 0}">
       <div class="person">
-        <img [attr.data-src]="'../../../assets/person3.jpeg'" alt="" class="person-profil">
+        <img [attr.data-src]="'../../../assets/person3.jpeg'" alt="Agence de developpeur Dvio, créateur et concepteur de site web design." class="person-profil">
       </div>
       <div class="person3-name" (click)="goToArmand()">
-        <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name">Armand Bègue</a>
+        <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><h3>Armand Bègue</h3></a>
       </div>
     </div>
   </div>
@@ -77,11 +85,13 @@
   <!-- Our Team Part -->
   <div class="team-container">
     <div class="team-img-container" [ngsReveal]="{reset:false}">
-      <img [attr.data-src]="'../../../assets/about-team.png'" alt="" class="team-img">
+      <img [attr.data-src]="'../../../assets/about-team.png'" alt="Agence de developpeur Dvio, créateur et concepteur de site web design." class="team-img">
     </div>
     <div class="team-text" [ngsReveal]="{reset:false}">
-      Le reste de l'équipe, aujourd'hui formée de 3 autres freelancers, se compose d'un incroyable codeur, d'une superbe marketeuse et d'un talentueux UX designer. Tous beaucoup trop perfectionniste pour leur propre bien. <br> <br>
-      De quoi constituer une équipe de choc lorsqu'il s'agit de réaliser un produit en accord avec vos besoins et envies. En soi, le meilleur pour vous.
+      <h3>
+        Le reste de l'équipe, aujourd'hui formée de 3 autres freelancers, se compose d'un incroyable codeur, d'une superbe marketeuse et d'un talentueux UX designer. Tous beaucoup trop perfectionniste pour leur propre bien. <br> <br>
+        De quoi constituer une équipe de choc lorsqu'il s'agit de réaliser un produit en accord avec vos besoins et envies. En soi, le meilleur pour vous.
+      </h3>
     </div>
   </div>
 </div>
@@ -93,15 +103,17 @@
       <div class="element1" id="element1">
         <div class="person-container">
           <div class="person" (click)="goToMaya()">
-            <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><img [attr.data-src]="'../../../assets/person1.jpeg'" alt="" class="person-profil"></a>
+            <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><img [attr.data-src]="'../../../assets/person1.jpeg'" alt="Agence de developpeur Dvio, créateur et concepteur de site web design." class="person-profil"></a>
           </div>
           <div class="person1-name" (click)="goToMaya()">
-            <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name">Maya Douadi</a>
+            <a href="https://www.linkedin.com/in/mayadouadi/" class="person1-name"><h3>Maya Douadi</h3></a>
           </div>
         </div>
         <div class="person-text-general">
-          Etudiant l'ingénierie informatique, elle multiplia les bootcamps d'informatique intensifs (notamment Le Wagon et l'école 42) afin de parfaire son code et d'en apprendre davantage sur la programmation et ses ficelles. <br><br>
-          Elle accompagne aujourd'hui l'équipe en tant que Designer et Frontend Developper pour sa maîtrise du visuel et du moderne.
+          <h3>
+            Etudiant l'ingénierie informatique, elle multiplia les bootcamps d'informatique intensifs (notamment Le Wagon et l'école 42) afin de parfaire son code et d'en apprendre davantage sur la programmation et ses ficelles. <br><br>
+            Elle accompagne aujourd'hui l'équipe en tant que Designer et Frontend Developper pour sa maîtrise du visuel et du moderne.
+          </h3>
         </div>
       </div>
     </ng-template>
@@ -109,16 +121,18 @@
       <div class="element2" id="element2">
         <div class="person-container">
           <div class="person" (click)="goToYasmine()">
-            <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><img [attr.data-src]="'../../../assets/person2.jpeg'" alt="" class="person-profil"></a>
+            <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><img [attr.data-src]="'../../../assets/person2.jpeg'" alt="Agence de developpeur Dvio, créateur et concepteur de site web design." class="person-profil"></a>
           </div>
           <div class="person2-name" (click)="goToYasmine()">
-            <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name">Yasmine Douadi</a>
+            <a href="https://www.linkedin.com/in/yasminedouadi/" class="person2-name"><h3>Yasmine Douadi</h3></a>
           </div>
         </div>
         <div class="person-text-general">
-          Suivant des études auprès de grandes écoles françaises telles que Paris School of Economics ou l'Ecole de guerre économique (EGE), elle est aujourd’hui consultante spécialisée en Cyber sécurité.<br><br>
-          Egalement présidente du club Risque de l'EGE, elle anime celui-ci et organise divers congrès et événements à grande échelle.<br>
-          Elle gère auprès de l'équipe Dvio l'aspect conseils marketing et sécurité du produit.
+          <h3>
+            Suivant des études auprès de grandes écoles françaises telles que Paris School of Economics ou l'Ecole de guerre économique (EGE), elle est aujourd’hui consultante spécialisée en Cyber sécurité.<br><br>
+            Egalement présidente du club Risque de l'EGE, elle anime celui-ci et organise divers congrès et événements à grande échelle.<br>
+            Elle gère auprès de l'équipe Dvio l'aspect conseils marketing et sécurité du produit.
+          </h3>
         </div>
       </div>
     </ng-template>
@@ -126,15 +140,17 @@
       <div class="element3" id="element3">
         <div class="person-container">
           <div class="person" (click)="goToArmand()">
-            <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><img [attr.data-src]="'../../../assets/person3.jpeg'" alt="" class="person-profil"></a>
+            <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><img [attr.data-src]="'../../../assets/person3.jpeg'" alt="Agence de developpeur Dvio, créateur et concepteur de site web design." class="person-profil"></a>
           </div>
           <div class="person3-name" (click)="goToArmand()">
-            <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name">Armand Bègue</a>
+            <a href="https://www.linkedin.com/in/armandbegue/" class="person3-name"><h3>Armand Bègue</h3></a>
           </div>
         </div>
         <div class="person-text-general">
-          Etudiant la programmation et le management, il suivit stages et alternance en tant que FullStack developper et Chef de projet pour de grandes entreprises.<br><br>
-          Aujourd'hui, au sein de la famille Dvio, il endosse le rôle de Backend Developper, jonglant entre code et serveur par ses superbes talents.
+          <h3>
+            Etudiant la programmation et le management, il suivit stages et alternance en tant que FullStack developper et Chef de projet pour de grandes entreprises.<br><br>
+            Aujourd'hui, au sein de la famille Dvio, il endosse le rôle de Backend Developper, jonglant entre code et serveur par ses superbes talents.
+          </h3>
         </div>
       </div>
     </ng-template>
@@ -142,15 +158,17 @@
       <div class="element4" id="element4">
         <div class="person-container">
           <div class="person">
-            <img [attr.data-src]="'../../../assets/about-team.png'" alt="" class="person-profil">
+            <img [attr.data-src]="'../../../assets/about-team.png'" alt="Agence de developpeur Dvio, créateur et concepteur de site web design." class="person-profil">
           </div>
           <div class="person1-name">
             <p class="person4-name">The crew</p>
           </div>
         </div>
         <div class="person-text-general">
-          Le reste de l'équipe, aujourd'hui formée de 3 autres freelancers, se compose d'un incroyable codeur, d'une superbe marketeuse et d'un talentueux UX designer. Tous beaucoup trop perfectionniste pour leur propre bien. <br> <br>
-          De quoi constituer une équipe de choc lorsqu'il s'agit de réaliser un produit en accord avec vos besoins et envies. En soi, le meilleur pour vous.
+          <h3>
+            Le reste de l'équipe, aujourd'hui formée de 3 autres freelancers, se compose d'un incroyable codeur, d'une superbe marketeuse et d'un talentueux UX designer. Tous beaucoup trop perfectionniste pour leur propre bien. <br> <br>
+            De quoi constituer une équipe de choc lorsqu'il s'agit de réaliser un produit en accord avec vos besoins et envies. En soi, le meilleur pour vous.
+          </h3>
         </div>
       </div>
     </ng-template>
@@ -160,7 +178,7 @@
 
 <!-- Title Our technologies -->
 <div class="title1-container">
-  <div class="title1-text">Nos technologies</div>
+  <div class="title1-text"><h2>Nos technologies</h2></div>
   <div class="line"></div>
 </div>
 
@@ -168,34 +186,34 @@
 <div class="technologies-container" [ngsRevealSet]="{ reset:true}" [ngsInterval]="150" [ngsSelector]="'.technologie'">
   <div class="technologie icon-left">
     <div class="tech-img"><i class="fab fa-4x fa-html5 one-icon image-icon"></i></div>
-    <div class="tech-title one-title">HTML</div>
+    <div class="tech-title one-title"><h3>HTML</h3></div>
   </div>
   <div class="technologie">
     <div class="tech-img"><i class="fab fa-4x fa-css3 two-icon image-icon"></i></div>
-    <div class="tech-title two-title">CSS</div>
+    <div class="tech-title two-title"><h3>CSS</h3></div>
   </div>
   <div class="technologie icon-right">
     <div class="tech-img"><i class="fab fa-4x fa-php three-icon image-icon"></i></div>
-    <div class="tech-title three-title">PHP</div>
+    <div class="tech-title three-title"><h3>PHP</h3></div>
   </div>
   <div class="technologie icon-left">
     <div class="tech-img"><i class="fab fa-4x fa-js four-icon image-icon"></i></div>
-    <div class="tech-title four-title">Javascript</div>
+    <div class="tech-title four-title"><h3>Javascript</h3></div>
   </div>
   <div class="technologie">
-    <div class="tech-img"><img src="../../../assets/typescript.png" alt="" class="one-icon image-icon"></div>
-    <div class="tech-title one-title">Typescript</div>
+    <div class="tech-img"><img src="../../../assets/typescript.png" alt="Agence de developpeur Dvio, créateur et concepteur de site web design." class="one-icon image-icon"></div>
+    <div class="tech-title one-title"><h3>Typescript</h3></div>
   </div>
   <div class="technologie icon-right">
-    <div class="tech-img"><img src="../../../assets/symfony.png" alt="" class="image-icon two-icon"></div>
-    <div class="tech-title two-title">Symfony</div>
+    <div class="tech-img"><img src="../../../assets/symfony.png" alt="Agence de developpeur Dvio, créateur et concepteur de site web design." class="image-icon two-icon"></div>
+    <div class="tech-title two-title"><h3>Symfony</h3></div>
   </div>
   <div class="technologie icon-left">
-    <div class="tech-img"><img src="../../../assets/ruby.png" alt="" class="three-icon image-icon"></div>
-    <div class="tech-title three-title">Ruby (&Rails)</div>
+    <div class="tech-img"><img src="../../../assets/ruby.png" alt="Agence de developpeur Dvio, créateur et concepteur de site web design." class="three-icon image-icon"></div>
+    <div class="tech-title three-title"><h3>Ruby (&Rails)</h3></div>
   </div>
   <div class="technologie icon-right">
     <div class="tech-img"><i class="fab fa-4x fa-angular four-icon image-icon"></i></div>
-    <div class="tech-title four-title">Angular</div>
+    <div class="tech-title four-title"><h3>Angular</h3></div>
   </div>
 </div>

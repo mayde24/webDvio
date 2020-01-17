@@ -171,3 +171,9 @@ a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #0E7C7C;
 }
+
+h1, h2, h3 {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
