@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {VariableService} from '../../services/variable.service';
 import * as firebase from 'firebase';
+import {CookieService} from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-client1',
@@ -9,16 +10,17 @@ import * as firebase from 'firebase';
 })
 export class Client1Component implements OnInit {
 
-  constructor(public variableService: VariableService) { }
+  constructor(public variableService: VariableService,
+              private cookieService: CookieService) { }
 
   ngOnInit() {
     document.documentElement.scrollTop = 0;
-    const visit_name = 'DameCoeur-' + this.variableService.visit_id;
+    const visit_name = 'DameCoeur-' + this.cookieService.get('visit_dvio_cookie');
     firebase.analytics().logEvent('visit', {name: visit_name});
   }
 
   goTo() {
-    const visit_bis = 'DameCoeur-' + this.variableService.visit_id;
+    const visit_bis = 'DameCoeur-' + this.cookieService.get('visit_dvio_cookie');
     firebase.analytics().logEvent('goTo_visit', {name: visit_bis});
   }
 

@@ -3,6 +3,7 @@ import { VariableService } from '../../services/variable.service';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 import * as firebase from 'firebase';
+import {CookieService} from 'ngx-cookie-service';
 
 
 @Component({
@@ -16,12 +17,13 @@ export class WorkComponent implements OnInit {
   show: boolean = true;
 
   constructor(public variableService: VariableService,
-              public config: NgbCarouselConfig) {
+              public config: NgbCarouselConfig,
+              private cookieService: CookieService) {
   }
 
   ngOnInit() {
     document.documentElement.scrollTop = 0;
-    const visit_name = 'Work-' + this.variableService.visit_id;
+    const visit_name = 'Work-' + this.cookieService.get('visit_dvio_cookie');
     firebase.analytics().logEvent('visit', {name: visit_name});
   }
 
