@@ -63,22 +63,31 @@
   color: #3D7288;
 }
 
-.contact-header {
+.devis-header {
   color: #D05689;
   transition: 0.5s;
 }
 
-.contact-header:hover {
+.devis-header:hover {
   color: #8E3A5D;
 }
 
-.about-header {
+.contact-header {
   color: #DEA331;
   transition: 0.5s;
 }
 
-.about-header:hover {
+.contact-header:hover {
   color: #9E7424;
+}
+
+.about-header {
+  color: #6CB619;
+  transition: 0.5s;
+}
+
+.about-header:hover {
+  color: #6A9736;
 }
 
 .container-header {
