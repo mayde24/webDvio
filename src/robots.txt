@@ -1,0 +1,3 @@
+sitemap: http://www.dvio.fr/assets/sitemap.xml
+User-agent: *
+Disallow:

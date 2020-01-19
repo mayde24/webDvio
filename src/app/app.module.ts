@@ -21,6 +21,8 @@ import { LazyLoadImagesModule } from 'ngx-lazy-load-images';
 import { CookieService } from 'ngx-cookie-service';
 
 import * as firebase from 'firebase';
+import { DevisComponent } from './components/devis/devis.component';
+import { EstimationComponent } from './components/estimation/estimation.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBScHiHWsJuzRMkhVSxWMZQFxxaYixZ6so",
@@ -44,7 +46,9 @@ firebase.initializeApp(firebaseConfig);
     AboutComponent,
     Client1Component,
     HeaderComponent,
-    Client2Component
+    Client2Component,
+    DevisComponent,
+    EstimationComponent
   ],
   imports: [
     BrowserModule,
