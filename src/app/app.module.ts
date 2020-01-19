@@ -23,6 +23,7 @@ import { CookieService } from 'ngx-cookie-service';
 import * as firebase from 'firebase';
 import { DevisComponent } from './components/devis/devis.component';
 import { EstimationComponent } from './components/estimation/estimation.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBScHiHWsJuzRMkhVSxWMZQFxxaYixZ6so",
@@ -50,18 +51,19 @@ firebase.initializeApp(firebaseConfig);
     DevisComponent,
     EstimationComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    TypingAnimationModule,
-    NgsRevealModule,
-    BrowserAnimationsModule,
-    NgbModule,
-    NgbPaginationModule,
-    NgbAlertModule,
-    MatCardModule,
-    LazyLoadImagesModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        TypingAnimationModule,
+        NgsRevealModule,
+        BrowserAnimationsModule,
+        NgbModule,
+        NgbPaginationModule,
+        NgbAlertModule,
+        MatCardModule,
+        LazyLoadImagesModule,
+        ReactiveFormsModule
+    ],
   providers: [
     CookieService,
     {

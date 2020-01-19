@@ -1,1 +1,20 @@
-<p>estimation works!</p>
+<div class="estimation">
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div class="choice" *ngFor="let question of questions">
+      <p>{{question[1]}}</p>
+      <label for="{{question[0]}}_oui">Oui</label>
+      <input type="radio" id="{{question[0]}}_oui" formControlName="{{question[0]}}" value="{{question[2]}}" required>
+      <label for="{{question[0]}}_non">Non</label>
+      <input type="radio" id="{{question[0]}}_non" formControlName="{{question[0]}}" value="0" required>
+    </div>
+
+    <button type="submit" [disabled]="!form.valid">Log in</button>
+
+    <p *ngIf="submitted">{{"Resultat :" + choix}}</p>
+    <p *ngIf="submitted">{{"Estimation : " + min + " - " + max}}</p>
+
+  </form>
+
+</div>
