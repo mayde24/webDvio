@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class DevisComponent implements OnInit {
 
   constructor() { }
+  widthEcran: number;
 
   ngOnInit() {
+    this.widthEcran = window.innerWidth;
   }
 
 }

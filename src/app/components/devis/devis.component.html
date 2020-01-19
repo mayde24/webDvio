@@ -1,1 +1,90 @@
-<p>devis works!</p>
+<div class="devis-container">
+  <div class="third-line">
+    <div class="title">
+      <h1>Nos formules</h1>
+    </div>
+    <div class="sub-text">
+      <h2>Des formules complètes et personnalisables, de quoi ne pas vous perdre tout en vous offrant un service adapté à vos besoins.</h2>
+    </div>
+  </div>
+  <div class="first-line" *ngIf="this.widthEcran < 650">
+    <div class="estimation-formule">
+      <div><h1>Estimer votre projet ici</h1></div>
+    </div>
+  </div>
+  <div class="second-line">
+    <div class="formule first-formule">
+      <div class="geometrie">
+        <div class="cercle11"></div>
+        <div class="cercle12"></div>
+      </div>
+      <div class="la-formule">
+        <div class="title-formule">
+          <h1>Standard</h1>
+        </div>
+        <div class="détail">
+          <div class="option">
+            <h3>Site fonctionnel</h3>
+          </div>
+          <div class="option">
+            <h3>Implémentation de base</h3>
+          </div>
+          <div class="option">
+            <h3>Moins de 5 pages</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="plus1"><i class="fas fa-plus-circle"></i></div>
+    <div class="formule second-formule">
+      <div class="geometrie">
+        <div class="carre21"></div>
+        <div class="cercle22"></div>
+      </div>
+      <div class="la-formule">
+        <div class="title-formule">
+          <h1>Business</h1>
+        </div>
+        <div class="détail">
+          <div class="option">
+            <h3>Implémentations avancées</h3>
+          </div>
+          <div class="option">
+            <h3>Assistance rédaction</h3>
+          </div>
+          <div class="option">
+            <h3>Plus de 5 pages</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="plus2"><i class="fas fa-plus-circle"></i></div>
+    <div class="formule third-formule">
+      <div class="geometrie">
+        <div class="triangle31"></div>
+        <div class="parallelogramme"></div>
+      </div>
+      <div class="la-formule">
+        <div class="title-formule">
+          <h1>Premium</h1>
+        </div>
+        <div class="détail">
+          <div class="option">
+            <h3>Création de logo</h3>
+          </div>
+          <div class="option">
+            <h3>Assistance mensuelle</h3>
+          </div>
+          <div class="option">
+            <h3>Rapport mensuel</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="first-line" *ngIf="this.widthEcran > 650">
+    <div class="estimation-formule">
+      <div><h1>Estimer votre projet ici</h1></div>
+    </div>
+  </div>
+</div>

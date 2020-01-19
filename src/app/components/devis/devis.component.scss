@@ -1,0 +1,429 @@
+.devis-container {
+  min-height: 100vh;
+  padding-top: 15vh;
+  background: url('../../../assets/devis-fond.png');
+  background-size: cover;
+}
+
+.third-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bolder;
+  color: #34CFD4;
+}
+
+.sub-text {
+  font-weight: lighter;
+  color: grey;
+  font-size: 15px;
+  width: 400px;
+}
+
+.first-line {
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.estimation-formule {
+  border-radius: 20px;
+  background: linear-gradient(#34CFD4, #34D490);
+  margin: 0 auto;
+  opacity: 0.7;
+  transition: 1s;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  h1 {
+    margin: 0;
+    transition: 1s;
+  }
+}
+
+.estimation-formule:hover {
+  opacity: 1;
+  h1 {
+    letter-spacing: 0.05rem;
+  }
+}
+
+.second-line {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+}
+
+.formule {
+  border-radius: 20px;
+  height: 45vh;
+  width: 20vw;
+  transition: 1s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  background-color: white;
+}
+
+.formule:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.cercle11 {
+  border-radius: 100%;
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  transition: 1s;
+  margin-top: -8vh;
+  margin-left: -5vh;
+  background-color: #E8BBDD;
+  opacity: 0.5;
+}
+
+.cercle12 {
+  background-color: #E74F5F;
+  border-radius: 100%;
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  transition: 1s;
+  margin-top: -8vh;
+  margin-left: 18vh;
+  opacity: 0.6;
+}
+
+.carre21 {
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  background-color: #F2B044;
+  opacity: 0.4;
+  transition: 1s;
+  transform: rotate(80deg);
+  margin-top: -7vh;
+  margin-left: -2vh;
+  transition: 1s;
+}
+
+.cercle22 {
+  width: 250px;
+  height: 250px;
+  background-color: #F2D044;
+  border-radius: 100%;
+  transform: rotate(15deg);
+  opacity: 0.6;
+  margin-top: -8vh;
+  margin-left: 18vh;
+  transition: 1s;
+  position : absolute;
+}
+
+.triangle31 {
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 300px solid #B8F244;
+  opacity: 0.6;
+  transition: 1s;
+  margin-top: -15vh;
+  margin-left: -8vh;
+  position : absolute;
+}
+
+.parallelogramme {
+  width  : 100px;
+  height : 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 300px solid #90F244;
+  position : absolute;
+  opacity: 0.5;
+  margin-top: -10vh;
+  margin-left: 19vh;
+  transform: rotate(100deg);
+  transition: 1s;
+}
+
+.first-formule:hover {
+  .cercle11 {
+    transform: translate(0px, 20px);
+  }
+  .cercle12 {
+    transform: translate(-30px, 20px);
+  }
+}
+
+.second-formule:hover {
+  .carre21 {
+    transform: rotate(70deg);
+  }
+  .cercle22 {
+    transform: translate(10px, 30px);
+  }
+}
+
+.third-formule:hover {
+  .parallelogramme {
+    transform: rotate(115deg);
+  }
+  .triangle31 {
+    transform: rotate(-20deg);
+  }
+}
+
+.plus2, .plus1 {
+  svg:not(:root).svg-inline--fa {
+    color: #14D3B3;
+    background-color: white;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.la-formule {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.title-formule {
+  font-size: 40px;
+  color: white;
+  font-weight: bolder;
+  margin-bottom: 10vh;
+}
+
+.option {
+  margin-bottom: 3vh;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 9px;
+  width: 250px;
+  margin-left: 15vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-weight: lighter;
+  text-align: left;
+  h3 {
+    margin: 0;
+  }
+}
+
+body, html {
+  height: 100vh;
+}
+
+@media only screen and (max-width: 1280px) {
+  .la-formule {
+    .title-formule {
+      font-size: 30px;
+      margin-bottom: 7vh;
+    }
+  }
+  .cercle11, .cercle12, .cercle22, .carre21 {
+    width: 200px;
+    height: 200px;
+  }
+  .triangle31, .parallelogramme {
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 250px solid #B8F244;
+  }
+  .la-formule {
+    h3 {
+      font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .formule {
+    width: 25vw;
+  }
+  .la-formule {
+    h3 {
+      font-size: 13px;
+    }
+  }
+  .plus2, .plus1 {
+    svg:not(:root).svg-inline--fa {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .la-formule {
+    h3 {
+      font-size: 12px;
+    }
+  }
+  .la-formule {
+    .title-formule {
+      font-size: 20px;
+      margin-bottom: 5vh;
+    }
+  }
+  .cercle11, .cercle12, .cercle22, .carre21 {
+    width: 150px;
+    height: 150px;
+  }
+  .triangle31, .parallelogramme {
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid #B8F244;
+  }
+  .option {
+    width: 200px;
+  }
+}
+
+@media only screen and (min-height: 1000px) {
+  .la-formule {
+    h3 {
+      font-size: 13px;
+    }
+  }
+  .la-formule {
+    .title-formule {
+      font-size: 25px;
+      margin-bottom: 7vh;
+    }
+  }
+  .formule {
+    height: 40vh;
+  }
+  .cercle11, .cercle12, .cercle22, .carre21 {
+    width: 200px;
+    height: 200px;
+    margin-top: -3vh;
+  }
+  .cercle12, .cercle22, .parallelogramme {
+    margin-left: 7vh;
+  }
+  .triangle31, .parallelogramme {
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 250px solid #B8F244;
+    margin-top: -4vh;
+  }
+  .option {
+    width: 290px;
+  }
+}
+
+@media only screen and (min-height: 1150px) {
+  .la-formule {
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .la-formule {
+    .title-formule {
+      font-size: 30px;
+    }
+  }
+  .formule {
+    height: 30vh;
+  }
+  .cercle11, .cercle12, .cercle22, .carre21 {
+    width: 300px;
+    height: 300px;
+    margin-top: -5vh;
+  }
+  .cercle12, .cercle22, .parallelogramme {
+    margin-left: 7vh;
+  }
+  .triangle31, .parallelogramme {
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    border-bottom: 350px solid #B8F244;
+    margin-top: -6vh;
+  }
+  .option {
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  body, html {
+    height: auto;
+    overflow: auto !important;
+  }
+  .second-line {
+    flex-direction: column;
+  }
+  .sub-text {
+    width: 300px;
+  }
+  .formule {
+    width: 70vw;
+    height: 40vh;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+  }
+  .la-formule {
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .la-formule {
+    .title-formule {
+      font-size: 30px;
+    }
+  }
+  .cercle11, .cercle12, .cercle22, .carre21 {
+    width: 250px;
+    height: 250px;
+    margin-top: -8vh;
+  }
+  .cercle12, .cercle22, .parallelogramme {
+    margin-left: 7vh;
+  }
+  .triangle31, .parallelogramme {
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 300px solid #B8F244;
+    margin-top: -13vh;
+  }
+  .option {
+    width: 300px;
+  }
+  .devis-container {
+    background: url('../../../assets/devis-fond-vertical.png');
+    background-size: cover;
+  }
+}
+
+::ng-deep body {
+  overflow-x: visible !important;
+}
