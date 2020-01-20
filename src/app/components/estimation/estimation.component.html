@@ -1,20 +1,259 @@
-<div class="estimation">
-
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
-
+<div class="estimation" [ngClass]="{'noDisplay': submitted}">
+  <div class="progress-bar" id="progress"></div>
+  <form [formGroup]="form" class="formulaire-design" id="entierParsec">
     <div class="choice" *ngFor="let question of questions">
-      <p>{{question[1]}}</p>
-      <label for="{{question[0]}}_oui">Oui</label>
-      <input type="radio" id="{{question[0]}}_oui" formControlName="{{question[0]}}" value="{{question[2]}}" required>
-      <label for="{{question[0]}}_non">Non</label>
-      <input type="radio" id="{{question[0]}}_non" formControlName="{{question[0]}}" value="0" required>
+      <div [ngClass]="{'noDisplay': index != questions.indexOf(question)}" class="tout">
+        <div class="text">
+          <div><h2>{{question[1]}}</h2></div>
+        </div>
+        <div class="inputGroup">
+          <input class="yes" type="radio" id="{{question[0]}}_oui" formControlName="{{question[0]}}" value="{{question[2]}}" required (click)="nextForced()">
+          <label for="{{question[0]}}_oui">Oui</label>
+        </div>
+        <div class="inputGroup">
+          <input class="no" type="radio" id="{{question[0]}}_non" formControlName="{{question[0]}}" value="0" required (click)="nextForced()">
+          <label for="{{question[0]}}_non">Non</label>
+        </div>
+      </div>
     </div>
-
-    <button type="submit" [disabled]="!form.valid">Log in</button>
-
-    <p *ngIf="submitted">{{"Resultat :" + choix}}</p>
-    <p *ngIf="submitted">{{"Estimation : " + min + " - " + max}}</p>
-
+    <button type="submit" [disabled]="!form.valid" class="cacher" id="btnSubmit">Log in</button>
+    <div class="bas-form">
+      <div class="previous" (click)="previous()" [ngClass]="{'noButtonOn': thereIsPrevious == false}">
+        <h3>Précédent</h3>
+      </div>
+      <div class="next" (click)="next()" [ngClass]="{'noButtonOn': thereIsNext == false}">
+        <h3>Suivant</h3>
+      </div>
+    </div>
   </form>
+</div>
 
+<div class="resultat-container" [ngClass]="{'noDisplay': submitted == false || widthEcran > 650}">
+  <div class="resultat-sub">
+    <div class="third-line">
+      <div class="title">
+        <h1>{{min + "€ — " + max + "€"}}</h1>
+      </div>
+      <div class="sub-text">
+        <h2>Selon vos réponses, nous avons identifé la formule correspondant le mieux à vos besoins.</h2>
+      </div>
+    </div>
+    <div class="formule first-formule ultime-choix1" [ngClass]="{'noDisplay': choix != 1}">
+      <div class="geometrie">
+        <div class="cercle11"></div>
+        <div class="cercle12"></div>
+      </div>
+      <div class="la-formule">
+        <div class="title-formule">
+          <h1>Standard</h1>
+        </div>
+        <div class="détail">
+          <div class="option">
+            <h3>Site fonctionnel</h3>
+          </div>
+          <div class="option">
+            <h3>Implémentation de base</h3>
+          </div>
+          <div class="option">
+            <h3>Moins de 5 pages</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="formule second-formule ultime-choix2" [ngClass]="{'noDisplay': choix != 2}">
+      <div class="geometrie">
+        <div class="carre21"></div>
+        <div class="cercle22"></div>
+      </div>
+      <div class="la-formule">
+        <div class="title-formule">
+          <h1>Business</h1>
+        </div>
+        <div class="détail">
+          <div class="option">
+            <h3>Implémentations avancées</h3>
+          </div>
+          <div class="option">
+            <h3>Assistance rédaction</h3>
+          </div>
+          <div class="option">
+            <h3>Plus de 5 pages</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="formule third-formule ultime-choix3" [ngClass]="{'noDisplay': choix != 3}">
+      <div class="geometrie">
+        <div class="triangle31"></div>
+        <div class="parallelogramme"></div>
+      </div>
+      <div class="la-formule">
+        <div class="title-formule">
+          <h1>Premium</h1>
+        </div>
+        <div class="détail">
+          <div class="option">
+            <h3>Création de logo</h3>
+          </div>
+          <div class="option">
+            <h3>Assistance mensuelle</h3>
+          </div>
+          <div class="option">
+            <h3>Rapport mensuel</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="second-line">
+      <div class="formule first-formule" [ngClass]="{'noDisplay': choix == 1}">
+        <div class="geometrie">
+          <div class="cercle11"></div>
+          <div class="cercle12"></div>
+        </div>
+        <div class="la-formule">
+          <div class="title-formule">
+            <h1>Standard</h1>
+          </div>
+          <div class="détail">
+            <div class="option">
+              <h3>Site fonctionnel</h3>
+            </div>
+            <div class="option">
+              <h3>Implémentation de base</h3>
+            </div>
+            <div class="option">
+              <h3>Moins de 5 pages</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="formule second-formule" [ngClass]="{'noDisplay': choix == 2}">
+        <div class="geometrie">
+          <div class="carre21"></div>
+          <div class="cercle22"></div>
+        </div>
+        <div class="la-formule">
+          <div class="title-formule">
+            <h1>Business</h1>
+          </div>
+          <div class="détail">
+            <div class="option">
+              <h3>Implémentations avancées</h3>
+            </div>
+            <div class="option">
+              <h3>Assistance rédaction</h3>
+            </div>
+            <div class="option">
+              <h3>Plus de 5 pages</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="formule third-formule" [ngClass]="{'noDisplay': choix == 3}">
+        <div class="geometrie">
+          <div class="triangle31"></div>
+          <div class="parallelogramme"></div>
+        </div>
+        <div class="la-formule">
+          <div class="title-formule">
+            <h1>Premium</h1>
+          </div>
+          <div class="détail">
+            <div class="option">
+              <h3>Création de logo</h3>
+            </div>
+            <div class="option">
+              <h3>Assistance mensuelle</h3>
+            </div>
+            <div class="option">
+              <h3>Rapport mensuel</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="resultat-container" [ngClass]="{'noDisplay': submitted == false || widthEcran < 650}">
+  <div class="resultat-sub">
+    <div class="third-line">
+      <div class="title">
+        <h1>{{min + "€ — " + max + "€"}}</h1>
+      </div>
+      <div class="sub-text">
+        <h2>Selon vos réponses, nous avons identifé la formule correspondant le mieux à vos besoins. Pour plus de précisions, pensez à nous contacter !</h2>
+      </div>
+    </div>
+    <div class="second-line">
+      <div class="formule first-formule" [ngClass]="{'ultime-choix1': choix == 1}">
+        <div class="geometrie">
+          <div class="cercle11"></div>
+          <div class="cercle12"></div>
+        </div>
+        <div class="la-formule">
+          <div class="title-formule">
+            <h1>Standard</h1>
+          </div>
+          <div class="détail">
+            <div class="option">
+              <h3>Site fonctionnel</h3>
+            </div>
+            <div class="option">
+              <h3>Implémentation de base</h3>
+            </div>
+            <div class="option">
+              <h3>Moins de 5 pages</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="plus1"><i class="fas fa-plus-circle"></i></div>
+      <div class="formule second-formule" [ngClass]="{'ultime-choix2': choix == 2}">
+        <div class="geometrie">
+          <div class="carre21"></div>
+          <div class="cercle22"></div>
+        </div>
+        <div class="la-formule">
+          <div class="title-formule">
+            <h1>Business</h1>
+          </div>
+          <div class="détail">
+            <div class="option">
+              <h3>Implémentations avancées</h3>
+            </div>
+            <div class="option">
+              <h3>Assistance rédaction</h3>
+            </div>
+            <div class="option">
+              <h3>Plus de 5 pages</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="plus2"><i class="fas fa-plus-circle"></i></div>
+      <div class="formule third-formule" [ngClass]="{'ultime-choix3': choix == 3}">
+        <div class="geometrie">
+          <div class="triangle31"></div>
+          <div class="parallelogramme"></div>
+        </div>
+        <div class="la-formule">
+          <div class="title-formule">
+            <h1>Premium</h1>
+          </div>
+          <div class="détail">
+            <div class="option">
+              <h3>Création de logo</h3>
+            </div>
+            <div class="option">
+              <h3>Assistance mensuelle</h3>
+            </div>
+            <div class="option">
+              <h3>Rapport mensuel</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

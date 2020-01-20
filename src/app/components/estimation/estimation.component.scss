@@ -6,8 +6,845 @@
   margin: 0 auto;
   width: 100vw;
   text-align: center !important;
-  padding-top: 10vh;
-  margin-top: 10vh;
-  background-image: url('../../../assets/about-text-fond.png');
+  padding-top: 15vh;
+  background-image: url('../../../assets/devis-fond.png');
   background-size: cover;
+  height: 100vh;
+}
+.choice {
+  position: absolute;
+  margin-top: -7%;
+}
+.bas-form {
+  margin-top: 30%;
+}
+
+.inputGroup {
+  background-color: #fff;
+  display: block;
+  margin: 10px 0;
+  position: relative;
+  margin: 0 auto;
+  width: 65%;
+  transition: 1s;
+  border-radius: 15px;
+  label {
+    transition: 1s;
+    padding: 10px 15px;
+    height: 40px;
+    width: 100%;
+    display: block;
+    text-align: left;
+    color: #3C454C;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 200ms ease-in;
+    overflow: hidden;
+    margin-bottom: 2vh;
+    &:before {
+      width: 100%;
+      height: 10px;
+      border-radius: 50%;
+      content: '';
+      background-color: #5562eb;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale3d(1, 1, 1);
+      transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+      opacity: 0;
+      z-index: -1;
+    }
+
+    &:after {
+      width: 20px;
+      height: 20px;
+      content: '';
+      border: 2px solid #D1D7DC;
+      background-color: #fff;
+      background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.414 11L4 12.414l5.414 5.414L20.828 6.414 19.414 5l-10 10z' fill='%23fff' fill-rule='nonzero'/%3E%3C/svg%3E ");
+      background-repeat: no-repeat;
+      background-position: -3px -4px;
+      border-radius: 50%;
+      z-index: 2;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      transition: all 200ms ease-in;
+    }
+  }
+
+  input:checked ~ label {
+    color: #fff;
+
+    &:before {
+      transform: translate(-50%, -50%) scale3d(56, 56, 1);
+      opacity: 1;
+    }
+
+    &:after {
+      background-color: #54E0C7;
+      border-color: #54E0C7;
+    }
+  }
+
+  input {
+    width: 32px;
+    height: 32px;
+    order: 1;
+    z-index: 2;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    visibility: hidden;
+  }
+}
+
+
+// codepen formatting
+.form {
+  padding: 0 16px;
+  max-width: 550px;
+  margin: 50px auto;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 36px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40vw;
+  margin: 0 auto;
+}
+
+.button-us {
+  background: linear-gradient(#34CFD4, #34D490);
+  padding: 8px 16px;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  border-radius: 35px;
+  animation: 2s 1 fade-in;
+  opacity: 0.7;
+  transition: 1s;
+}
+
+.button-us:hover {
+  opacity: 1;
+}
+
+.formulaire-design {
+  margin: 0 auto;
+  background-color: white;
+  width: 60vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  height: 55vh;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.text {
+  width: 40vw;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+  height: 15vh;
+  margin-bottom: 4vh;
+  margin-top: 5vh;
+  animation: 1s 1 fade-up;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.label-base {
+  position: relative;
+  margin-top: 10vh;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-button {
+  background: lightgrey !important;
+  opacity: 1 !important;
+  transition: 1s;
+  animation: 2s 1 fade-in;
+  padding: 8px 16px;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  border-radius: 35px;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.bas-form {
+  width: 60vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.previous {
+  border-radius: 5px;
+  background-color: #A5C3CA;
+  width: 120px;
+  height: 40px;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  cursor: pointer;
+  h3 {
+    margin: 0;
+  }
+}
+
+.next {
+  cursor: pointer;
+  background-color: #5562eb;
+  border-radius: 5px;
+  width: 120px;
+  height: 40px;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  h3 {
+    margin: 0;
+  }
+}
+
+.cacher {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.progress-bar {
+  height: 2px;
+  background-color: #36F5D3;
+  transition: 1s;
+}
+
+// Card Pricing style
+.devis-container {
+  min-height: 100vh;
+  padding-top: 15vh;
+  background: url('../../../assets/devis-fond.png');
+  background-size: cover;
+}
+
+.third-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+.noButtonOn {
+  opacity: 0.4;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: bolder;
+  color: #34CFD4;
+}
+
+.sub-text {
+  font-weight: lighter;
+  color: grey;
+  font-size: 15px;
+  width: 400px;
+}
+
+.first-line {
+  height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.estimation-formule {
+  border-radius: 20px;
+  background: linear-gradient(#34CFD4, #34D490);
+  margin: 0 auto;
+  opacity: 0.7;
+  transition: 1s;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  h1 {
+    margin: 0;
+    transition: 1s;
+  }
+}
+
+.estimation-formule:hover {
+  opacity: 1;
+  h1 {
+    letter-spacing: 0.05rem;
+  }
+}
+
+.second-line {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding-bottom: 5vh;
+  padding-top: 5vh;
+}
+
+.formule {
+  border-radius: 20px;
+  height: 45vh;
+  width: 20vw;
+  transition: 1s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  background-color: white;
+}
+
+.ultime-choix1 {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  animation: 2s 5 choix1;
+}
+.ultime-choix2 {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  animation: 2s 5 choix2;
+}
+.ultime-choix3 {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  animation: 2s 5 choix3;
+}
+
+
+@keyframes choix1 {
+  0% {
+    border: 2px solid transparent;
+  }
+  50% {
+    border: 2px solid #DDA0A2;
+  }
+  100% {
+    border: 2px solid transparent;
+  }
+}
+
+@keyframes choix2 {
+  0% {
+    border: 2px solid transparent;
+  }
+  50% {
+    border: 2px solid #D3CC5E;
+  }
+  100% {
+    border: 2px solid transparent;
+  }
+}
+
+@keyframes choix3 {
+  0% {
+    border: 2px solid transparent;
+  }
+  50% {
+    border: 2px solid #36F5AD;
+  }
+  100% {
+    border: 2px solid transparent;
+  }
+}
+
+.tout {
+  width: 60vw;
+}
+
+.cercle11 {
+  border-radius: 100%;
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  transition: 1s;
+  margin-top: -8vh;
+  margin-left: -5vh;
+  background-color: #E8BBDD;
+  opacity: 0.5;
+}
+
+.cercle12 {
+  background-color: #E74F5F;
+  border-radius: 100%;
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  transition: 1s;
+  margin-top: -8vh;
+  margin-left: 18vh;
+  opacity: 0.6;
+}
+
+.carre21 {
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  background-color: #F2B044;
+  opacity: 0.4;
+  transition: 1s;
+  transform: rotate(80deg);
+  margin-top: -7vh;
+  margin-left: -2vh;
+  transition: 1s;
+}
+
+.cercle22 {
+  width: 250px;
+  height: 250px;
+  background-color: #F2D044;
+  border-radius: 100%;
+  transform: rotate(15deg);
+  opacity: 0.6;
+  margin-top: -8vh;
+  margin-left: 18vh;
+  transition: 1s;
+  position : absolute;
+}
+
+.triangle31 {
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 300px solid #B8F244;
+  opacity: 0.6;
+  transition: 1s;
+  margin-top: -15vh;
+  margin-left: -8vh;
+  position : absolute;
+}
+
+.parallelogramme {
+  width  : 100px;
+  height : 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 300px solid #90F244;
+  position : absolute;
+  opacity: 0.5;
+  margin-top: -10vh;
+  margin-left: 19vh;
+  transform: rotate(100deg);
+  transition: 1s;
+}
+
+.first-formule:hover {
+  .cercle11 {
+    transform: translate(0px, 20px);
+  }
+  .cercle12 {
+    transform: translate(-30px, 20px);
+  }
+}
+
+.second-formule:hover {
+  .carre21 {
+    transform: rotate(70deg);
+  }
+  .cercle22 {
+    transform: translate(10px, 30px);
+  }
+}
+
+.third-formule:hover {
+  .parallelogramme {
+    transform: rotate(115deg);
+  }
+  .triangle31 {
+    transform: rotate(-20deg);
+  }
+}
+
+.plus2, .plus1 {
+  svg:not(:root).svg-inline--fa {
+    color: #14D3B3;
+    background-color: white;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.la-formule {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.title-formule {
+  font-size: 40px;
+  color: white;
+  font-weight: bolder;
+  margin-bottom: 10vh;
+}
+
+.inputGroup:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.option {
+  margin-bottom: 3vh;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 9px;
+  width: 250px;
+  margin-left: 15vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  font-weight: lighter;
+  text-align: left;
+  h3 {
+    margin: 0;
+  }
+}
+
+.noDisplay {
+  display: none !important;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.resultat-container {
+  width: 100vw;
+  margin: 0 auto;
+  padding-top: 20vh;
+  background-image: url('../../../assets/devis-fond.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20vh;
+}
+
+.resultat-sub {
+  width: 100vw;
+  margin: 0 auto;
+  animation: 2s 1 fade-up;
+}
+
+body , html{
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+
+@media only screen and (max-width: 1280px) {
+  .la-formule {
+    .title-formule {
+      font-size: 30px;
+      margin-bottom: 7vh;
+    }
+  }
+  .cercle11, .cercle12, .cercle22, .carre21 {
+    width: 200px;
+    height: 200px;
+  }
+  .triangle31, .parallelogramme {
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 250px solid #B8F244;
+  }
+  .la-formule {
+    h3 {
+      font-size: 15px;
+    }
+  }
+  .formulaire-design, .tout {
+    width: 70vw;
+  }
+  .text {
+    font-size: 18px;
+    width: 80%;
+  }
+  .bas-form {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 1080px) {
+  .formule {
+    width: 23vw;
+  }
+  .la-formule {
+    h3 {
+      font-size: 13px;
+    }
+  }
+  .plus2, .plus1 {
+    svg:not(:root).svg-inline--fa {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .la-formule {
+    h3 {
+      font-size: 12px;
+    }
+  }
+  .la-formule {
+    .title-formule {
+      font-size: 20px;
+      margin-bottom: 5vh;
+    }
+  }
+  .cercle11, .cercle12, .cercle22, .carre21 {
+    width: 150px;
+    height: 150px;
+  }
+  .triangle31, .parallelogramme {
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 200px solid #B8F244;
+  }
+  .option {
+    width: 200px;
+  }
+  .formulaire-design, .tout {
+    width: 80vw;
+  }
+  .inputGroup {
+    width: 75%;
+  }
+  .text {
+    font-size: 15px;
+  }
+  .previous, .next {
+    font-size: 15px;
+    width: 90px;
+    height: 30px;
+  }
+}
+
+@media only screen and (min-height: 1000px) {
+  .la-formule {
+    h3 {
+      font-size: 13px;
+    }
+  }
+  .la-formule {
+    .title-formule {
+      font-size: 25px;
+      margin-bottom: 7vh;
+    }
+  }
+  .formule {
+    height: 40vh;
+  }
+  .cercle11, .cercle12, .cercle22, .carre21 {
+    width: 200px;
+    height: 200px;
+    margin-top: -3vh;
+  }
+  .cercle12, .cercle22, .parallelogramme {
+    margin-left: 7vh;
+  }
+  .triangle31, .parallelogramme {
+    border-left: 125px solid transparent;
+    border-right: 125px solid transparent;
+    border-bottom: 250px solid #B8F244;
+    margin-top: -4vh;
+  }
+  .option {
+    width: 290px;
+  }
+  .text {
+    font-size: 23px;
+    margin-bottom: 10vh;
+  }
+  .choice {
+    position: absolute;
+    margin-top: -10%;
+  }
+  .bas-form {
+    margin-top: 70%;
+  }
+}
+
+@media only screen and (min-height: 1150px) {
+  .la-formule {
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .la-formule {
+    .title-formule {
+      font-size: 30px;
+    }
+  }
+  .formule {
+    height: 30vh;
+  }
+  .cercle11, .cercle12, .cercle22, .carre21 {
+    width: 300px;
+    height: 300px;
+    margin-top: -5vh;
+  }
+  .cercle12, .cercle22, .parallelogramme {
+    margin-left: 7vh;
+  }
+  .triangle31, .parallelogramme {
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    border-bottom: 350px solid #B8F244;
+    margin-top: -6vh;
+  }
+  .option {
+    width: 350px;
+  }
+  .text {
+    margin-bottom: 10vh;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  body, html {
+    height: auto;
+    overflow: auto !important;
+  }
+  .choice {
+    position: absolute;
+    margin-top: -10%;
+  }
+  .bas-form {
+    margin-top: 70%;
+  }
+  .text {
+    margin-bottom: 7vh;
+    margin-top: 2vh;
+  }
+  .formulaire-design {
+    height: 65vh;
+  }
+  .previous, .next {
+    font-size: 11px;
+    width: 70px;
+    height: 25px;
+  }
+  .second-line {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sub-text {
+    width: 300px;
+  }
+  .formule {
+    width: 70vw;
+    height: 40vh;
+    margin: 0 auto;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+  }
+  .la-formule {
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .la-formule {
+    .title-formule {
+      font-size: 30px;
+    }
+  }
+  .cercle11, .cercle12, .cercle22, .carre21 {
+    width: 250px;
+    height: 250px;
+    margin-top: -8vh;
+  }
+  .cercle12, .cercle22, .parallelogramme {
+    margin-left: 7vh;
+  }
+  .triangle31, .parallelogramme {
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 300px solid #B8F244;
+    margin-top: -13vh;
+  }
+  .option {
+    width: 300px;
+  }
+  .resultat-container, .estimation {
+    background: url('../../../assets/devis-fond-vertical.png');
+    background-size: cover;
+  }
+  ::ng-deep body , html{
+    height: auto;
+    overflow: visible;
+  }
 }

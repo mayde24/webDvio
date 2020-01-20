@@ -7,9 +7,13 @@
       <h2>Des formules complètes et personnalisables, de quoi ne pas vous perdre tout en vous offrant un service adapté à vos besoins.</h2>
     </div>
   </div>
-  <div class="first-line" *ngIf="this.widthEcran < 650">
+  <div class="first-line" routerLinkActive="active" *ngIf="this.widthEcran < 650">
     <div class="estimation-formule">
-      <div><h1>Estimer votre projet ici</h1></div>
+      <div>
+        <a routerLink="/estimation">
+          <h1>Estimez votre projet ici</h1>
+        </a>
+      </div>
     </div>
   </div>
   <div class="second-line">
@@ -82,9 +86,13 @@
       </div>
     </div>
   </div>
-  <div class="first-line" *ngIf="this.widthEcran > 650">
+  <div class="first-line" routerLinkActive="active" *ngIf="this.widthEcran > 650">
     <div class="estimation-formule">
-      <div><h1>Estimer votre projet ici</h1></div>
+      <div>
+        <a routerLink="/estimation">
+        <h1>Estimez votre projet ici</h1>
+        </a>
+      </div>
     </div>
   </div>
 </div>

@@ -424,6 +424,6 @@ body, html {
   }
 }
 
-::ng-deep body {
-  overflow-x: visible !important;
+body , html{
+  overflow: hidden !important;
 }
