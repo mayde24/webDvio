@@ -7,28 +7,28 @@
           <div><h2>{{question[1]}}</h2></div>
         </div>
         <div class="inputGroup">
-          <input class="yes" type="radio" id="{{question[0]}}_oui" formControlName="{{question[0]}}" value="{{question[2]}}" required (click)="nextForced()">
-          <label for="{{question[0]}}_oui">Oui</label>
+          <input class="yes" type="radio" id="{{question[0]}}_oui" formControlName="{{question[0]}}" value="{{question[3]}}" required (click)="nextForced()">
+          <label for="{{question[0]}}_oui">{{question[2]}}</label>
         </div>
         <div class="inputGroup">
-          <input class="no" type="radio" id="{{question[0]}}_non" formControlName="{{question[0]}}" value="0" required (click)="nextForced()">
-          <label for="{{question[0]}}_non">Non</label>
+          <input class="no" type="radio" id="{{question[0]}}_non" formControlName="{{question[0]}}" value="{{question[5]}}" required (click)="nextForced()">
+          <label for="{{question[0]}}_non">{{question[4]}}</label>
         </div>
       </div>
     </div>
     <button type="submit" [disabled]="!form.valid" class="cacher" id="btnSubmit">Log in</button>
     <div class="bas-form">
-      <div class="previous" (click)="previous()" [ngClass]="{'noButtonOn': thereIsPrevious == false}">
+      <div class="base-button" (click)="previous()" [ngClass]="{'previous': thereIsPrevious, 'noButtonOn': !thereIsPrevious}">
         <h3>Précédent</h3>
       </div>
-      <div class="next" (click)="next()" [ngClass]="{'noButtonOn': thereIsNext == false}">
+      <div class="base-button"(click)="next()" [ngClass]="{'next': thereIsNext, 'noButtonOn': !thereIsNext}">
         <h3>Suivant</h3>
       </div>
     </div>
   </form>
 </div>
 
-<div class="resultat-container" [ngClass]="{'noDisplay': submitted == false || widthEcran > 650}">
+<div class="resultat-container" [ngClass]="{'noDisplay': !submitted || widthEcran > 650}">
   <div class="resultat-sub">
     <div class="third-line">
       <div class="title">
@@ -99,7 +99,7 @@
             <h3>Assistance mensuelle</h3>
           </div>
           <div class="option">
-            <h3>Rapport mensuel</h3>
+            <h3>Interface Admin</h3>
           </div>
         </div>
       </div>
@@ -166,7 +166,7 @@
               <h3>Assistance mensuelle</h3>
             </div>
             <div class="option">
-              <h3>Rapport mensuel</h3>
+              <h3>Interface Admin</h3>
             </div>
           </div>
         </div>
@@ -175,7 +175,7 @@
   </div>
 </div>
 
-<div class="resultat-container" [ngClass]="{'noDisplay': submitted == false || widthEcran < 650}">
+<div class="resultat-container" [ngClass]="{'noDisplay': !submitted || widthEcran < 650}">
   <div class="resultat-sub">
     <div class="third-line">
       <div class="title">
@@ -249,7 +249,7 @@
               <h3>Assistance mensuelle</h3>
             </div>
             <div class="option">
-              <h3>Rapport mensuel</h3>
+              <h3>Interface Admin</h3>
             </div>
           </div>
         </div>

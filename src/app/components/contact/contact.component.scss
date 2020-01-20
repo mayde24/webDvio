@@ -7,8 +7,7 @@
   margin: 0 auto;
   width: 100vw;
   text-align: center !important;
-  padding-top: 10vh;
-  margin-top: 10vh;
+  margin-top: 20vh;
   background-image: url('../../../assets/about-text-fond.png');
   background-size: cover;
   .title-new {
@@ -61,6 +60,9 @@
       transition: 1s;
       padding-right: 5px;
       padding-left: 5px;
+      h3 {
+        margin-bottom: 5px;
+      }
     }
   }
   .contact-new:hover {

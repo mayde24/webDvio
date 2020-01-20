@@ -1,7 +1,6 @@
 .devis-container {
-  min-height: 100vh;
   padding-top: 15vh;
-  background: url('../../../assets/devis-fond.png');
+  background-image: url('../../../assets/devis-fond.png');
   background-size: cover;
 }
 
@@ -97,6 +96,15 @@
   margin-left: -5vh;
   background-color: #E8BBDD;
   opacity: 0.5;
+}
+
+.option {
+  transition: 1s;
+}
+
+.option:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .cercle12 {
@@ -419,7 +427,7 @@ body, html {
     width: 300px;
   }
   .devis-container {
-    background: url('../../../assets/devis-fond-vertical.png');
+    background-image: url('../../../assets/devis-fond-vertical.png');
     background-size: cover;
   }
 }

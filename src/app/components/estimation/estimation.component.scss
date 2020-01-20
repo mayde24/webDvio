@@ -20,7 +20,7 @@
 }
 
 .inputGroup {
-  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   display: block;
   margin: 10px 0;
   position: relative;
@@ -28,9 +28,12 @@
   width: 65%;
   transition: 1s;
   border-radius: 15px;
+  animation: 1s 1 fade-up;
+  margin-bottom: 3vh;
+  font-size: 14px;
   label {
     transition: 1s;
-    padding: 10px 15px;
+    padding: 12px 15px;
     height: 40px;
     width: 100%;
     display: block;
@@ -42,12 +45,13 @@
     transition: color 200ms ease-in;
     overflow: hidden;
     margin-bottom: 2vh;
+    border-radius: 15px;
     &:before {
       width: 100%;
       height: 10px;
       border-radius: 50%;
       content: '';
-      background-color: #5562eb;
+      background-color: #BB1DFF;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -69,7 +73,7 @@
       border-radius: 50%;
       z-index: 2;
       position: absolute;
-      right: 30px;
+      right: 15px;
       top: 50%;
       transform: translateY(-50%);
       cursor: pointer;
@@ -86,8 +90,8 @@
     }
 
     &:after {
-      background-color: #54E0C7;
-      border-color: #54E0C7;
+      background-color: #D2ADFA;
+      border-color: #D2ADFA;
     }
   }
 
@@ -158,7 +162,7 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   height: 55vh;
-  padding-top: 20px;
+  padding-top: 50px;
   padding-bottom: 20px;
 }
 
@@ -169,7 +173,7 @@
   text-align: center;
   height: 15vh;
   margin-bottom: 4vh;
-  margin-top: 5vh;
+  margin-top: 6vh;
   animation: 1s 1 fade-up;
   display: flex;
   justify-content: center;
@@ -226,39 +230,13 @@
 }
 
 .previous {
-  border-radius: 5px;
-  background-color: #A5C3CA;
-  width: 120px;
-  height: 40px;
-  color: white;
-  font-weight: bolder;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 1s;
+  background-color: #D2ADFA;
   cursor: pointer;
-  h3 {
-    margin: 0;
-  }
 }
 
 .next {
+  background-color: #C849FF;
   cursor: pointer;
-  background-color: #5562eb;
-  border-radius: 5px;
-  width: 120px;
-  height: 40px;
-  color: white;
-  font-weight: bolder;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 1s;
-  h3 {
-    margin: 0;
-  }
 }
 
 .cacher {
@@ -268,7 +246,7 @@
 
 .progress-bar {
   height: 2px;
-  background-color: #36F5D3;
+  background-color: #F684F3;
   transition: 1s;
 }
 
@@ -290,7 +268,23 @@
 }
 
 .noButtonOn {
-  opacity: 0.4;
+  background-color: white;
+}
+
+.base-button {
+  border-radius: 15px;
+  width: 120px;
+  height: 40px;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  h3 {
+    margin: 0;
+  }
 }
 
 .title {
@@ -468,6 +462,15 @@
   position : absolute;
 }
 
+.option {
+  transition: 1s;
+}
+
+.option:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .triangle31 {
   width: 0;
   height: 0;
@@ -552,7 +555,7 @@
 }
 
 .inputGroup:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: #F5F5F5;
 }
 
 .option {
@@ -685,7 +688,7 @@ body , html{
   .text {
     font-size: 15px;
   }
-  .previous, .next {
+  .base-button {
     font-size: 15px;
     width: 90px;
     height: 30px;
@@ -783,7 +786,7 @@ body , html{
     margin-top: -10%;
   }
   .bas-form {
-    margin-top: 70%;
+    margin-top: 85%;
   }
   .text {
     margin-bottom: 7vh;
@@ -792,7 +795,7 @@ body , html{
   .formulaire-design {
     height: 65vh;
   }
-  .previous, .next {
+  .base-button {
     font-size: 11px;
     width: 70px;
     height: 25px;
@@ -801,6 +804,9 @@ body , html{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .inputGroup {
+    font-size: 12px;
   }
   .sub-text {
     width: 300px;
