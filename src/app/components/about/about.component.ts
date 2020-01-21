@@ -24,6 +24,7 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.variableService.page_shadow = false;
     document.documentElement.scrollTop = 0;
     const visit_name = 'AboutUs-' + this.cookieService.get('visit_dvio_cookie');
     firebase.analytics().logEvent(visit_name);

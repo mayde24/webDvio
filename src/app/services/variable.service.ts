@@ -11,6 +11,7 @@ export class VariableService {
   largeur: number;
   hauteurEcran: number;
   visit_id: string;
+  page_shadow: boolean = false;
 
   constructor(private cookieService: CookieService) {
     if (this.cookieService.get('visit_dvio_cookie') == '') {

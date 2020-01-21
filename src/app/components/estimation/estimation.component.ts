@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import * as firebase from 'firebase';
 import { CookieService } from 'ngx-cookie-service';
+import {VariableService} from '../../services/variable.service';
 
 @Component({
   selector: 'app-estimation',
@@ -58,9 +59,11 @@ export class EstimationComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private cookieService: CookieService) { }
+    private cookieService: CookieService,
+    public variableService: VariableService) { }
 
   ngOnInit() {
+    this.variableService.page_shadow = true;
     document.documentElement.scrollTop = 0;
     const visit_name = 'Estimation-' + this.cookieService.get('visit_dvio_cookie');
     firebase.analytics().logEvent(visit_name);

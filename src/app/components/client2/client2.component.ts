@@ -14,6 +14,7 @@ export class Client2Component implements OnInit {
               private cookieService: CookieService) { }
 
   ngOnInit() {
+    this.variableService.page_shadow = false;
     document.documentElement.scrollTop = 0;
     const visit_name = 'EsmelLian-' + this.cookieService.get('visit_dvio_cookie');
     firebase.analytics().logEvent(visit_name);
