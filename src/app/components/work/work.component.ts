@@ -24,7 +24,7 @@ export class WorkComponent implements OnInit {
   ngOnInit() {
     document.documentElement.scrollTop = 0;
     const visit_name = 'Work-' + this.cookieService.get('visit_dvio_cookie');
-    firebase.analytics().logEvent('visit', {name: visit_name});
+    firebase.analytics().logEvent(visit_name);
   }
 
   next() {

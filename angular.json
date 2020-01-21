@@ -44,6 +44,9 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
+              "src/robots.txt",
+              "src/assets/sitemap.xml",
+              "src/assets/robots.txt",
               "src/assets"
             ],
             "styles": [
@@ -113,6 +116,9 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
+              "src/robots.txt",
+              "src/assets/sitemap.xml",
+              "src/assets/robots.txt",
               "src/assets"
             ],
             "styles": [

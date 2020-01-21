@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as firebase from 'firebase';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-devis',
@@ -7,11 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DevisComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cookieService: CookieService) { }
   widthEcran: number;
 
   ngOnInit() {
     this.widthEcran = window.innerWidth;
+    document.documentElement.scrollTop = 0;
+    const visit_name = 'Devis-' + this.cookieService.get('visit_dvio_cookie');
+    firebase.analytics().logEvent(visit_name);
   }
 
 }

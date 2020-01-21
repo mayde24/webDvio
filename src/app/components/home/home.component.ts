@@ -16,6 +16,6 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     document.documentElement.scrollTop = 0;
     const visit_name = 'Home-' + this.cookieService.get('visit_dvio_cookie');
-    firebase.analytics().logEvent('visit', {name: visit_name});
+    firebase.analytics().logEvent(visit_name);
   }
 }

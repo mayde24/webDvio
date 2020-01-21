@@ -315,7 +315,7 @@
   transition: 1s;
   color: white;
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -608,7 +608,7 @@ body , html{
 @media only screen and (max-width: 1280px) {
   .la-formule {
     .title-formule {
-      font-size: 30px;
+      font-size: 27px;
       margin-bottom: 7vh;
     }
   }
@@ -663,7 +663,7 @@ body , html{
   }
   .la-formule {
     .title-formule {
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 5vh;
     }
   }
@@ -695,7 +695,7 @@ body , html{
   }
 }
 
-@media only screen and (min-height: 1000px) {
+@media (min-width: 650px) and (min-height: 1000px) {
   .la-formule {
     h3 {
       font-size: 13px;
@@ -740,7 +740,7 @@ body , html{
   }
 }
 
-@media only screen and (min-height: 1150px) {
+@media (min-width: 650px) and (min-height: 1150px) {
   .la-formule {
     h3 {
       font-size: 16px;
@@ -813,7 +813,7 @@ body , html{
   }
   .formule {
     width: 70vw;
-    height: 40vh;
+    height: 47vh;
     margin: 0 auto;
     margin-top: 6vh;
     margin-bottom: 6vh;
@@ -825,7 +825,8 @@ body , html{
   }
   .la-formule {
     .title-formule {
-      font-size: 30px;
+      font-size: 25px;
+      margin-top: 15px;
     }
   }
   .cercle11, .cercle12, .cercle22, .carre21 {

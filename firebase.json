@@ -11,8 +11,27 @@
     ],
     "rewrites": [
       {
+        "source": "/sitemap",
+        "destination": "/assets/sitemap.xml"
+      },
+      {
+        "source": "/sitemap.xml",
+        "destination": "/assets/sitemap.xml"
+      },
+      {
+        "source": "/robots.txt",
+        "destination": "/assets/robots.txt"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
+      }
+    ],
+    "redirects": [
+      {
+      "source": "/robots.txt",
+      "destination": "/assets/robots.txt",
+      "type": 301
       }
     ]
   },

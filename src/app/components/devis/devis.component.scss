@@ -252,7 +252,7 @@ body, html {
 @media only screen and (max-width: 1280px) {
   .la-formule {
     .title-formule {
-      font-size: 30px;
+      font-size: 27px;
       margin-bottom: 7vh;
     }
   }
@@ -297,7 +297,7 @@ body, html {
   }
   .la-formule {
     .title-formule {
-      font-size: 20px;
+      font-size: 18px;
       margin-bottom: 5vh;
     }
   }
@@ -315,7 +315,7 @@ body, html {
   }
 }
 
-@media only screen and (min-height: 1000px) {
+@media (min-width: 650px) and (min-height: 1000px) {
   .la-formule {
     h3 {
       font-size: 13px;
@@ -349,7 +349,7 @@ body, html {
   }
 }
 
-@media only screen and (min-height: 1150px) {
+@media (min-width: 650px) and (min-height: 1150px) {
   .la-formule {
     h3 {
       font-size: 16px;
@@ -395,7 +395,7 @@ body, html {
   }
   .formule {
     width: 70vw;
-    height: 40vh;
+    height: 47vh;
     margin-top: 4vh;
     margin-bottom: 4vh;
   }
@@ -406,7 +406,8 @@ body, html {
   }
   .la-formule {
     .title-formule {
-      font-size: 30px;
+      font-size: 25px;
+      padding-top: 15px;
     }
   }
   .cercle11, .cercle12, .cercle22, .carre21 {

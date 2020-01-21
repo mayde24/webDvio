@@ -21,6 +21,16 @@
 <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://www.dvio.fr/devis</loc>
+  <lastmod>2020-01-19T11:46:11+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.dvio.fr/estimation</loc>
+  <lastmod>2020-01-19T11:46:11+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
 <loc>https://www.dvio.fr/work/dame-de-coeur</loc>
 <lastmod>2020-01-19T11:46:11+00:00</lastmod>
 <priority>0.64</priority>

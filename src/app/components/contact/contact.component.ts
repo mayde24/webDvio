@@ -14,20 +14,21 @@ export class ContactComponent implements OnInit {
               private cookieService: CookieService) { }
 
   ngOnInit() {
+    document.documentElement.scrollTop = 0;
     const visit_name = 'Contact-' + this.cookieService.get('visit_dvio_cookie');
-    firebase.analytics().logEvent('visit', {name: visit_name});
+    firebase.analytics().logEvent(visit_name);
   }
 
   goToMail() {
-    const visit_bis = 'Mail-' + this.cookieService.get('visit_dvio_cookie');
-    firebase.analytics().logEvent('goTo_visit', {name: visit_bis});
+    const visit_name = 'goToMail-' + this.cookieService.get('visit_dvio_cookie');
+    firebase.analytics().logEvent(visit_name);
   }
   goToLink() {
-    const visit_bis = 'LinkedIn-' + this.cookieService.get('visit_dvio_cookie');
-    firebase.analytics().logEvent('goTo_visit', {name: visit_bis});
+    const visit_name = 'goToLinkedin-' + this.cookieService.get('visit_dvio_cookie');
+    firebase.analytics().logEvent(visit_name);
   }
   goToTwitter() {
-    const visit_bis = 'Twitter-' + this.cookieService.get('visit_dvio_cookie');
-    firebase.analytics().logEvent('goTo_visit', {name: visit_bis});
+    const visit_name = 'goToTwitter-' + this.cookieService.get('visit_dvio_cookie');
+    firebase.analytics().logEvent(visit_name);
   }
 }

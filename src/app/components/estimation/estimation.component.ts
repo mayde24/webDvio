@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import * as firebase from 'firebase';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-estimation',
@@ -19,7 +21,7 @@ export class EstimationComponent implements OnInit {
       "Non, j'ai déjà mon contenu", 0,
       200, 500],
     ["question3", "Possédez-vous une maquette du site ?",
-      "Oui", 1,
+      "Oui", 2,
       "Non", 0,
       100, 200],
     ["question4", "Aurez-vous besoin de fonctionnalités telles qu'un formulaire de contact, une FAQ ou une carte ?",
@@ -44,8 +46,8 @@ export class EstimationComponent implements OnInit {
       200, 300]
   ];
   choix: number = 1;
-  min: number = 800;
-  max: number = 1500;
+  min: number = 600;
+  max: number = 1200;
   submitted: boolean = false;
   index: number = 0;
   largeur: number = 0;
@@ -55,9 +57,13 @@ export class EstimationComponent implements OnInit {
   thereIsPrevious: boolean = false;
 
   constructor(
-    private formBuilder: FormBuilder,) { }
+    private formBuilder: FormBuilder,
+    private cookieService: CookieService) { }
 
   ngOnInit() {
+    document.documentElement.scrollTop = 0;
+    const visit_name = 'Estimation-' + this.cookieService.get('visit_dvio_cookie');
+    firebase.analytics().logEvent(visit_name);
     this.widthEcran = window.innerWidth;
     this.parsec = (document.getElementById('entierParsec').offsetWidth / 7.0) - 5;
     this.form = this.formBuilder.group({

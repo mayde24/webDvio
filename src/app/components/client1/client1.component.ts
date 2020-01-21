@@ -16,12 +16,12 @@ export class Client1Component implements OnInit {
   ngOnInit() {
     document.documentElement.scrollTop = 0;
     const visit_name = 'DameCoeur-' + this.cookieService.get('visit_dvio_cookie');
-    firebase.analytics().logEvent('visit', {name: visit_name});
+    firebase.analytics().logEvent(visit_name);
   }
 
   goTo() {
-    const visit_bis = 'DameCoeur-' + this.cookieService.get('visit_dvio_cookie');
-    firebase.analytics().logEvent('goTo_visit', {name: visit_bis});
+    const visit_name = 'goToDameCoeur' + this.cookieService.get('visit_dvio_cookie');
+    firebase.analytics().logEvent(visit_name);
   }
 
 }

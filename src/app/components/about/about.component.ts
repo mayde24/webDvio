@@ -26,20 +26,20 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     document.documentElement.scrollTop = 0;
     const visit_name = 'AboutUs-' + this.cookieService.get('visit_dvio_cookie');
-    firebase.analytics().logEvent('visit', {name: visit_name});
+    firebase.analytics().logEvent(visit_name);
   }
 
   goToMaya() {
-    const visit_bis1 = 'MayaDouadi-' + this.cookieService.get('visit_dvio_cookie');
-    firebase.analytics().logEvent('goTo_visit', {name: visit_bis1});
+    const visit_name = 'goToMaya-' + this.cookieService.get('visit_dvio_cookie');
+    firebase.analytics().logEvent(visit_name);
   }
   goToYasmine() {
-    const visit_bis2 = 'YasmineDouadi-' + this.cookieService.get('visit_dvio_cookie');
-    firebase.analytics().logEvent('goTo_visit', {name: visit_bis2});
+    const visit_name = 'goToYasmine-' + this.cookieService.get('visit_dvio_cookie');
+    firebase.analytics().logEvent(visit_name);
   }
   goToArmand() {
-    const visit_bis3 = 'ArmandBègue-' + this.cookieService.get('visit_dvio_cookie');
-    firebase.analytics().logEvent('goTo_visit', {name: visit_bis3});
+    const visit_name = 'goToArmand-' + this.cookieService.get('visit_dvio_cookie');
+    firebase.analytics().logEvent(visit_name);
   }
 
   hover(person: number) {
